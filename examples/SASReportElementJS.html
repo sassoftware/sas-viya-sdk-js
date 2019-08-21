@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <style>
+      html {
+        background-color: #f0f0f0;
+      }
+    </style>
+    <script async src="https://unpkg.com/@sassoftware/va-report-components@0.1/dist/umd/va-report-components.js"></script>
+  </head>
+  <body></body>
+  <script> 
+    window.addEventListener("vaReportComponents.loaded", () => {
+      const reportElement = new vaReportComponents.SASReportElement();
+      reportElement.url = "YOUR-VIYA-URL";
+      reportElement.reportUri = "YOUR-REPORT-URI";
+      reportElement.authenticationType = "guest";
+      reportElement.style.setProperty("--sas-report-background-color", "#0074BE");
+      reportElement.style.setProperty("--sas-report-padding", "1rem");
+
+      document.body.appendChild(reportElement);
+    });
+  </script>
+</html>

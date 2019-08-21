@@ -1,0 +1,15 @@
+{
+  "docs": {
+    "Introduction": ["getting-started"],
+    "Guides": ["guides/data-driven-content"],
+    "API Reference": [
+      "api-reference",
+      "api/SASReportElement",
+      "api/SASReportObjectElement",
+      "api/connectToServer",
+      "api/registerDataDrivenContent",
+      "api/DataDrivenContentHandle"
+    ],
+    "Resources": ["faq"]
+  }
+}
