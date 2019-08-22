@@ -105,7 +105,7 @@
 
       // Receive data and create an html table in the 'data-driven-content' div
       function handleDataMessage(message) {
-        if (message && message.availableRowCount >= 0) {
+        if (message && message.rowCount >= 0) {
           // Find the index of the brush column
           const brushColumnIndex = message.columns.findIndex((column) => column.usage === 'brush');
 
