@@ -7,7 +7,7 @@ title: registerDataDrivenContent
 registerDataDrivenContent(options, onMessage): DataDrivenContentHandle
 ```
 
-This function is used to receive and dispatch messages to a data-driven content report object. If the report is not yet
+This function is used to receive and dispatch messages to a data-driven content object. If the report is not yet
 opened then this call will open it and initiate data processing for this data-driven content object.
 
 See [the Getting Started page](getting-started.md#create-a-custom-html-tag) to learn how to find the correct values for
@@ -23,7 +23,7 @@ Choose options for how to connect to the server. The following properties are su
   the protocol, optional port, and host.
 - `reportUri: string`: Specify the report URI.
 - `objectName: string`: Specify name of the data-driven content object.
-- `authenticationType: string`: Choose the method that will be used to authenticate requests to the Viya server.
+- `authenticationType: string`: Choose the method that will be used to authenticate requests to the SAS Viya server.
   - Currently the only valid value is `"guest"`. This attribute is required to support a future update where
     `"credential"` will be the default.
 
@@ -36,7 +36,7 @@ about receiving data for data driven content can be found in the <a target="_bla
 ## Return value
 
 `registerDataDrivenContent` returns a [`DataDrivenContentHandle`](api/DataDrivenContentHandle.md) which can be used to dispatch
-messages to the data-driven content report object.
+messages to the data-driven content object.
 
 ## The `receivedMessage` object
 
@@ -68,7 +68,7 @@ Each column object supports the following properties:
   following properties:
   - `name: string` A name for the format
   - `width: number` The maximum number of characters for the formatted value.
-  - `precision: number` The number of digits after the decimal place
+  - `precision: number` The number of digits after the decimal place.
   - `formatString: string` A string that completely specifies the formatting by combining the `name`, `width`, and
     `precision`.
 

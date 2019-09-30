@@ -24,7 +24,7 @@ the correct values for `url`, `reportUri`, and `objectName`.
 
 ### `authenticationType: string`
 
-Choose the method that will be used to authenticate requests to the Viya server.
+Choose the method that will be used to authenticate requests to the SAS Viya server.
 
 Currently the only valid value is `"guest"`. This attribute is required to support a future update where `"credential"`
 will be the default.

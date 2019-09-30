@@ -42,7 +42,7 @@ needed in order to connect to SAS Viya from the domain that is hosting your HTML
 ### Allow guest access
 
 The SAS Visual Analytics SDK connects to the SAS Viya server using guest authentication. This requires that the SAS Viya system be
-set up to enable Guest mode, and that the Guest user has access to the appropriate report content and data. For more information, see 
+set up to enable guest access, and that the guest user has access to the appropriate report content and data. For more information, see 
 <a target="_blank" href="https://documentation.sas.com/?cdcId=calcdc&cdcVersion=3.4&docsetId=calauthmdl&docsetTarget=n067qoyrgu1yohn19nq4ehy8o0b3.htm#p04ifnaixhf85in1xo7zrr2fgimf">SAS Help Center</a>.
 
 ## Include a custom elements polyfill

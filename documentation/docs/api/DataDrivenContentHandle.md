@@ -3,7 +3,7 @@ id: DataDrivenContentHandle
 title: DataDrivenContentHandle
 ---
 
-A `DataDrivenContentHandle` is used to dispatch messages to a data-driven content report object. It can be obtained by
+A `DataDrivenContentHandle` is used to dispatch messages to a data-driven content object. It can be obtained by
 calling [`registerDataDrivenContent`.](registerDataDrivenContent.md)
 
 ## Methods
@@ -15,7 +15,7 @@ the <a target="_blank" href="https://documentation.sas.com/?docsetId=varef&docse
 
 ### `deregister(): void`
 
-Detach this handler from the attached data-driven report object. This cleans up resources and should be called when it
+Detach this handler from the attached data-driven content object. This cleans up resources and should be called when it
 is no longer necessary to communicate with the object.
 
 ## The `message` object
