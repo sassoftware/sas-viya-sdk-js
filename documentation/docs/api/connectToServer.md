@@ -7,7 +7,7 @@ title: connectToServer
 connectToServer(url, options): void
 ```
 
-Initiate the connection to the SAS Visual Analytics server specified by the url. Using a SASReportElement or
+Initiate the connection to the SAS Visual Analytics server specified by the URL. Using a SASReportElement or
 SASReportObjectElement implicitly makes the appropriate server connection. This API is used to make a server connection
 before any report elements are added to the DOM. `connectToServer` is intended for use in single-page applications, or
 in any context where report components will not necessarily be shown immediately. In these cases, calling
@@ -18,12 +18,12 @@ the server.
 
 ### `url: string`
 
-Specify the url of the SAS Viya server. This is the full context root, including the protocol, optional port, and host.
+Specify the URL of the SAS Viya server. This is the full context root, including the protocol, optional port, and host.
 
 ### `options: Object`
 
 Choose additional options for how to connect to the server. The following properties are supported:
 
-- `authenticationType: string`: Choose the method that will be used to authenticate requests to the Viya server.
+- `authenticationType: string`: Choose the method that will be used to authenticate requests to the SAS Viya server.
   - Currently the only valid value is `"guest"`. This attribute is required to support a future update where
     `"credential"` will be the default.

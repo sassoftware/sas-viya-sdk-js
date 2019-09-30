@@ -22,7 +22,7 @@ The SAS Visual Analytics SDK offers two ways to work with data-driven content ob
 
 This guide walks you step-by-step through the
 <a target="_blank" href="https://github.com/sassoftware/visual-analytics-sdk/blob/master/examples/registerDataDrivenContent.html">Data-Driven
-Content Example</a>. The example is set up to show the data flow between the SDK and a custom HTML table rendered by the
+Content Example</a>. The example is set up to show the data flow between the SAS Visual Analytics SDK and a custom HTML table rendered by the
 example. Here are the steps to set up the example and run it using your own report.
 
 ### Create a source report
@@ -60,7 +60,7 @@ object, and use it to replace the placeholder in the example.
 </body>
 ```
 
-Using the same steps, create a `<sas-report-object>` tag for the data-driven content report object. But instead of
+Using the same steps, create a `<sas-report-object>` tag for the data-driven content object. But instead of
 adding the tag directly to the example, use the generated `url`, `reportUri`, and `objectName` to populate the values
 used in the call to `registerDataDrivenContent`.
 
@@ -140,7 +140,7 @@ const rows = message.data.map((dataRow, rowIndex) =>
 );
 ```
 
-In `createTableRow`, the value of the brush column is used to set the `checked` property of the row's checkbox. The
+In `createTableRow`, the value of the brush column is used to set the `checked` property of the row's check box. The
 brush value is numeric, and a value greater than 0 indicates that this data row is selected.
 
 ```javascript

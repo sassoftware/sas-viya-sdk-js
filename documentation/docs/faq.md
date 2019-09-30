@@ -50,7 +50,7 @@ try these steps to resolve the problem:
    `"/reports/reports/f57c57ba-1cf1-4b14-aeeb-1a61664debb4"`. If the `"/reports/reports/"` prefix is missing, or if you
    see `%2F` in place of `/`, then the report will not load. We have a tool for generating a correctly-formatted
    `sas-report` or `sas-report-object` tag in our [Getting started guide](getting-started.md#create-a-custom-html-tag).
-1. Ensure that you have permission to access the report given the current authentication type. Currently the SDK always
+1. Ensure that you have permission to access the report given the current authentication type. Currently the SAS Visual Analytics SDK always
    logs in as a guest user when accessing reports; if the report is not accessible to a guest user, then the report will
    not load.
 
