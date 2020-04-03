@@ -9,6 +9,7 @@ to use SAS data to drive your own components or visualizations.
 ## Top-Level Exports
 
 - [`SASReportElement`](api/SASReportElement.md)
+- [`SASReportPageElement`](api/SASReportPageElement.md)
 - [`SASReportObjectElement`](api/SASReportObjectElement.md)
 - [`connectToServer`](api/connectToServer.md)
 - [`registerDataDrivenContent`](api/registerDataDrivenContent.md)

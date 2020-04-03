@@ -23,6 +23,7 @@ To find the correct values for `url` and `reportUri`, see [the Getting Started p
 ### `authenticationType: string`
 
 Choose the method to authenticate requests to the SAS Viya server.
+
 - `'guest'` automatically signs in to the SAS Viya server as the guest user.
 - `'credentials'` uses SAS Logon to establish an authenticated session.
 
@@ -44,6 +45,24 @@ Indicate whether page navigation tabs ought to be hidden. `false` provides an ap
 than one section.
 
 default value: `'auto'`
+
+## Methods
+
+### `getReportHandle(): Promise<ReportHandle>`
+
+Get a [ReportHandle](ReportHandle.md) for controlling the state of the
+current report.
+
+If called before the element is added to the DOM, the promise will resolve
+after the report begins to load.
+
+The [ReportHandle](ReportHandle.md) is invalidated when attributes on the
+`SASReportElement` are changed and when the element is removed from the DOM.
+To obtain another [ReportHandle](ReportHandle.md), discard the previous
+result and call `getReportHandle` again.
+
+[ReportHandles](ReportHandle.md) from `SASReportElements` are never shared
+with other elements.
 
 ## Styles
 

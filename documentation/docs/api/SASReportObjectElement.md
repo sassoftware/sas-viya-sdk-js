@@ -24,6 +24,7 @@ To find the correct values for `url`, `reportUri`, and `objectName`, see [the Ge
 ### `authenticationType: string`
 
 Choose the method to authenticate requests to the SAS Viya server.
+
 - `'guest'` automatically signs in to the SAS Viya server as the guest user.
 - `'credentials'` uses SAS Logon to establish an authenticated session.
 
@@ -41,3 +42,21 @@ Specify the report URI.
 ### `objectName: string`
 
 Specify the name of the object from the report to display.
+
+## Methods
+
+### `getReportHandle(): Promise<ReportHandle>`
+
+Get a [ReportHandle](ReportHandle.md) for controlling the state of the
+current report.
+
+If called before the element is added to the DOM, the promise will resolve
+after the object begins to load.
+
+The [ReportHandle](ReportHandle.md) is invalidated when attributes on the
+`SASReportObjectElement` are changed and when the element is removed from the
+DOM. To obtain another [ReportHandle](ReportHandle.md), discard the previous
+result and call `getReportHandle` again.
+
+[ReportHandles](ReportHandle.md) from `SASReportObjectElement` are shared
+between objects from the same report.
