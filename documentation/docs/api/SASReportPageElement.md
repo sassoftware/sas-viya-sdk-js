@@ -23,6 +23,7 @@ To find the correct values for `url`, `reportUri`, and `pageName`, see [the Gett
 ### `authenticationType: string`
 
 Choose the method to authenticate requests to the SAS Viya server.
+
 - `'guest'` automatically signs in to the SAS Viya server as the guest user.
 - `'credentials'` uses SAS Logon to establish an authenticated session.
 
@@ -44,3 +45,21 @@ Specify the name of the report page that you want to display. Either `pageName` 
 ### `pageIndex: number`
 
 Specify the index of the report page that you want to display. `0` is the first page. Either `pageName` or `pageIndex` can be used, but not both.
+
+## Methods
+
+### `getReportHandle(): Promise<ReportHandle>`
+
+Get a [ReportHandle](ReportHandle.md) for controlling the state of the
+current report.
+
+If called before the element is added to the DOM, the promise will resolve
+after the page begins to load.
+
+A [ReportHandle](ReportHandle.md) are invalidated when attributes on the
+`SASReportPageElement` are changed and when the element is removed from the
+DOM. To obtain another [ReportHandle](ReportHandle.md), discard the previous
+result and call `getReportHandle` again.
+
+[ReportHandles](ReportHandle.md) from `SASReportPageElements` are not shared
+with other elements.

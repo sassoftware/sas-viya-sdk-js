@@ -55,9 +55,9 @@ function Versions(props) {
           <table className="versions">
             <tbody>
               {versions.map(
-                version =>
+                (version, i) =>
                   version !== latestVersion && (
-                    <tr>
+                    <tr key={i}>
                       <th>{version}</th>
                       <td>
                         {/* You are supposed to change this href where appropriate
