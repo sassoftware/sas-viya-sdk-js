@@ -13,5 +13,5 @@
 
 ## 0.4.0 (April 8, 2020)
 
-- Add ReportHandle API with support report parameters
+- Add ReportHandle API with support for report parameters
 - Bug fixes
