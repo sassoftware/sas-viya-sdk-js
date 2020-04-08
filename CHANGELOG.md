@@ -10,3 +10,8 @@
 - Add support for SAS Visual Analytics 8.5
 - Add support for `<sas-report-page>` custom element for embedding a report page.
 - Additional bug fixes
+
+## 0.4.0 (April 8, 2020)
+
+- Add ReportHandle API with support report parameters
+- Bug fixes
