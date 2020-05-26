@@ -15,3 +15,10 @@
 
 - Add ReportHandle API with support for report parameters
 - Bug fixes
+
+## 0.5.0 (May 27, 2020)
+
+- Add support for custom report themes
+- Add support for SAS Graphics Accelerator
+- Keyboard and focus accessibility fixes
+- Bug fixes
