@@ -72,7 +72,3 @@ This message means that you have multiple uses of the same report object - eithe
 ## Why does nothing happen when I click a report link?
 
 Report linking is not currently supported in the SAS Visual Analytics SDK.  All other action types are supported.
-
-## Where is my custom report theme?
-
-Custom report themes are not currently supported in the SAS Visual Analytics SDK.
