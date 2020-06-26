@@ -22,3 +22,7 @@
 - Add support for SAS Graphics Accelerator
 - Keyboard and focus accessibility fixes
 - Bug fixes
+
+## 0.6.0 (June 26, 2020)
+
+- Bug fixes
