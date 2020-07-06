@@ -19,7 +19,7 @@ The <a target="_blank" href="https://www.npmjs.com/package/@sassoftware/va-repor
 npm install @sassoftware/va-report-components
 
 # Copy the contents of the package to an asset folder for deployment
-cp -r ./node_modules/@sassoftware/va-report-components/dist ./sdk-assets
+cp -r ./node_modules/@sassoftware/va-report-components ./sdk-assets
 ```
 
 The library can then be loaded out of the deployed assets folder using a `script` tag.
