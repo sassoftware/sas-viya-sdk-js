@@ -26,3 +26,7 @@
 ## 0.6.0 (June 26, 2020)
 
 - Bug fixes
+
+## 0.7.0 (July 24, 2020)
+
+- Bug fixes
