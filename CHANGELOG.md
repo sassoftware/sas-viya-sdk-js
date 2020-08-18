@@ -30,3 +30,7 @@
 ## 0.7.0 (July 24, 2020)
 
 - Bug fixes
+
+## 0.8.0 (Aug 18, 2020)
+
+- Bug fixes
