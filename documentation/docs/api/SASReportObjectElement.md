@@ -43,6 +43,12 @@ Specify the report URI.
 
 Specify the name of the object from the report to display.
 
+## Properties
+
+### `menuItemProvider: MenuItemProvider`
+
+A [`MenuItemProvider`](MenuItemProvider.md) function that generates custom menu content for this element.
+
 ## Methods
 
 ### `getReportHandle(): Promise<ReportHandle>`

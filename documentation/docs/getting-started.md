@@ -102,4 +102,4 @@ For a complete list of options, see the documentation for [`SASReportElement`](a
 ## See our examples
 
 <a target="_blank" href="https://github.com/sassoftware/visual-analytics-sdk/tree/master/examples">Our examples</a> demonstrate a few different
-ways to start using the Visual Analytics SDK in your HTML application.
+ways to start using the SAS Visual Analytics SDK in your HTML application.

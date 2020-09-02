@@ -46,6 +46,12 @@ Specify the name of the report page that you want to display. Either `pageName` 
 
 Specify the index of the report page that you want to display. `0` is the first page. Either `pageName` or `pageIndex` can be used, but not both.
 
+## Properties
+
+### `menuItemProvider: MenuItemProvider`
+
+A [`MenuItemProvider`](MenuItemProvider.md) function that generates custom menu content for this element.
+
 ## Methods
 
 ### `getReportHandle(): Promise<ReportHandle>`
