@@ -49,16 +49,7 @@ page. Each [`SASReportElement`](SASReportElement.md) and
 state, so setting parameters on those elements does not affect other elements
 on the page.
 
-### updateReportParameters(parameters: Object): void
-
-Update a subset of the parameters in the report.
-
-Usage of `updateReportParameters` is the same as `setReportParameters`,
-except report parameters missing from the `parameters` argument do not get
-reset to their default values. Calling `updateReportParameters` with an empty
-object has no effect on the report.
-
-### Example: setReportParameters
+#### Example
 
 In this example, the parameters `Date`, `Character`, `Multiple Character`,
 and `Numeric` get valid values, `OtherNumeric` has its value unset, and
@@ -66,7 +57,7 @@ and `Numeric` get valid values, `OtherNumeric` has its value unset, and
 not present in the object, they would be reset to their initial state.
 
 ```javascript
-const sasReport = getElementById("my-report");
+const sasReport = document.getElementById("my-report");
 sasReport.getReportHandle().then((reportHandle) => {
   reportHandle.setReportParameters({
     Date: new Date(2020, 0, 1),
@@ -79,17 +70,54 @@ sasReport.getReportHandle().then((reportHandle) => {
 });
 ```
 
-### Example: updateReportParameters
+### updateReportParameters(parameters: Object): void
+
+Update a subset of the parameters in the report.
+
+Usage of `updateReportParameters` is the same as `setReportParameters`,
+except report parameters missing from the `parameters` argument do not get
+reset to their default values. Calling `updateReportParameters` with an empty
+object has no effect on the report.
+
+#### Example
 
 In this example, the parameters `Character` and `Numeric` get new values,
 while all other parameters are left unchanged.
 
 ```javascript
-const sasReport = getElementById("my-report");
+const sasReport = document.getElementById("my-report");
 sasReport.getReportHandle().then((reportHandle) => {
   reportHandle.updateReportParameters({
     Character: "String",
     Numeric: 12,
+  });
+});
+```
+
+### exportPDF(options?: ExportPDFOptions): Promise\<string>
+
+Exports a PDF of the report and returns a URL to the PDF document.
+
+`options` is an [`ExportPDFOptions`](ExportPDFOptions.md) that controls the format of the exported PDF document.
+If no `options` parameter is supplied, the report will be exported using the default options values.
+
+#### Example
+
+In this example, custom options are passed in to the export function, and the exported PDF is opened in a new window.
+
+```javascript
+const sasReport = document.getElementById("my-report");
+sasReport.getReportHandle().then((reportHandle) => {
+  const options = {
+    orientation: "portrait",
+    margin: { top: 0.2, bottom: 0.2, units: "inches" },
+    includeDetailsTables: true,
+    includedReportObjects: ["ve38", "ve56"],
+  };
+
+  reportHandle.exportPDF(options).then((pdfUrl) => {
+    // Open the PDF in a new window
+    window.open(pdfUrl, '_blank');
   });
 });
 ```
