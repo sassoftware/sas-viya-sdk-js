@@ -13,6 +13,7 @@
       "version-0.16.0-api/SASReportObjectElement",
       "version-0.16.0-api/ReportHandle",
       "version-0.16.0-api/ExportPDFOptions",
+      "version-0.16.0-api/ExportReportOptions",
       "version-0.16.0-api/MenuItemProvider",
       "version-0.16.0-api/connectToServer",
       "version-0.16.0-api/registerDataDrivenContent",

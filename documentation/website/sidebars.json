@@ -9,6 +9,7 @@
       "api/SASReportObjectElement",
       "api/ReportHandle",
       "api/ExportPDFOptions",
+      "api/ExportReportOptions",
       "api/MenuItemProvider",
       "api/connectToServer",
       "api/registerDataDrivenContent",
