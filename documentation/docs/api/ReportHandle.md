@@ -121,3 +121,7 @@ sasReport.getReportHandle().then((reportHandle) => {
   });
 });
 ```
+
+### getObjectHandle(objectName: string): Promise\<ObjectHandle>
+
+Returns the handle for a report's object. 
