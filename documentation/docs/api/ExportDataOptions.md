@@ -1,9 +1,9 @@
 ---
-id: ExportReportOptions
-title: ExportReportOptions
+id: ExportDataOptions
+title: ExportDataOptions
 ---
 
-ExportReportOptions provides options for customizing the properties of an exported report. If no option is specified, then the default value is used.
+ExportDataOptions provides options for customizing the properties of exported report data. If no option is specified, then the default value is used.
 
 ## Options
 
