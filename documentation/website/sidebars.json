@@ -14,7 +14,8 @@
       "api/connectToServer",
       "api/registerDataDrivenContent",
       "api/DataDrivenContentHandle",
-      "api/setUseHighContrastReportTheme"
+      "api/setUseHighContrastReportTheme",
+      "api/setLoadingTheme"
     ],
     "Resources": ["faq"]
   }

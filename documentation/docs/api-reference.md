@@ -15,6 +15,7 @@ to use SAS data to drive your own components or visualizations.
 - [`registerDataDrivenContent`](api/registerDataDrivenContent.md)
 - [`DataDrivenContentHandle`](api/DataDrivenContentHandle.md)
 - [`setUseHighContrastReportTheme`](api/setUseHighContrastReportTheme.md)
+- [`setLoadingTheme`](api/setLoadingTheme.md)
 
 ## Loading with \<script\>
 
