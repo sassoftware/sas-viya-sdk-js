@@ -1,0 +1,52 @@
+
+<html>
+  <head>
+    <script async src="https://unpkg.com/@sassoftware/content-sdk@0.1.0/dist/umd/content-sdk-components.js"></script>
+    <script async src="https://unpkg.com/@sassoftware/va-report-components@0.16.0/dist/umd/va-report-components.js"></script>
+  </head>
+  <body>
+    <!-- sas-content-area to display a folder containing reports -->
+    <sas-content-area id="ca1" url="YOUR-VIYA-URL"></sas-content-area>
+    <!-- Header that will be updated with the selected report name -->
+    <h3 id="reportName" style="margin-left: 1rem;">No report selected</h3>
+    <!-- sas-report with empty reportUri to start -->
+    <sas-report id="report1" hideNavigation="auto" authenticationType="credentials" url="YOUR-VIYA-URL" style="height: 400px;"></sas-report>
+  </body>
+  <script>
+    // Get the sas-content-area element and set the folderIdentifier
+    document.getElementById('ca1').folderIdentifier = {
+        type: 'persistentLocation',
+        // myFolder: My Folder
+        // favorites: My Favorites
+        // root: SAS Content
+        // history: Recent
+        // trash: Recycle Bin
+        // quickAccess: Quick Access
+        value: 'myFolder'
+    };
+    // Or, to point to a specific folder uri:
+    // document.getElementById('ca1').folderIdentifier = {
+    //   type: 'folderUri',
+    //   value: <folder uri>  
+    // };
+    // Handle the sas-content-area onSelect event
+    ca1.onSelect = (value) => {
+        let reportUri = "";
+        const reportName = document.getElementById('reportName');
+        if (value && value.length > 0) {
+            // If tiles are selected, get new reportUri and report name from the selected item
+            reportUri = value[0].resource.id;
+            reportName.innerText = value[0].name;
+        } else {
+            reportName.innerText = 'No report selected';
+        }
+        // Update the reportUri on the sas-report
+        document.getElementById('report1').reportUri = reportUri;
+    };
+
+    // Use contentFilterConfig to only show certain content types
+    ca1.contentFilterConfig = {
+      queryModeFilter: `eq(contentType,'report')`
+    };
+  </script>
+</html>

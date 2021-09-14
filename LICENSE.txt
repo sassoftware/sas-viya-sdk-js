@@ -1,0 +1,333 @@
+                    License Agreement for SAS Technology
+
+PLEASE CAREFULLY READ THE TERMS AND CONDITIONS OF THIS LICENSE AGREEMENT 
+("AGREEMENT"). BY ACCEPTING THIS AGREEMENT AND/OR USING THE SAS IP, AS DEFINED 
+BELOW, YOU, ON BEHALF OF CUSTOMER, AS DEFINED BELOW, ARE AGREEING TO THESE TERMS 
+AND SAS INSTITUTE INC. (“SAS”) WILL AUTHORIZE YOU TO DOWNLOAD THE SAS IP. YOU 
+REPRESENT AND WARRANT THAT YOU HAVE FULL AUTHORITY TO BIND CUSTOMER TO THIS 
+AGREEMENT. IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THIS AGREEMENT, DO NOT 
+ACCEPT THIS AGREEMENT OR ATTEMPT TO DOWNLOAD THE SAS IP.
+
+1. DEFINITIONS.
+  1.1. “API” means any application programming interface provided or made 
+    available by SAS to Customer.
+  1.2.“Customer” means the individual, company or institution that has licensed 
+    software from SAS under a separate software license agreement (“Software 
+    License Agreement”) with which a Customer Application (as defined below) 
+    will interconnect.
+  1.3. “Customer Application” means an application developed by Customer which 
+    incorporates or makes use of any SAS IP.
+  1.4.“Documentation” means any documentation or materials provided or made 
+    available by SAS to Customer under this Agreement, including documentation 
+    and materials describing an API or SDK.
+  1.5.“SAS Product” means any of SAS’ software, services or subscription 
+    products licensed to Customer under a Software License Agreement.
+  1.6. “SAS IP” means the APIs, SDKs, Documentation, and any other intellectual 
+    property made available by SAS under or in connection with this Agreement.
+  1.7. “Redistributable Code” means any sample software in object code format 
+    provided or made available by SAS to Customer under this Agreement.
+  1.8. “Sample Code” means any sample software in source code format provided or 
+    made available by SAS to Customer under this Agreement.
+  1.9.“SDK” or “Software Development Kits” means the contents in the SAS 
+    developer portal (developer.sas.com) or any file or other media provided or 
+    made available by SAS to Customer under this Agreement, including the API, 
+    Documentation, Redistributable Code, and Sample Code.
+2. LICENSE AND RESTRICTIONS.
+  2.1.Subject to Customer’s compliance with this Agreement, SAS grants to 
+    Customer a non-exclusive, nontransferable, limited license to: i) internally
+    use the APIs or SDKs in accordance with the Documentation solely to develop 
+    and test the Customer Applications that are capable of interconnection with 
+    SAS Product(s); ii) reproduce and internally modify the Sample Code solely 
+    as a component of the Customer Application; iii) reproduce the 
+    Redistributable Code solely as a component of the Customer Application; iv) 
+    distribute the Sample Code and Redistributable Code only in object code 
+    format (unless object code format is not technically feasible) solely as a 
+    component of the Customer Application. In no event shall the API be exposed 
+    to any third party, including, but not limited to users of the Customer 
+    Application.
+  2.2. SAS and its third party licensors own all right, title and interest in 
+    all SAS IP and all intellectual property embodied therein. All rights in and 
+    to the SAS IP not expressly granted to Customer in this Agreement are reserved 
+    by SAS. Customer acknowledges that nothing in this Agreement gives Customer 
+    the right to use any trademark, trade name or service mark of SAS, or any 
+    third party from whom SAS has acquired license rights.
+  2.3. This is a limited license. Customer shall not, and shall not allow any 
+    other person or entity to: i) remove or alter any copyright notices or other 
+    proprietary legends contained in any SAS IP or related documentation; ii) 
+    disassemble, decompile, or reverse engineer any SAS IP; iii) modify, 
+    translate, or create any derivative work of any SAS IP except as expressly 
+    licensed herein; iv) disclose any portion of the SAS IP to any person except 
+    to Customer’s employees and contractors who are required to use such SAS IP 
+    in order for Customer to develop and distribute the Customer Application as 
+    expressly licensed; or v) use any SAS IP in violation of any law or 
+    regulation. Customer shall not use, or allow any other person or entity to 
+    use, any SAS IP: i) to extract or derive information from any SAS Product to 
+    any product or service other than the Customer Application; ii) for the 
+    purpose of investigating, supporting, threatening or filing any intellectual 
+    property infringement claim against SAS or its affiliates; or iii) for the 
+    purpose of developing or using an offering or product directly or indirectly 
+    competing with a SAS Product. Customer’s failure to comply with the 
+    prohibitions contained in this Subsection 2.3 constitutes a breach of this 
+    Agreement with respect to the SAS IP at issue. Due to the nature of the 
+    property that is the subject of this Agreement, SAS shall have the right to 
+    seek equitable relief to enforce any right arising hereunder or to prevent 
+    or cure any breach of any obligation undertaken, without in any way 
+    prejudicing any available legal relief. Such equitable relief may include, 
+    but is not limited to, the seeking of a temporary or permanent injunction, 
+    restraining order or order for specific performance, and may be sought in 
+    any appropriate court, with or without prior notice, depending on the 
+    circumstances. It is expressly agreed that the obligations of this paragraph 
+    survive any termination of this Agreement. Customer shall promptly notify 
+    SAS of any known or suspected use of any SAS IP in breach of this Agreement.
+  2.4.Customer shall not make any representation or any express or implied 
+    warranty to third parties (including, without limitation, to any end users) 
+    on behalf of SAS.
+  2.5. In the event Customer uses the SAS IP in conjunction with any Open Source 
+    Programs, Customer must ensure that such use does not (a) grant, or purport 
+    to grant, any rights to SAS’ intellectual property rights in the SAS IP; 
+    (b) in any way restrict, or purport to restrict, SAS’ abilities to protect 
+    its intellectual property rights in the SAS IP; or (c) create, or purport to 
+    create, any obligations by SAS with respect to the SAS IP. By way of example 
+    and not of limitation, Customer may not develop a software application which 
+    contains code from the SAS IP and Open Source Programs, including but not 
+    limited to libraries, if the Open Source Program license requires any 
+    modifications or combinations to be made freely available. “Open Source 
+    Programs” refers generally to software programs which are available for use, 
+    modification and distribution without charge.
+  2.6. It is the sole responsibility of the Customer to maintain the privacy of 
+    Customer’s data.
+  2.7. If Customer provides any feedback to SAS concerning any SAS IP or SAS 
+    Product (including potential improvements), Customer hereby grants to SAS a 
+    non-exclusive, royalty free, perpetual right to use such feedback at SAS’ 
+    discretion.
+3. TERM AND TERMINATION.
+  3.1. All terms and conditions of this Agreement shall remain in full force and 
+    effect and apply in perpetuity, unless the Customer’s license to use the SAS 
+    IP is terminated in accordance with this Section or Customer’s license to 
+    the SAS Product with which the Customer Applicaton interconnects is 
+    terminated or expires.
+  3.2. Either party may terminate this Agreement upon thirty (30) calendar days 
+    written notice to the other party.
+  3.3. SAS may terminate this Agreement and Customer's license to all SAS IP 
+    immediately (a) if Customer breaches any provision of this Agreement; or 
+    (b) if Customer asserts any claim of intellectual property infringement 
+    against SAS. In such event, SAS will notify Customer that Customer is not 
+    licensed to access and/or use the SAS IP.
+  3.4. Upon termination, Customer’s right to use and possess any SAS IP shall 
+    immediately cease and Customer shall return or destroy all copies thereof. 
+    Customer shall provide written certification signed by an officer of 
+    Customer that all copies of the SAS IP have been returned or destroyed and 
+    that Customer has retained no copies. Termination does not affect any end 
+    user’s rights to continue to use the Customer Application distributed prior 
+    to the effective date of termination, provided, and only so long as, 
+    Customer maintains a valid license to the SAS Product with which the 
+    Customer Applicaton interconnects.
+  3.5. Notwithstanding termination, all terms and conditions of Sections 1, 2, 
+    and 5-10 shall survive in perpetuity. Termination of this Agreement and 
+    Customer’s right to access, use and/or possess any SAS IP shall not limit 
+    the remedies otherwise available to either party, including injunctive 
+    relief.
+4. DELIVERY, SUPPORT.
+  4.1.SAS will make available for download a copy of those portions of the SAS 
+    IP which SAS, using reasonable discretion, deems necessary for Customer to 
+    develop the Customer Application. SAS may, in its sole discretion, provide 
+    replacements, updates, or modifications, for any portion of the SAS IP 
+    during the term of this Agreement (“Updated IP”). Customer will ensure that, 
+    prior to commercially releasing any version of any Customer Application, 
+    that version of the Customer Application will be fully compatible with the 
+    most recent Updated IP, if any.
+  4.2.If requested by Customer, SAS may provide support for use of the SAS IP 
+    for developing Customer Applications as set forth in an separate 
+    professional services agreement to be executed by the Customer. All such 
+    support is subject to SAS’ standard professional services terms and fees. 
+    SAS will have no other support or service obligations except as set forth 
+    in such professional services agreement.
+5. CONFIDENTIALITY.
+  5.1. The term “Confidential Information” means any trade secrets or other 
+    information of a party, whether of a technical, business, or other nature 
+    (including, without limitation, information relating to a party’s 
+    technology, software, products, services, designs, methodologies, business 
+    plans, finances, marketing plans, customers, prospects, or other affairs), 
+    that is disclosed to a party during the term of this Agreement and that such 
+    party knows or has reason to know is confidential, proprietary, or trade 
+    secret information of the disclosing party. The SAS IP is the Confidential 
+    Information of SAS. Confidential Information does not include any 
+    information that the receiving party can show: i) was known to the receiving 
+    party prior to receiving the same from the disclosing party in connection 
+    with this Agreement; ii) is independently developed by the receiving party 
+    without use of or reference to the Confidential Information of the 
+    disclosing party; iii) is acquired by the receiving party from another 
+    source without restriction as to use or disclosure; or iv) is or becomes 
+    part of the public domain through no fault or action of the receiving party.
+  5.2.During and after the term of this Agreement, each party will: i) use the 
+    other party’s Confidential Information solely for the purpose for which it 
+    is provided (in Customer’s case, solely for the purpose of developing the 
+    Customer Applications); ii) not disclose the other party’s Confidential 
+    Information to a third party unless the third party must access the 
+    Confidential Information to perform in accordance with this Agreement and 
+    the third party has executed a written agreement that contains terms that 
+    are substantially similar to the terms contained in this Section 5; and iii) 
+    protect the other party’s Confidential Information from unauthorized use and 
+    disclosure to the same extent (but using no less than a reasonable degree of 
+    care) that it protects its own Confidential Information of a similar nature.
+  5.3. If either party is required by law to disclose the Confidential 
+    Information or the terms of this Agreement, the disclosing party will use 
+    reasonable commercial efforts to give prompt written notice of such 
+    requirement before such disclosure (to the extent not prohibited by law) and 
+    assist the non-disclosing party in obtaining an order protecting the 
+    Confidential Information from public disclosure.
+  5.4.Upon the termination or expiration of this Agreement, or upon earlier 
+    request, each party will deliver to the other all Confidential Information 
+    that they may have in their possession or control.
+  5.5.The obligations in this Section 5 are in addition to, and supplement, each 
+    party’s obligations of confidentiality under any nondisclosure or other 
+    agreement between the parties containing nondisclosure obligations.
+6. WARRANTY DISCLAIMER.
+  SAS AND ITS LICENSORS DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING 
+  WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A 
+  PARTICULAR PURPOSE, OR ARISING AS A RESULT OF CUSTOM OR USAGE IN THE TRADE OR 
+  BY COURSE OF DEALING. WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, SAS 
+  AND ITS LICENSORS DO NOT WARRANT OR REPRESENT THAT THE SAS IP WILL RESULT IN 
+  COMPLIANCE, FULFILLMENT OR CONFORMITY WITH THE LAWS, RULES, REGULATIONS, 
+  REQUIREMENTS OR GUIDELINES OF ANY GOVERNMENTAL AGENCY. SAS’ LICENSORS PROVIDE 
+  THEIR SOFTWARE “AS IS.” THE SAS IP AND ALL INTELLECTUAL PROPERTY MADE 
+  AVAILABLE BY SAS OR ITS LICENSORS UNDER OR IN CONNECTION WITH THIS AGREEMENT 
+  ARE PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND.
+7. SAS INDEMNIFICATION.
+  7.1. SAS will indemnify, defend and hold Customer harmless, at SAS’s expense, 
+    from and against any action brought or allegation made against Customer to 
+    the extent that it is based upon a claim that any SAS IP, as provided by SAS 
+    and used within the scope of this Agreement, infringes any copyright, trade 
+    secret, U.S. patent or other third party proprietary right, and will pay all 
+    costs, damages and reasonable attorneys' fees attributable to such claim 
+    that are finally awarded against Customer. SAS’s obligations hereunder are 
+    contingent on: i) Customer notifying SAS in writing promptly after Customer 
+    becomes aware of a claim or the possibility thereof; ii) Customer granting 
+    SAS sole control of the settlement, compromise, negotiation, and defense of 
+    the claim; and iii) Customer providing good faith cooperation and reasonably 
+    requested information for the defense of the claim.
+  7.2. The foregoing indemnity shall not apply to any claim that arises from: 
+    i) modifications to the SAS IP made by anyone other than SAS; ii) Customer’s 
+    use of any SAS IP in conjunction with any application, including but not 
+    limited to the Customer Application, or system where use with such 
+    application or system gave rise to the claim; iii) any use of the SAS IP 
+    with software or systems other than a Customer Application; iv) use of other 
+    than the most current, unaltered Updated IP if such claim would have been 
+    avoided by the use of such Updated IP; and (v) compliance by SAS with 
+    designs, plans or specifications furnished by or on behalf of Customer where 
+    such compliance gave rise to the infringement claim.
+  7.3. SAS shall not be liable for any settlement made by Customer, without 
+    SAS’s advance written approval, or for any award from any action in which 
+    SAS was not granted control of the defense. The obligations contained in 
+    this Section 7 will survive termination of this Agreement. This Section 
+    states SAS’ entire liability and Customer’s exclusive remedy for any claim 
+    of infringement of intellectual property of any kind.
+8. CUSTOMER INDEMNIFICATION.
+  Customer will indemnify and defend SAS against, and hold SAS harmless from, 
+  any and all liabilities, claims, costs, expenses or damages of any nature 
+  (including reasonable attorney fees and expenses of litigation) to the extent 
+  arising out of or relating to disputes or legal actions brought by an 
+  unrelated third party concerning the Customer Application. The obligations 
+  contained in the preceding sentence will survive termination of this 
+  Agreement. This Section does not apply to any cost or damage attributable to 
+  to a claim for which SAS has an obligation to indemnify Customer as set forth 
+  in Section 7.
+9. LIMITATION OF LIABILITY.
+  9.1. NEITHER CUSTOMER, SAS, NOR SAS’ LICENSORS ARE LIABLE FOR SPECIAL, 
+    INCIDENTAL, INDIRECT, CONSEQUENTIAL, PUNITIVE, OR RELIANCE DAMAGES (ARISING 
+    IN TORT, CONTRACT OR OTHERWISE), EVEN IF THEY HAVE BEEN INFORMED OF THE 
+    POSSIBILITY OF SUCH DAMAGES. NEITHER SAS NOR SAS’ LICENSORS ARE LIABLE FOR 
+    ANY CLAIM AGAINST CUSTOMER BY A THIRD PARTY RELATING TO USE OF THE SAS IP, 
+    EXCEPT AS SET FORTH IN SECTION 7. SAS’ LICENSORS ARE NOT LIABLE FOR DIRECT 
+    DAMAGES (ARISING IN TORT, CONTRACT OR OTHERWISE) AND DISCLAIM ANY LIABILITY 
+    CONNECTED WITH USE OF THE SAS IP. THE PARTIES MAKE THESE EXCLUSIONS IN 
+    CONSIDERATION OF THE FEES PAID AND LICENSES GRANTED UNDER THIS AGREEMENT.
+  9.2. THE TOTAL AMOUNT COMPANY MAY RECOVER FOR ALL CLAIMS RELATING TO THIS 
+    AGREEMENT IS LIMITED IN THE AGGREGATE TO ONE HUNDRED DOLLARS ($100.00).
+  9.3. To the extent that any applicable law limits or does not allow 
+    limitations of liability or exclusions for incidental or consequential 
+    damages, the provisions of this Section shall apply to the maximum extent 
+    permitted by applicable law.
+  9.4. This Section does not apply to the indemnification obligations in 
+    Sections 7 and 8, breach of the confidentiality obligatons in Section 5 or 
+    to either party’s violation of the other’s intellectual property rights.
+10. GOVERNING LAW; EXPORT AND IMPORT RESTRICTIONS.
+  10.1. Governing Law. Both parties agree to the application of the laws of the 
+    State of North Carolina to govern, interpret, and enforce all of Customer’s 
+    and SAS’ respective rights, duties, and obligations arising from, or 
+    relating in any manner to, the subject matter of this Agreement, without 
+    regard to conflict of law principles. The parties expressly agree to exclude 
+    from this Agreement the United Nations Convention on Contracts for the 
+    International Sale of Goods.
+  10.2. EXPORT/IMPORT RESTRICTIONS. SAS hereby notifies Customer that the SAS IP 
+    is of United States of America (“United States”) origin and United States 
+    export laws and regulations apply to the SAS IP. Both SAS and Customer agree 
+    to comply with these and other applicable export and import laws and 
+    regulations. Customer’s compliance obligations include ensuring (a) that 
+    there is no access, download, export, re-export, import, or distribution of 
+    the SAS IP or any underlying information, technology or data except in full 
+    compliance with all laws and regulations of the United States and in full 
+    compliance with any other applicable laws and regulations; and (b) 
+    compliance with restrictions of countries other than the United States 
+    related to exports and imports. United States export classification 
+    information for SAS software can be found at SAS’ Export Compliance website 
+    located at http://support.sas.com/adminservices/export.html. By accepting 
+    the Agreement and using and/or, if authorized, downloading the SAS IP, 
+    Customer agrees to the foregoing and represents and warrants that (i) 
+    neither Customer nor any User, as defined in the Software License Agreement, 
+    is a party to whom the United States prohibits access to the SAS IP; (ii) 
+    neither Customer nor any User is located in, under control of, or a national 
+    or resident of any country to which export of the SAS IP is restricted by 
+    laws of the United States or other applicable laws and regulations, 
+    including E:1 countries (currently Cuba, Iran, North Korea, Syria, and 
+    Sudan); (iii) neither Customer nor any User will use the SAS IP in 
+    activities directly or indirectly related to the proliferation of weapons of 
+    mass destruction; (iv) neither Customer nor any User will share access to 
+    the SAS IP with a party identified in this paragraph; and (v) neither 
+    Customer nor any User shall further export the SAS IP without a license or 
+    other authorization from the United States.
+11. GENERAL.
+  11.1. Severability. If a court of competent jurisdiction finds any part of 
+    this Agreement unenforceable, that part shall be excluded, but the remainder 
+    of this Agreement shall remain in full force and effect.
+  11.2. No Waiver. Failure to require compliance with a part of this Agreement 
+    is not a waiver of that part. Nothing in this Agreement waives any remedy 
+    SAS may have under this Agreement at law, in equity, or otherwise.
+  11.3. Non-assignment. Customer may not assign this Agreement or any of its 
+    rights or obligations hereunder whether voluntarily or involuntarily, and 
+    whether by means of merger, consolidation, sale of assets, dissolution, 
+    operation of law, or by any other manner, without SAS’ written permission, 
+    which permission will not be unreasonably withheld. Any purported assignment 
+    in violation of this Section 11.3 is void and constitutes a material breach 
+    of this Agreement.
+  11.4. Audit. Upon fifteen (15) business days’ notice to Customer, SAS will 
+    have the right to conduct an on- site audit during Customer’s normal 
+    business hours to verify compliance with the terms and conditions of this 
+    Agreement. Customer shall cooperate with SAS by: (a) making applicable 
+    records available; (b) providing copies of the records requested; and (c) 
+    directing all agents to cooperate. If the audit reveals that Customer owes 
+    additional license fees, Customer shall pay the amounts owed and SAS’ 
+    reasonable expenses in conducting the audit.
+  11.5. Injunctive Relief. Breach of SAS' or SAS’ Licensors’ intellectual 
+    property rights will lead to damages not adequately remedied by an award of 
+    money; therefore, SAS may protect those intellectual property rights through 
+    temporary restraining orders or injunctions, without the obligation of 
+    posting bond.
+  11.6. English Language. The parties acknowledge that they have agreed that 
+    this Agreement and all notices and documents relating hereto shall be drawn 
+    up in the English language and that nothing herein shall be construed 
+    against the drafter of this Agreement based solely on the choice of 
+    language.
+12. COMPLETE AGREEMENT; MODIFICATIONS. 
+  This Agreement is the parties' complete and exclusive statement relating to 
+  their subject matter. No modifications to this Agreement will be accepted. 
+  Additional or conflicting terms on current or future Customer or third party 
+  purchasing documents are expressly objected to and rejected. The individual 
+  accepting this Agreement by clicking “I agree” represents that he or she has 
+  authority to bind Customer to this Agreement.
+
+SAS and all other SAS Institute Inc. product or service names are registered 
+trademarks or trademarks of SAS Institute Inc. in the USA and other countries. 
+® indicates USA registration. Other brand and product names are trademarks of 
+their respective companies.
+LGL4446/07May19
