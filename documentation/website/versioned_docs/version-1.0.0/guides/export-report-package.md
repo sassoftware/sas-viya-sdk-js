@@ -1,6 +1,7 @@
 ---
-id: export-report-package
+id: version-1.0.0-export-report-package
 title: Export SAS Report Packages
+original_id: export-report-package
 ---
 
 The SAS Visual Analytics SDK can be used in two fundamentally different ways. In the most basic setup you are connecting directly to a SAS Viya deployment, delivering reports and data to your web page.  But it can also be used to display report content that has been exported from SAS Visual Analytics and hosted on your own web server. Exporting a report package enables you to use the SAS Visual Analytics SDK while completely disconnected from SAS Viya. The benefit is that your webpage traffic can scale independently from your SAS Viya deployment. This also enables you to skip any [SAS Viya configuration setup](guides/viya-setup.md) necessary for enabling cross-site access from the SAS Visual Analytics SDK.
