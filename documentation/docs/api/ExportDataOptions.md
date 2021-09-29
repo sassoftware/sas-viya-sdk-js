@@ -3,7 +3,7 @@ id: ExportDataOptions
 title: ExportDataOptions
 ---
 
-ExportDataOptions provides options for customizing the properties of exported report data. If no option is specified, then the default value is used.
+ExportDataOptions provides options for customizing the properties of the report data that you want to export. If no option is specified, then the default value is used.
 
 ## Options
 

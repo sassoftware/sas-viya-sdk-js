@@ -14,7 +14,7 @@ discarded.
 ## Methods
 
 ### exportData(format: string, options?: ExportDataOptions): Promise\<string>
-Exports a file containing the object's data, returning a URL to the file. 
+Exports a file that contains the object's data, and returns a URL to the file. 
 
 `format` defines the format of the data output file.
 Supported formats: 
