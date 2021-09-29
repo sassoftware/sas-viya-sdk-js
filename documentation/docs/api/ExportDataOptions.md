@@ -7,15 +7,13 @@ ExportDataOptions provides options for customizing the properties of exported re
 
 ## Options
 
-### `selectedColumns: { name: string; label: string }[]`
-Specifies which columns should be included in the file. `[]` returns all columns.
-
-default value: `[]`
+### `columns: string[]`
+Determines which data columns should be exported by specifying their labels.
 
 ### `startRow: number` 
 Determines which row the data should begin with.
 
-default value: `1`
+default value: `0`
 
 ### `endRow: number` 
 Determines which row the data should end with.
@@ -31,8 +29,3 @@ default value: `true`
 Specifies whether the data is detailed.
 
 default value: `false`
-
-### `exportType: "CSV" | "TSV" | "XLSX"` 
-Specifies the file type for the export.
-
-default value: `XLSX`
