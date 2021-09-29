@@ -89,3 +89,31 @@
 
 - SAS Viya 2021.1.1 support
 - Bug fixes
+
+## 0.18.0 (June 16, 2021)
+
+- SAS Viya 2021.1.2 support
+- Add getObjectHandle API
+- Add refreshData API (ReportHandle and ObjectHandle)
+- Bug fixes
+
+## 0.19.0 (July 21, 2021)
+
+- SAS Viya 2021.1.3 support
+- Add setLoadingTheme API
+- Bug fixes
+
+## 0.20.0 (August 18, 2021)
+
+- SAS Viya 2021.1.4 support
+- Add reloadReport API (ReportHandle)
+- Add support for object maximize and detailed data
+- Bug fixes
+
+## 1.0.0 (September 15, 2021)
+
+- SAS Viya 2021.1.5 support
+- SAS Viya 2021.2 LTS support
+- Add enablePdfAccessibleTags to ExportPDFOptions
+- Add packageUri API and support exported SAS Report Packages
+- Bug fixes

@@ -1,6 +1,7 @@
 ---
-id: SASReportPageElement
+id: version-1.0.0-SASReportPageElement
 title: SASReportPageElement
+original_id: SASReportPageElement
 ---
 
 `SASReportPageElement` is a custom HTML element that renders a report page. This element extends <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">`HTMLElement`</a>.

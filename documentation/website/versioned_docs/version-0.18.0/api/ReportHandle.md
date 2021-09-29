@@ -1,6 +1,7 @@
 ---
-id: ReportHandle
+id: version-0.18.0-ReportHandle
 title: ReportHandle
+original_id: ReportHandle
 ---
 
 A `ReportHandle` is used to control the state of an open report. A report's
@@ -142,7 +143,3 @@ sasReport.getReportHandle().then((reportHandle) => {
 ### refreshData(): void
 
 Refreshes the data for all of the objects in the report.
-
-### reloadReport(): void
-
-Reloads the report. This updates all report content and data, which resets all filters and parameters to their default values.

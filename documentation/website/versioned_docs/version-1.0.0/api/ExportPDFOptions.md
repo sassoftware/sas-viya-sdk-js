@@ -1,6 +1,7 @@
 ---
-id: ExportPDFOptions
+id: version-1.0.0-ExportPDFOptions
 title: ExportPDFOptions
+original_id: ExportPDFOptions
 ---
 
 ExportPDFOptions provides options for customizing the properties of an exported report. If no option is specified, then the default value is used.

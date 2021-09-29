@@ -1,6 +1,7 @@
 ---
-id: ObjectHandle
+id: version-0.18.0-ObjectHandle
 title: ObjectHandle
+original_id: ObjectHandle
 ---
 
 An `ObjectHandle` is used to perform actions on a single object in an open

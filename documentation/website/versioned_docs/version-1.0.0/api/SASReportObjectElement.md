@@ -1,21 +1,23 @@
 ---
-id: SASReportPageElement
-title: SASReportPageElement
+id: version-1.0.0-SASReportObjectElement
+title: SASReportObjectElement
+original_id: SASReportObjectElement
 ---
 
-`SASReportPageElement` is a custom HTML element that renders a report page. This element extends <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">`HTMLElement`</a>.
+`SASReportObjectElement` is a custom HTML element that renders a report object. This could be a single object or a
+container of multiple objects. This element extends <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">`HTMLElement`</a>.
 
-To find the correct values for `url`, `reportUri`, and `pageName`, see [the Getting Started page](getting-started.md#create-a-custom-html-tag).
+To find the correct values for `url`, `reportUri`, and `objectName`, see [the Getting Started page](getting-started.md#create-a-custom-html-tag).
 
 ## Custom Element Tag
 
 ```html
-<sas-report-page
+<sas-report-object
   authenticationType="guest"
   url="http://my-viya-server.com"
   reportUri="/reports/reports/c3c6befb-3981-4c9e-b011-7dc11dec5e37"
-  pageName="vi20"
-></sas-report-page>
+  objectName="ve27"
+></sas-report-object>
 ```
 
 ## Attributes
@@ -44,13 +46,9 @@ Specify the base location of the SAS report package that was exported from SAS V
 
 See [Export Report Package](guides/export-report-package.md)
 
-### `pageName: string`
+### `objectName: string`
 
-Specify the name of the report page that you want to display. Either `pageName` or `pageIndex` can be used, but not both.
-
-### `pageIndex: number`
-
-Specify the index of the report page that you want to display. `0` is the first page. Either `pageName` or `pageIndex` can be used, but not both.
+Specify the name of the object from the report to display.
 
 ## Properties
 
@@ -66,12 +64,12 @@ Get a [ReportHandle](ReportHandle.md) for controlling the state of the
 current report.
 
 If called before the element is added to the DOM, the promise will resolve
-after the page begins to load.
+after the object begins to load.
 
-A [ReportHandle](ReportHandle.md) are invalidated when attributes on the
-`SASReportPageElement` are changed and when the element is removed from the
+The [ReportHandle](ReportHandle.md) is invalidated when attributes on the
+`SASReportObjectElement` are changed and when the element is removed from the
 DOM. To obtain another [ReportHandle](ReportHandle.md), discard the previous
 result and call `getReportHandle` again.
 
-[ReportHandles](ReportHandle.md) from `SASReportPageElements` are not shared
-with other elements.
+[ReportHandles](ReportHandle.md) from `SASReportObjectElement` are shared
+between objects from the same report.

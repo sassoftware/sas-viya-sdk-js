@@ -1,6 +1,7 @@
 ---
-id: ReportHandle
+id: version-0.20.0-ReportHandle
 title: ReportHandle
+original_id: ReportHandle
 ---
 
 A `ReportHandle` is used to control the state of an open report. A report's

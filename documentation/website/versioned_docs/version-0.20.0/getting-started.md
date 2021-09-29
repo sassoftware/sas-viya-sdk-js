@@ -1,6 +1,7 @@
 ---
-id: getting-started
+id: version-0.20.0-getting-started
 title: Getting started
+original_id: getting-started
 ---
 
 The SAS Visual Analytics SDK enables you to use the power of SAS Visual Analytics in your own websites and HTML applications.
@@ -31,16 +32,24 @@ The library can then be loaded out of the deployed assets folder using a `script
 
 Accessing the `va-report-components` library from a CDN is easy. It does not require installation or
 hosting of the library code and assets. There are several public options for accessing NPM content through a CDN, such
-as <a target="_blank" href="https://unpkg.com/">UNPKG</a> and <a target="_blank" href="https://www.jsdelivr.com/">jsDelivr</a>. Here is an example of loading the 1.0.0 version of `va-report-components` from UNPKG
+as <a target="_blank" href="https://unpkg.com/">UNPKG</a> and <a target="_blank" href="https://www.jsdelivr.com/">jsDelivr</a>. Here is an example of loading the 0.20.0 version of `va-report-components` from UNPKG
 using an HTML `script` tag. When used in production, the version should be pinned to the full `major.minor.patch` semantic version.
 
 ```html
-<script async src="https://unpkg.com/@sassoftware/va-report-components@1.0.0/dist/umd/va-report-components.js"></script>
+<script async src="https://unpkg.com/@sassoftware/va-report-components@0.20.0/dist/umd/va-report-components.js"></script>
 ```
 
 ## SAS Viya setup
 
-The SAS Visual Analytics SDK requires either connecting directly to SAS Viya or exporting a SAS Report Package.  Server setup requirements for connecting to SAS Viya are covered in the [SAS Viya Setup Guide](guides/viya-setup.md).
+The SAS Visual Analytics SDK requires connecting to SAS Viya server.  Server setup requirements are covered in the [SAS Viya Setup Guide](guides/viya-setup.md).
+
+## Include a custom elements polyfill
+
+A <a target="_blank" href="https://www.npmjs.com/package/@webcomponents/custom-elements">custom elements polyfill</a> is required for Microsoft Edge support. The following script tag should be added before the `va-report-components` script tag.
+
+```html
+<script src="https://unpkg.com/@webcomponents/custom-elements"></script>
+```
 
 ## Create a custom HTML tag
 
