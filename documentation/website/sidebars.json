@@ -10,6 +10,7 @@
       "api/ReportHandle",
       "api/ObjectHandle",
       "api/ExportPDFOptions",
+      "api/ExportDataOptions",
       "api/MenuItemProvider",
       "api/connectToServer",
       "api/registerDataDrivenContent",
