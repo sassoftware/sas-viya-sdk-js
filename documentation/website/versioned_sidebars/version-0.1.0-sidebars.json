@@ -3,16 +3,11 @@
     "Introduction": [
       "version-0.1.0-getting-started"
     ],
-    "Guides": [
-      "version-0.1.0-guides/data-driven-content"
-    ],
     "API Reference": [
       "version-0.1.0-api-reference",
-      "version-0.1.0-api/SASReportElement",
-      "version-0.1.0-api/SASReportObjectElement",
-      "version-0.1.0-api/connectToServer",
-      "version-0.1.0-api/registerDataDrivenContent",
-      "version-0.1.0-api/DataDrivenContentHandle"
+      "version-0.1.0-api/ContentAreaElement",
+      "version-0.1.0-api/Item",
+      "version-0.1.0-api/ItemIdentifier"
     ],
     "Resources": [
       "version-0.1.0-faq"

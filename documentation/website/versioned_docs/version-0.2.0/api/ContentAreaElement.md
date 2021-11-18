@@ -1,6 +1,7 @@
 ---
-id: ContentAreaElement
+id: version-0.2.0-ContentAreaElement
 title: ContentAreaElement
+original_id: ContentAreaElement
 ---
 
 `ContentAreaElement` is a custom HTML element that renders an entire report. This element extends <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">`HTMLElement`</a>.
@@ -10,8 +11,6 @@ title: ContentAreaElement
 ```html
 <sas-content-area
   url="http://my-viya-server.com"
-  initial-selection-index="0"
-  selection-mode="single"
 ></sas-content-area>
 ```
 

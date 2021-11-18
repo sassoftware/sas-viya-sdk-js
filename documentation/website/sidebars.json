@@ -1,18 +1,11 @@
 {
   "docs": {
     "Introduction": ["getting-started"],
-    "Guides": ["guides/data-driven-content"],
     "API Reference": [
       "api-reference",
-      "api/SASReportElement",
-      "api/SASReportPageElement",
-      "api/SASReportObjectElement",
-      "api/ReportHandle",
-      "api/ExportPDFOptions",
-      "api/MenuItemProvider",
-      "api/connectToServer",
-      "api/registerDataDrivenContent",
-      "api/DataDrivenContentHandle"
+      "api/ContentAreaElement",
+      "api/Item",
+      "api/ItemIdentifier"
     ],
     "Resources": ["faq"]
   }

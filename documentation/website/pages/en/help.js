@@ -44,7 +44,7 @@ function Help(props) {
           </header>
           <p>
             Get your questions answered by a dedicated support team by sending an email to{' '}
-            <a href="mailto:VisualAnalyticsSDKsupport@sas.com">VisualAnalyticsSDKsupport@sas.com</a>
+            <a href="mailto:ContentSDKsupport@sas.com">ContentSDKsupport@sas.com</a>
           </p>
           <GridBlock contents={supportLinks} layout="threeColumn" />
         </div>

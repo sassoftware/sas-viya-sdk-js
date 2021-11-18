@@ -38,7 +38,6 @@ class Footer extends React.Component {
           <div>
             <h5>Docs</h5>
             <a href={this.docUrl('getting-started')}>Getting Started</a>
-            <a href={this.docUrl('guides/data-driven-content')}>Guides</a>
             <a href={this.docUrl('api-reference')}>API Reference</a>
           </div>
           <div>
@@ -53,7 +52,7 @@ class Footer extends React.Component {
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub"
             >
-              visual-analytics-sdk
+              content-sdk
             </a>
           </div>
         </section>
