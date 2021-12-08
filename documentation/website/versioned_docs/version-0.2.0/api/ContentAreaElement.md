@@ -11,6 +11,8 @@ original_id: ContentAreaElement
 ```html
 <sas-content-area
   url="http://my-viya-server.com"
+  initial-selection-index="0"
+  selection-mode="single"
 ></sas-content-area>
 ```
 

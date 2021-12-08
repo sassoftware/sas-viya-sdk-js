@@ -12,7 +12,7 @@ const baseUrl = '/sdk/content/';
 
 const siteConfig = {
   title: 'SAS® Content SDK', // Title for your website.
-  tagline: 'Insights where you need them',
+  tagline: 'Your SAS® content where you need it',
   url: 'https://developer.sas.com', // Your website URL
   baseUrl: baseUrl, // Base URL for your project
 

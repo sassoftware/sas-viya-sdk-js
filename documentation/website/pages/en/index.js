@@ -83,21 +83,10 @@ class Index extends React.Component {
             {[
               {
                 content:
-                  'The insights you discover with SAS Visual Analytics can now be embedded in your websites and web apps using the new SAS Visual Analytics SDK. You can embed your whole report or individual objects, and give your consumers a completely unique, innovative and customized experience.',
-                image: `${baseUrl}img/sdk-monitor-2.png`,
-                imageAlign: 'left',
-                title: 'SAS® insights embedded in your web pages and apps'
-              }
-            ]}
-          </Block>
-          <Block background="white" align="left">
-            {[
-              {
-                content:
-                  'The SAS Visual Analytics SDK lets you combine insights from across different reports in one place. Users can even drive interactions and filters on SAS visualizations using interface elements in your web page or web app.',
+                  'The content you create in SAS Viya can now be accessed in your websites and web apps using the new SAS Content SDK. Choose specific content items, or show the contents of an entire folder. Filter content by type and control what happens when content is selected or opened.',
                 image: `${baseUrl}img/sdk-monitor.png`,
-                imageAlign: 'right',
-                title: 'Ability to combine insights across reports'
+                imageAlign: 'left',
+                title: 'Your SAS® content under your control'
               }
             ]}
           </Block>

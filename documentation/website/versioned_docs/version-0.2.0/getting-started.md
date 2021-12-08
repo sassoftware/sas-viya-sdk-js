@@ -1,6 +1,7 @@
 ---
-id: getting-started
+id: version-0.2.0-getting-started
 title: Getting started
+original_id: getting-started
 ---
 
 The SAS Content SDK enables you to use the power of SAS Viya in your own websites and HTML applications.
