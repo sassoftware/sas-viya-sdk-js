@@ -8,3 +8,7 @@
  - `selection-mode` attribute to choose between single and multiple selection.
  - `initial-selection-index` attribute to set a default initial selection when content details are not known.
  - `setSelectedIdentifiers` method to allow for updating the selection programmatically.
+
+ ## 0.3.0 (December 15, 2021)
+
+ - Internal dependency update
