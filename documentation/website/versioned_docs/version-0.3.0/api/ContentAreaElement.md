@@ -1,6 +1,7 @@
 ---
-id: ContentAreaElement
+id: version-0.3.0-ContentAreaElement
 title: ContentAreaElement
+original_id: ContentAreaElement
 ---
 
 `ContentAreaElement` is a custom HTML element that displays the contents of a SAS Viya folder as tiles. This element extends <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">`HTMLElement`</a>.

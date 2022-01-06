@@ -8,9 +8,10 @@
 const React = require('react');
 
 const CompLibrary = require('../../core/CompLibrary.js');
+const clsx = require('clsx');
 
 const Container = CompLibrary.Container;
-const GridBlock = CompLibrary.GridBlock;
+const MarkdownBlock = CompLibrary.MarkdownBlock;
 
 class HomeSplash extends React.Component {
   render() {
@@ -64,6 +65,87 @@ class HomeSplash extends React.Component {
   }
 }
 
+function GridBlockWithCaption(props) {
+  function renderBlock(origBlock, i) {
+    const blockDefaults = {
+      imageAlign: 'left',
+    };
+
+    const block = Object.assign({}, blockDefaults, origBlock);
+
+    const blockClasses = clsx('blockElement', props.className, {
+      alignCenter: props.align === 'center',
+      alignRight: props.align === 'right',
+      fourByGridBlock: props.layout === 'fourColumn',
+      imageAlignSide:
+        block.image &&
+        (block.imageAlign === 'left' || block.imageAlign === 'right'),
+      imageAlignTop: block.image && block.imageAlign === 'top',
+      imageAlignRight: block.image && block.imageAlign === 'right',
+      imageAlignBottom: block.image && block.imageAlign === 'bottom',
+      imageAlignLeft: block.image && block.imageAlign === 'left',
+      threeByGridBlock: props.layout === 'threeColumn',
+      twoByGridBlock: props.layout === 'twoColumn',
+    });
+
+    const topLeftImage =
+      (block.imageAlign === 'top' || block.imageAlign === 'left') &&
+      renderBlockImage(block.image, block.imageLink, block.imageAlt, block.caption);
+
+    const bottomRightImage =
+      (block.imageAlign === 'bottom' || block.imageAlign === 'right') &&
+      renderBlockImage(block.image, block.imageLink, block.imageAlt, block.caption);
+
+    return (
+      <div className={blockClasses} key={i}>
+        {topLeftImage}
+        <div className="blockContent">
+          {renderBlockTitle(block.title)}
+          <MarkdownBlock>{block.content}</MarkdownBlock>
+        </div>
+        {bottomRightImage}
+      </div>
+    );
+  }
+
+  function renderBlockImage(image, imageLink, imageAlt, caption) {
+    if (!image) {
+      return null;
+    }
+
+    return (
+      <div className="blockImage" style={{textAlign: 'center'}}>
+        {imageLink ? (
+          <a href={imageLink}>
+            <img src={image} alt={imageAlt} />
+          </a>
+        ) : (
+          <img src={image} alt={imageAlt} />
+        )}
+        {caption? (
+          <span style={{
+            fontSize: 'small',
+          }}>{caption}</span>
+        ) : null}
+      </div>
+    );
+  }
+
+  function renderBlockTitle(title) {
+    if (!title) {
+      return null;
+    }
+
+    return (
+      <h2>
+        <MarkdownBlock>{title}</MarkdownBlock>
+      </h2>
+    );
+  }
+
+  return <div className="gridBlockV1">{props.contents.map(renderBlock)}</div>;
+}
+
 class Index extends React.Component {
   render() {
     const { config: siteConfig, language = '' } = this.props;
@@ -71,7 +153,7 @@ class Index extends React.Component {
 
     const Block = props => (
       <Container padding={['bottom', 'top']} id={props.id} background={props.background}>
-        <GridBlock align={props.align ? props.align : 'center'} contents={props.children} layout={props.layout} />
+        <GridBlockWithCaption align={props.align ? props.align : 'center'} contents={props.children} layout={props.layout} />
       </Container>
     );
 
@@ -86,7 +168,8 @@ class Index extends React.Component {
                   'The content you create in SAS Viya can now be accessed in your websites and web apps using the new SAS Content SDK. Choose specific content items, or show the contents of an entire folder. Filter content by type and control what happens when content is selected or opened.',
                 image: `${baseUrl}img/sdk-monitor.png`,
                 imageAlign: 'left',
-                title: 'Your SAS® content under your control'
+                title: 'Your SAS® content under your control',
+                caption: 'This example uses SAS Content SDK to display content tiles and SAS Visual Analytics SDK to display a report.'
               }
             ]}
           </Block>

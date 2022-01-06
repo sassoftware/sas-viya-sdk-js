@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "docusaurus": "^1.14.7"
+  },
+  "dependencies": {
+    "clsx": "^1.1.1"
   }
 }
