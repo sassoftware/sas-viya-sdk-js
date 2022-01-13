@@ -7,7 +7,7 @@ library.
 
 ## Prerequisites
 
-Access to a deployment of SAS Viya 4.0.1 (or later) is necessary in order to use the SDK. For more information about server set up, see <a target="_blank" href="https://developer.sas.com/sdk/va/docs/getting-started#sas-viya-setup">SAS Viya setup</a>.
+Access to a deployment of SAS Viya 4.0.1 (or later) is necessary in order to use the SDK. For more information about server set up, see <a target="_blank" href="https://developer.sas.com/sdk/content/docs/getting-started#sas-viya-setup">SAS Viya setup</a>.
 
 ## Installation
 
