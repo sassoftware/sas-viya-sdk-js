@@ -21,3 +21,5 @@ Specify what type of content item this is. `persistentLocation` refers to a set 
 - `trash`: the Recycle Bin folder in SAS Viya
 
 For `type: 'folderUri'`, a SAS Viya folder uri of the form: `'/folder/folders/789d13d3-789d-4fa3-9fea-123e321f1ea1'`. You can find the URI for a Folder in SAS Drive in the Information Pane. Select the Folder, scroll down in the Information Pane to the More -> URI section and copy the URI.
+
+![Finding folder and item URIs](assets/findUri.png)

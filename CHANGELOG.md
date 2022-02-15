@@ -12,3 +12,11 @@
  ## 0.3.0 (December 15, 2021)
 
  - Internal dependency update
+
+ ## 0.4.0 (February 15, 2022)
+
+ - Added ContentTreeElement
+ - Added ContentBreadcrumbElement
+ - Added ContentGroupElement
+ - BREAKING CHANGE: Removed `folderIdentifier` and `itemIdentifiers` properties from ContentAreaElement. The `initialNavigationValue` property of ContentGroupElement is recommended instead.
+ - Added the `authentication-type` attribute to components to specify whether to use credentials or guest authentication.

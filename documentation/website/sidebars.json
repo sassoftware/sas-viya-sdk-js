@@ -5,8 +5,13 @@
     "API Reference": [
       "api-reference",
       "api/ContentAreaElement",
+      "api/ContentBreadcrumbElement",
+      "api/ContentGroupElement",
+      "api/ContentTreeElement",
       "api/Item",
-      "api/ItemIdentifier"
+      "api/ItemIdentifier",
+      "api/LocationIdentifier",
+      "api/LogonWrapperProps"
     ],
     "Resources": ["faq"]
   }

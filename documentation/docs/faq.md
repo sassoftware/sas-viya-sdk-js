@@ -23,7 +23,7 @@ The SAS Content SDK is released under a <a target="_blank" href="https://github.
 
 ## How is authentication handled by the SAS Content SDK?
 
-The SAS Content SDK can either connect as guest or as a credentialed user, controlled by the `authenticationType` attribute on [ContentAreaElement](api/ContentAreaElement.md#authenticationtype-string).
+The SAS Content SDK can either connect as guest or as a credentialed user, controlled by the `authenticationType` attribute on most components. See [authenticationType](api/LogonWrapperProps.md#authenticationType).
 
 ### Guest
 Connecting as guest requires that the SAS Viya server be setup to [allow for guest access](getting-started.md#allow-guest-access). The authentication happens automatically, without any intervention by the user.

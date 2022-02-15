@@ -17,24 +17,24 @@ The <a target="_blank" href="https://www.npmjs.com/package/@sassoftware/content-
 npm install @sassoftware/content-sdk
 
 # Copy the contents of the package to an asset folder for deployment
-cp -r ./node_modules/@sassoftware/content-sdk ./sdk-assets
+cp -r ./node_modules/@sassoftware/content-sdk ./sdk-assets/content
 ```
 
 The library can then be loaded out of the deployed assets folder using a `script` tag.
 
 ```html
-<script async src="./sdk-assets/dist/umd/content-sdk-components.js"></script>
+<script async src="./sdk-assets/content/dist/umd/content-sdk-components.js"></script>
 ```
 
 ### CDN (Content Delivery Network)
 
 Accessing the `content-sdk` library from a CDN is easy. It does not require installation or
 hosting of the library code and assets. There are several public options for accessing NPM content through a CDN, such
-as <a target="_blank" href="https://unpkg.com/">UNPKG</a> and <a target="_blank" href="https://www.jsdelivr.com/">jsDelivr</a>. Here is an example of loading the 0.1.0 version of `content-sdk` from UNPKG
+as <a target="_blank" href="https://unpkg.com/">UNPKG</a> and <a target="_blank" href="https://www.jsdelivr.com/package/npm/@sassoftware/content-sdk">jsDelivr</a>. Here is an example of loading the 0.1.0 version of `content-sdk` from UNPKG
 using an HTML `script` tag. When used in production, the version should be pinned to the full `major.minor.patch` semantic version.
 
 ```html
-<script async src="https://unpkg.com/@sassoftware/content-sdk@0.1.0/dist/umd/content-sdk-components.js"></script>
+<script async src="https://unpkg.com/@sassoftware/content-sdk/dist/umd/content-sdk-components.js"></script>
 ```
 
 ## SAS Viya setup
@@ -49,7 +49,7 @@ needed in order to connect to SAS Viya from the domain that is hosting your HTML
 
 ### Cross-Site Request Forgery
 
-SAS Viya servers protect against Cross-Site Request Forgery (CSRF) by blocking requests where the HTTP Referer Header does not match the URI of the requested resource or a URI whitelist. The domain of the site using the SAS Content SDK must be whitelisted in the CSRF configuration.  See <a target="_blank" href="https://documentation.sas.com/?cdcId=calcdc&cdcVersion=3.5&docsetId=calconfig&docsetTarget=n08030sasconfiguration0admin.htm#n0nf0wwa3p7mjhn11926x4k9gl72">SAS Help Center</a> for more information.
+SAS Viya servers protect against Cross-Site Request Forgery (CSRF) by blocking requests where the HTTP Referer Header does not match the URI of the requested resource or a URI allowlist. The domain of the site using the SAS Content SDK must be allowlisted in the CSRF configuration.  See <a target="_blank" href="https://documentation.sas.com/?cdcId=calcdc&cdcVersion=3.5&docsetId=calconfig&docsetTarget=n08030sasconfiguration0admin.htm#n0nf0wwa3p7mjhn11926x4k9gl72">SAS Help Center</a> for more information.
 
 ### Cross-Site Cookies
 
