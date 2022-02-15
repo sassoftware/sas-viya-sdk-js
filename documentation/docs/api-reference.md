@@ -10,3 +10,6 @@ Analytics SDK.
 ## Top-Level Exports
 
 - [`ContentAreaElement`](api/ContentAreaElement.md)
+- [`ContentBreadcrumbElement`](api/ContentBreadcrumbElement.md)
+- [`ContentGroupElement`](api/ContentGroupElement.md)
+- [`ContentTreeElement`](api/ContentTreeElement.md)
