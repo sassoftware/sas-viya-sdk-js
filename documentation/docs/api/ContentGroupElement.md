@@ -37,7 +37,7 @@ The initial set of root locations to be used by hierarchical components such as 
 
 ### `initialSelectionValue: ItemIdentifier[]`
 
-An array of [ItemIdentifiers](ItemIdentifier.md) which will be initially selected in the components in this group. Any items in the selection that are not present in the displayed items of a component, such as the [ContentAreaElement](ContentAreaElement.md), will be ignored.
+An array of [ItemIdentifiers](ItemIdentifier.md) which will be initially selected in the components in this group. If you specify any items that are not displayed in one of the components in the group, then those items are ignored.
 
 ### `initialFilterConfig: { queryModeFilter: string; }`
 
@@ -45,4 +45,4 @@ Specify options for filtering the content displayed in the content group.
 
 ### `initialFilterConfig.queryModeFilter: string`
 
-A SAS REST filter that is forwarded to underlying service requests. For example, to filter content to only show reports, use the following vaue: `eq(contentType,'report')`.
+A SAS REST filter that is forwarded to underlying service requests. For example, to filter content to only show reports, use the following vaue: `eq(contentType,'report')`. Any type that can be parented to a folder is supported.
