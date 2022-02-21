@@ -13,7 +13,7 @@
 
  - Internal dependency update
 
- ## 0.4.0 (February 15, 2022)
+ ## 0.4.0 (February 21, 2022)
 
  - Added ContentTreeElement
  - Added ContentBreadcrumbElement
