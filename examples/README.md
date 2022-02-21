@@ -6,10 +6,7 @@
 
 ## Examples
 
-- [ContentAreaElement](./ContentAreaElement.html) (<a target="_blank" href="https://developer.sas.com/sdk/content/docs/api/ContentAreaElement">docs</a>)
+- [ContentSDKWithReport](./ContentSDKWithReport.html) (<a target="_blank" href="https://developer.sas.com/sdk/content/docs/api-reference/">docs</a>)
 
-Uses the `<sas-content-area>` custom element to display a set of tiles representing content items.
 
-- [ContentAreaElementWithReport](./ContentAreaElementWithReport.html) (<a target="_blank" href="https://developer.sas.com/sdk/content/docs/api/ContentAreaElement">docs</a>)
-
-Uses the `<sas-content-area>` and `<sas-report>` (from the <a target="_blank" href="https://developer.sas.com/sdk/va/docs/getting-started">VA SDK</a>) to display a set of tiles representing reports. Selecting a report tile will update the report being displayed below.
+Uses the `<sas-content-tree>`, `<sas-content-breadcrumb>`, and `<sas-content-area>`, along with a `<sas-report>` (from the <a target="_blank" href="https://developer.sas.com/sdk/va/docs/getting-started">VA SDK</a>) to display a set of tiles representing reports. Selecting a report tile will update the report being displayed below.
