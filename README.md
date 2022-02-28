@@ -31,7 +31,7 @@ The library can then be loaded out of the deployed assets folder using a `script
 
 Accessing the `content-sdk` library from a CDN is easy. It does not require installation or
 hosting of the library code and assets. There are several public options for accessing NPM content through a CDN, such
-as <a target="_blank" href="https://unpkg.com/">UNPKG</a> and <a target="_blank" href="https://www.jsdelivr.com/package/npm/@sassoftware/content-sdk">jsDelivr</a>. Here is an example of loading the 0.1.0 version of `content-sdk` from UNPKG
+as <a target="_blank" href="https://unpkg.com/">UNPKG</a> and <a target="_blank" href="https://www.jsdelivr.com/package/npm/@sassoftware/content-sdk">jsDelivr</a>. Here is an example of loading the latest version of `content-sdk` from UNPKG
 using an HTML `script` tag. When used in production, the version should be pinned to the full `major.minor.patch` semantic version.
 
 ```html

@@ -32,73 +32,75 @@
     </sas-content-group>
   </body>
   <script>
-    // Get the required elements from the HTML
-    const cg = document.getElementById('cg');
-    const ca = document.getElementById('ca');
-    const report = document.getElementById('report');
-    const reportName = document.getElementById('reportName');
+    window.addEventListener('contentSdkComponents.loaded', () => {
+      // Get the required elements from the HTML
+      const cg = document.getElementById('cg');
+      const ca = document.getElementById('ca');
+      const report = document.getElementById('report');
+      const reportName = document.getElementById('reportName');
 
-    const myFolderIdentifier = {
-      type: "persistentLocation",
-      value: "myFolder"
-    };
-    const favoritesIdentifier = {
-      type: "persistentLocation",
-      value: "favorites",
-      preventExpansion: true
-    };
-    const sasContentIdentifier = {
-      type: "persistentLocation",
-      value: "root"
-    };
-    const recycleBinIdentifier = {
-      type: "persistentLocation",
-      value: "trash",
-      preventExpansion: true
-    };
+      const myFolderIdentifier = {
+        type: "persistentLocation",
+        value: "myFolder"
+      };
+      const favoritesIdentifier = {
+        type: "persistentLocation",
+        value: "favorites",
+        preventExpansion: true
+      };
+      const sasContentIdentifier = {
+        type: "persistentLocation",
+        value: "root"
+      };
+      const recycleBinIdentifier = {
+        type: "persistentLocation",
+        value: "trash",
+        preventExpansion: true
+      };
 
-    // Set the initialNavigationValue on the sas-content-group
-    // This will sync all contained components to an initial state, and keep them in sync automatically based on user interaction
-    cg.initialNavigationValue = {
-      location: myFolderIdentifier,
-      locationContextPath: [myFolderIdentifier],
-      locations: [myFolderIdentifier, favoritesIdentifier, sasContentIdentifier, recycleBinIdentifier]
-    };
+      // Set the initialNavigationValue on the sas-content-group
+      // This will sync all contained components to an initial state, and keep them in sync automatically based on user interaction
+      cg.initialNavigationValue = {
+        location: myFolderIdentifier,
+        locationContextPath: [myFolderIdentifier],
+        locations: [myFolderIdentifier, favoritesIdentifier, sasContentIdentifier, recycleBinIdentifier]
+      };
 
-    // Use the initialFilterValue to only show certain content types in the group
-    cg.initialFilterValue = {
-      // Show only reports
-      queryModeFilter: "or(eq(contentType,'report'),eq(contentType,'folder'))"
-      // Show only folders
-      // queryModeFilter: "eq(contentType, 'folder')"
-      // Show reports and folders
-      // queryModeFilter: "in(contentType, 'report', 'folder')"
-    };
+      // Use the initialFilterValue to only show certain content types in the group
+      cg.initialFilterValue = {
+        // Show only reports
+        queryModeFilter: "or(eq(contentType,'report'),eq(contentType,'folder'))"
+        // Show only folders
+        // queryModeFilter: "eq(contentType, 'folder')"
+        // Show reports and folders
+        // queryModeFilter: "in(contentType, 'report', 'folder')"
+      };
 
-    // setSelectedIdentifiers can be used for programmatic selection
-    // ca.setSelectedIdentifiers([
-    //   {
-    //     type: "driveItemId",
-    //     value: "<item 1 uri>"
-    //   },
-    //   {
-    //     type: "driveItemId",
-    //     value: "<item 2 uri>"
-    //   }
-    // ]);
+      // setSelectedIdentifiers can be used for programmatic selection
+      // ca.setSelectedIdentifiers([
+      //   {
+      //     type: "driveItemId",
+      //     value: "<item 1 uri>"
+      //   },
+      //   {
+      //     type: "driveItemId",
+      //     value: "<item 2 uri>"
+      //   }
+      // ]);
 
-    // The onSelect handler can be used to respond to user selection. In this case it will update the embedded report.
-    ca.onSelect = (value) => {
-      let reportUri = '';
-      if (value && value.length > 0 && value[0]?.resource?.type?.sasType === 'report') {
-        // If tiles are selected, get new reportUri and report name from the selected item
-        reportName.innerText = value[0].name;
-        reportUri = value[0].resource.id;
-      } else {
-        reportName.innerText = 'No report selected'
-      }
+      // The onSelect handler can be used to respond to user selection. In this case it will update the embedded report.
+      ca.onSelect = (value) => {
+        let reportUri = '';
+        if (value && value.length > 0 && value[0]?.resource?.type?.sasType === 'report') {
+          // If tiles are selected, get new reportUri and report name from the selected item
+          reportName.innerText = value[0].name;
+          reportUri = value[0].resource.id;
+        } else {
+          reportName.innerText = 'No report selected'
+        }
 
-      report.reportUri = reportUri;
-    };
+        report.reportUri = reportUri;
+      };
+    });
   </script>
 </html>
