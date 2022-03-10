@@ -3,7 +3,7 @@ id: ContentAreaElement
 title: ContentAreaElement
 ---
 
-`ContentAreaElement` is a custom HTML element that displays the contents of a SAS Viya folder as either a tile or table view. By default it includes navigation breadcrumbs along with sorting and view switching controls. This element extends <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">`HTMLElement`</a>.
+`ContentAreaElement` is a custom HTML element that displays the contents of a SAS Viya folder as either a tile or a table view. By default, it includes navigation breadcrumbs along with sorting and view-switching controls. This element extends <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">`HTMLElement`</a>.
 
 ## Custom Element Tag
 
