@@ -20,3 +20,7 @@
  - Added ContentGroupElement
  - BREAKING CHANGE: Removed `folderIdentifier` and `itemIdentifiers` properties from ContentAreaElement. The `initialNavigationValue` property of ContentGroupElement is recommended instead.
  - Added the `authentication-type` attribute to components to specify whether to use credentials or guest authentication.
+
+ ## 0.5.0 (March 17, 2022)
+
+ - Added table view and controls to ContentAreaElement
