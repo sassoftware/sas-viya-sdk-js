@@ -22,7 +22,7 @@ npm install @sassoftware/sas-auth-browser
 
 A simple example that uses sas-auth-browser in the [examples](./examples) directory.
 
-Additionally, before a rest api is made to the viya server, you should first check to see if the cookie session is still valid.
+Additionally, before a rest api call is made to the viya server, you should first check to see if the cookie session is still valid.
 
 ```ts
 const sasAuthInstance = sasAuthBrowser.createCookieAuthenticationCredentialInstance({
