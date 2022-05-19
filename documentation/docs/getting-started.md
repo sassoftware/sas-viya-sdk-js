@@ -29,13 +29,13 @@ The library can then be loaded out of the deployed assets folder using a `script
 ### CDN (Content Delivery Network)
 
 Accessing the `content-sdk` library from a CDN is easy. It does not require installation or
-hosting of the library code and assets. There are several public options for accessing NPM content through a CDN, such
-as <a target="_blank" href="https://unpkg.com/">UNPKG</a> and <a target="_blank" href="https://www.jsdelivr.com/package/npm/@sassoftware/content-sdk">jsDelivr</a>. Here is an example of loading the latest version of `content-sdk` from UNPKG
-using an HTML `script` tag. When used in production, the version should be pinned to the full `major.minor.patch` semantic version.
+hosting of the library code and assets. Here is an example of loading the latest version of `content-sdk` from the CDN
+using an HTML `script` tag.
 
 ```html
-<script async src="https://unpkg.com/@sassoftware/content-sdk/dist/umd/content-sdk-components.js"></script>
+<script async src="https://cdn.developer.sas.com/packages/content-sdk/latest/dist/umd/content-sdk-components.js"></script>
 ```
+When the library is used in production, consider pinning it to an explicit version. This is done with a URL like `https://cdn.developer.sas.com/packages/content-sdk/${VERSION}/dist/umd/content-sdk-components.js`, where `${VERSION}` is the full `major.minor.patch` semantic version.
 
 ## SAS Viya setup
 
