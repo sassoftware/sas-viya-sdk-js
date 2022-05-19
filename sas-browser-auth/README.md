@@ -32,7 +32,7 @@ async function callViyaApi() {
   try {
     await sasAuthInstance.checkAuthenticated();
   } catch {
-    // Note: if the user closes the popup an uncaught exception will occur.
+    // Note: If the user closes the popup an uncaught exception will occur.
     await sasAuthInstance.loginPopup();
   }
   // Start making rest calls!
@@ -51,7 +51,7 @@ The CookieAuthenticationCredential class provides functions to check the authent
 ### `new CookieAuthenticationCredential(configuration)`
 * `configuration: object`
   * `url: string` The url of SAS Viya server you are authenticating against.
-  * `guest: boolean` Automatically log in a guest if no user session is found.
+  * `guest: boolean` Automatically log in as a guest, if no user session is found.
     * default value: false 
 #### Methods
 
@@ -62,7 +62,7 @@ Throws: if no user is authenticated.
 
 ##### `ensureAuthenticated(): Promise<void>`
 
-Bypasses the cache and checked the endpoint to see if a user is authenticated.
+Bypasses the cache and checks the endpoint to see if a user is authenticated.
 Throws: if no user is authenticated.
 
 ##### `loginPopup(): Promise<void>`
