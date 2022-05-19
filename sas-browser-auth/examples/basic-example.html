@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sas-auth-browser basic auth</title>
+  </head>
+  <body>
+    <div id="content">Initializing</div>
+    <script src="https://cdn.developer.sas.com/packages/sas-auth-browser/latest/dist/index.js"></script>
+    <script>
+      (async () => {
+        const endpoint = "ENDPOINT_LOCATION";
+        async function fetchFolders() {
+          const content = document.getElementById("content");
+          content.innerText = "Fetching folders.";
+          let json;
+          try {
+            resp = await fetch(
+              `${endpoint}/folders/folders?limit=1000000&filter=and(isNull(parent),in(type,%27folder%27))`,
+              {
+                credentials: "include",
+                // REST requests from browsers should include this header.
+                'X-Requested-With': 'XMLHttpRequest',
+              }
+            );
+            if (!resp.ok) {
+              throw new Error("Invalid response");
+            }
+            json = await resp.json();
+          } catch (e) {
+            content.innerText = "Unable to fetch folders.";
+            throw e;
+          }
+
+          content.innerHTML = "";
+          const title = document.createElement("h1");
+          title.innerText = "Folders";
+          content.appendChild(title);
+          const ul = document.createElement("ul");
+          content.appendChild(ul);
+          for (const folder of json?.items || []) {
+            const li = document.createElement("li");
+            li.innerText = folder.name;
+            ul.appendChild(li);
+          }
+        }
+
+        const instance = sasAuthBrowser.createCookieAuthenticationInstance({
+          endpoint,
+        });
+        try {
+          await instance.checkAuthenticated();
+          fetchFolders();
+        } catch {
+          const btn = document.createElement("button");
+          btn.textContent = "Logon...";
+          btn.onclick = async () => {
+            await instance.loginPopup();
+            fetchFolders();
+          };
+          const content = document.getElementById("content");
+          content.innerHTML = "";
+          content.appendChild(btn);
+        }
+      })();
+    </script>
+  </body>
+</html>
