@@ -1,6 +1,6 @@
 # Overview
 
-The `sas-auth-browser` package provides an api that allows for single page applications to ensure that a user is authenticated before making api calls. Currently only cookie based authentication is supported.
+The `sas-auth-browser` package provides an api that allows for an application or web page to ensure that a user is authenticated before making SAS api calls or using SAS web components. Currently only cookie based authentication is supported.
 
 # Prerequisites
 
