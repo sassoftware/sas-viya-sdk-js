@@ -10,14 +10,14 @@
     <script src="https://cdn.developer.sas.com/packages/sas-auth-browser/latest/dist/index.js"></script>
     <script>
       (async () => {
-        const endpoint = "ENDPOINT_LOCATION";
+        const viyaUrl = "YOUR-VIYA-URL";
         async function fetchFolders() {
           const content = document.getElementById("content");
           content.innerText = "Fetching folders.";
           let json;
           try {
             resp = await fetch(
-              `${endpoint}/folders/folders?limit=1000000&filter=and(isNull(parent),in(type,%27folder%27))`,
+              `${viyaUrl}/folders/folders?limit=1000000&filter=and(isNull(parent),in(type,%27folder%27))`,
               {
                 credentials: "include",
                 // REST requests from browsers should include this header.
@@ -46,8 +46,8 @@
           }
         }
 
-        const instance = sasAuthBrowser.createCookieAuthenticationInstance({
-          endpoint,
+        const instance = sasAuthBrowser.createCookieAuthentication({
+          url: viyaUrl,
         });
         try {
           await instance.checkAuthenticated();
