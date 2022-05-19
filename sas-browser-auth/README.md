@@ -1,10 +1,10 @@
 # Overview
 
-The `sas-auth-browser` package provides an api that allows for an application or web page to ensure that a user is authenticated before making SAS api calls or using SAS web components. Currently only cookie based authentication is supported.
+The `sas-auth-browser` package provides an api that allows for an application or web page to ensure that a user is authenticated before making SAS api calls or using SAS web components. Currently only cookie-based authentication is supported.
 
 # Prerequisites
 
-In order to successfully make browser based REST calls to viya endpoints using cookies, you will need to enable CORS, Cross-site cookies and CSRF web security settings on the server for your single page application. For more information please see the SAS® Visual Analytics SDK [Viya setup guide](https://developer.sas.com/sdk/va/docs/guides/viya-setup/).
+In order to successfully make browser based REST calls to SAS Viya endpoints using cookies, you will need to enable CORS, Cross-site cookies and CSRF web security settings on the server for your single page application. For more information please see the SAS® Visual Analytics SDK [SAS Viya setup guide](https://developer.sas.com/sdk/va/docs/guides/viya-setup/).
 
 # Installation
 
@@ -22,11 +22,11 @@ npm install @sassoftware/sas-auth-browser
 
 A simple example that uses sas-auth-browser in the [examples](./examples) directory.
 
-Additionally, before a rest api call is made to the viya server, you should first check to see if the cookie session is still valid.
+Additionally, before a rest api call is made to the SAS Viya server, you should first check to see if the cookie session is still valid.
 
 ```ts
-const sasAuthInstance = sasAuthBrowser.createCookieAuthenticationCredentialInstance({
-  endpoint,
+const sasAuthInstance = sasAuthBrowser.createCookieAuthenticationCredential({
+  url,
 });
 async function callViyaApi() {
   try {
@@ -50,14 +50,14 @@ Creates a new CookieAuthenticationCredential instance.
 The CookieAuthenticationCredential class provides functions to check the authentication status of a given endpoint
 ### `new CookieAuthenticationCredential(configuration)`
 * `configuration: object`
-  * `endpoint: string` The Viya server you are authenticating against.
+  * `url: string` The url of SAS Viya server you are authenticating against.
   * `guest: boolean` Automatically log in a guest if no user session is found.
-    * default: false 
+    * default value: false 
 #### Methods
 
 ##### `checkAuthenticated(): Promise<void>`
 
-If the server endpoint has been checked, use the cached value. Otherwise check the server endpoint to see if a user is logged in.
+If the server endpoint has been checked, use the cached value. Otherwise, check the server endpoint to see if a user is logged in.
 Throws: if no user is authenticated.
 
 ##### `ensureAuthenticated(): Promise<void>`
