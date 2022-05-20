@@ -50,13 +50,21 @@
           url: viyaUrl,
         });
         try {
+          // Before calling any SAS Viya API endpoints, first ensure that a user is authenticated.
           await instance.checkAuthenticated();
+          // If a user is authenticated, it is safe to start making REST calls
           fetchFolders();
         } catch {
+          // When no user is authenticated, create a logon button in order to prompt the user to logon.
+          // NOTE: A button is used so that the browser does not block the popup.              
           const btn = document.createElement("button");
           btn.textContent = "Logon...";
           btn.onclick = async () => {
+            // Open a popup and navigate to the logon endpoint.
+            // Once the user has logged in, the popup will automatically close.
             await instance.loginPopup();
+            // After the user has successfully logged in and the popup has closed the promise
+            // will resolve and REST calls can now be made to SAS Viya endpoints.
             fetchFolders();
           };
           const content = document.getElementById("content");

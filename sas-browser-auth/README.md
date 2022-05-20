@@ -15,12 +15,15 @@ npm install @sassoftware/sas-auth-browser
 # CDN
 
 ```html
-<script async src="https://cdn.developer.sas.com/packages/sas-auth-browser/latest/dist/index.min.js"></script>
+<script
+  async
+  src="https://cdn.developer.sas.com/packages/sas-auth-browser/latest/dist/index.min.js"
+></script>
 ```
 
 ## Usage
 
-A simple example that uses sas-auth-browser in the [examples](./examples) directory.
+A simple example that uses sas-auth-browser is provided in the [examples](./examples) directory.
 
 Additionally, before a rest api call is made to the SAS Viya server, you should first check to see if the cookie session is still valid.
 
@@ -41,38 +44,42 @@ async function callViyaApi() {
 
 # API
 
-## `createCookieAuthenticationCredentialInstance(configuration): CookieAuthenticationCredential`
+## `sasAuthBrowser.createCookieAuthenticationCredential(configuration): CookieAuthenticationCredential`
 
-Creates a new CookieAuthenticationCredential instance. 
+Creates a new CookieAuthenticationCredential instance. This function is used when importing sas-basic-auth globally.
 
+See: [CDN](#CDN)
+
+- `configuration: object`
+  - `url: string` The url of SAS Viya server you are authenticating against.
+  - `guest: boolean` Automatically log in as a guest, if no user session is found.
+    - default value: `false
 ## CookieAuthenticationCredential
 
 The CookieAuthenticationCredential class provides functions to check the authentication status of a given endpoint
+
 ### `new CookieAuthenticationCredential(configuration)`
-* `configuration: object`
-  * `url: string` The url of SAS Viya server you are authenticating against.
-  * `guest: boolean` Automatically log in as a guest, if no user session is found.
-    * default value: false 
+
+- `configuration: object`
+  - `url: string` The url of SAS Viya server you are authenticating against.
+  - `guest: boolean` Automatically log in as a guest, if no user session is found.
+    - default value: `false`
+
 #### Methods
 
-##### `checkAuthenticated(): Promise<void>`
+##### ` (): Promise<void>`
 
-If the server endpoint has been checked, use the cached value. Otherwise, check the server endpoint to see if a user is logged in.
-Throws: if no user is authenticated.
-
-##### `ensureAuthenticated(): Promise<void>`
-
-Bypasses the cache and checks the endpoint to see if a user is authenticated.
+Checks to see if any user is authenticated.
 Throws: if no user is authenticated.
 
 ##### `loginPopup(): Promise<void>`
 
 Launches a popup window that navigates to the authentication endpoint and allows the user to login.
-Throws: when login fails (for example: user closes the popup).
+rejects: When login fails (for example: user closes the popup).
 
-## Examples
+##### `invalidateCache()`
 
-Examples for sas-auth-browser are located in the [examples folder](./examples/) of this directory.
+If `checkAuthenticated` has already been called, a cached value may be returned the next time . This is done to reduce the number of potential service calls needed when making multiple API calls. Calling `invalidateCache` will force `checkAuthenticated` to re-validate the next time it is called. This function is not needed in most use cases. **This is not need for most use cases.**
 
 # Contributing
 
