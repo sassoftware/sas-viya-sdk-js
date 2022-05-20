@@ -4,7 +4,7 @@ The `sas-auth-browser` package provides an api that allows for an application or
 
 # Prerequisites
 
-In order to successfully make browser based REST calls to SAS Viya endpoints using cookies, you will need to enable CORS, Cross-site cookies and CSRF web security settings on the server for your single page application. For more information please see the SAS® Visual Analytics SDK [SAS Viya setup guide](https://developer.sas.com/sdk/va/docs/guides/viya-setup/).
+In order to successfully make browser based REST calls to SAS Viya endpoints using cookies, you will need to enable CORS, Cross-site cookies and CSRF web security settings. For more information, see the SAS® Visual Analytics SDK [SAS Viya setup guide](https://developer.sas.com/sdk/va/docs/guides/viya-setup/).
 
 # Installation
 
@@ -51,9 +51,10 @@ Creates a new CookieAuthenticationCredential instance. This function is used whe
 See: [CDN](#CDN)
 
 - `configuration: object`
-  - `url: string` The url of SAS Viya server you are authenticating against.
+  - `url: string` The URL of SAS Viya server you are authenticating against.
   - `guest: boolean` Automatically log in as a guest, if no user session is found.
     - default value: `false
+
 ## CookieAuthenticationCredential
 
 The CookieAuthenticationCredential class provides functions to check the authentication status of a given endpoint
@@ -61,7 +62,7 @@ The CookieAuthenticationCredential class provides functions to check the authent
 ### `new CookieAuthenticationCredential(configuration)`
 
 - `configuration: object`
-  - `url: string` The url of SAS Viya server you are authenticating against.
+  - `url: string` The URL of SAS Viya server you are authenticating against.
   - `guest: boolean` Automatically log in as a guest, if no user session is found.
     - default value: `false`
 
