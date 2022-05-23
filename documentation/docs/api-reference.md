@@ -14,7 +14,7 @@ Analytics SDK.
 - [`ContentGroupElement`](api/ContentGroupElement.md)
 - [`ContentTreeElement`](api/ContentTreeElement.md)
 
-## Loading with <script>
+## Loading with a script element
 
 When you load the library with a script element, the Content SDK components are not ready to configure and use until all of the other assets are loaded. The `contentSdkComponents.loaded` event is dispatched once it is ready.
 

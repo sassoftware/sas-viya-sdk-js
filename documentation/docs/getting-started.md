@@ -28,7 +28,7 @@ The library can then be loaded out of the deployed assets folder using a `script
 
 ### CDN (Content Delivery Network)
 
-Accessing the `content-sdk` library from a CDN is easy. It does not require installation or
+Accessing the `content-sdk` library from the SAS Developer CDN is easy. It does not require installation or
 hosting of the library code and assets. Here is an example of loading the latest version of `content-sdk` from the CDN
 using an HTML `script` tag.
 
