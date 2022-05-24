@@ -71,16 +71,18 @@ The CookieAuthenticationCredential class provides functions to check the authent
 ##### `checkAuthenticated(): Promise<void>`
 
 Checks to see if any user is authenticated.
+
 rejects: If no user is authenticated.
 
 ##### `loginPopup(): Promise<void>`
 
 Launches a popup window that navigates to the authentication endpoint and allows the user to login.
+
 rejects: When login fails (for example: user closes the popup).
 
 ##### `invalidateCache()`
 
-If `checkAuthenticated` has already been called, a cached value may be returned the next time. This is done to reduce the number of potential service calls needed when making multiple API calls. Calling `invalidateCache` will force `checkAuthenticated` to re-validate the next time it is called. **This is not need for most use cases.**
+If `checkAuthenticated` has already been called, a cached value may be returned the next time. This is done to reduce the number of potential service calls needed when making multiple API calls. Calling `invalidateCache` will force `checkAuthenticated` to re-validate the next time it is called. **This is not needed for most use cases.**
 
 # Contributing
 
