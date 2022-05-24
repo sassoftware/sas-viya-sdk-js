@@ -1,6 +1,6 @@
 # Overview
 
-The `sas-auth-browser` package provides an api that allows for an application or web page to ensure that a user is authenticated before making SAS api calls or using SAS web components. Currently only cookie-based authentication is supported.
+The `sas-auth-browser` package provides an API that allows for an application or web page to ensure that a user is authenticated before making SAS API calls or using SAS web components. Currently only cookie-based authentication is supported.
 
 # Prerequisites
 
@@ -25,7 +25,7 @@ npm install @sassoftware/sas-auth-browser
 
 A simple example that uses sas-auth-browser is provided in the [examples](./examples) directory.
 
-Additionally, before a rest api call is made to the SAS Viya server, you should first check to see if the cookie session is still valid.
+Additionally, before a rest API call is made to the SAS Viya server, you should first check to see if the cookie session is still valid.
 
 ```ts
 const sasAuthInstance = sasAuthBrowser.createCookieAuthenticationCredential({
@@ -53,7 +53,7 @@ See: [CDN](#CDN)
 - `configuration: object`
   - `url: string` The URL of SAS Viya server you are authenticating against.
   - `guest: boolean` Automatically log in as a guest, if no user session is found.
-    - default value: `false
+    - default value: `false`
 
 ## CookieAuthenticationCredential
 
@@ -68,10 +68,10 @@ The CookieAuthenticationCredential class provides functions to check the authent
 
 #### Methods
 
-##### ` (): Promise<void>`
+##### `checkAuthenticated(): Promise<void>`
 
 Checks to see if any user is authenticated.
-Throws: if no user is authenticated.
+rejects: If no user is authenticated.
 
 ##### `loginPopup(): Promise<void>`
 
@@ -80,7 +80,7 @@ rejects: When login fails (for example: user closes the popup).
 
 ##### `invalidateCache()`
 
-If `checkAuthenticated` has already been called, a cached value may be returned the next time . This is done to reduce the number of potential service calls needed when making multiple API calls. Calling `invalidateCache` will force `checkAuthenticated` to re-validate the next time it is called. This function is not needed in most use cases. **This is not need for most use cases.**
+If `checkAuthenticated` has already been called, a cached value may be returned the next time. This is done to reduce the number of potential service calls needed when making multiple API calls. Calling `invalidateCache` will force `checkAuthenticated` to re-validate the next time it is called. **This is not need for most use cases.**
 
 # Contributing
 

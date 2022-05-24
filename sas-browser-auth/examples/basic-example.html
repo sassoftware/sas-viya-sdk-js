@@ -21,7 +21,7 @@
               {
                 credentials: "include",
                 // REST requests from browsers should include this header.
-                'X-Requested-With': 'XMLHttpRequest',
+                "X-Requested-With": "XMLHttpRequest",
               }
             );
             if (!resp.ok) {
@@ -46,7 +46,7 @@
           }
         }
 
-        const instance = sasAuthBrowser.createCookieAuthentication({
+        const instance = sasAuthBrowser.createCookieAuthenticationCredential({
           url: viyaUrl,
         });
         try {
@@ -55,8 +55,8 @@
           // If a user is authenticated, it is safe to start making REST calls
           fetchFolders();
         } catch {
-          // When no user is authenticated, create a logon button in order to prompt the user to logon.
-          // NOTE: A button is used so that the browser does not block the popup.              
+          // When no user is authenticated, create a button to prompt the user to sign in.
+          // NOTE: A button is used so that the browser does not block the popup.
           const btn = document.createElement("button");
           btn.textContent = "Logon...";
           btn.onclick = async () => {
