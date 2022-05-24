@@ -51,7 +51,7 @@ Creates a new CookieAuthenticationCredential instance. This function is used whe
 See: [CDN](#CDN)
 
 - `configuration: object`
-  - `url: string` The URL of SAS Viya server you are authenticating against.
+  - `url: string` The URL of the SAS Viya server that you are authenticating with.
   - `guest: boolean` Automatically log in as a guest, if no user session is found.
     - default value: `false`
 
@@ -62,7 +62,7 @@ The CookieAuthenticationCredential class provides functions to check the authent
 ### `new CookieAuthenticationCredential(configuration)`
 
 - `configuration: object`
-  - `url: string` The URL of SAS Viya server you are authenticating against.
+  - `url: string` The URL of the SAS Viya server that you are authenticating with.
   - `guest: boolean` Automatically log in as a guest, if no user session is found.
     - default value: `false`
 
