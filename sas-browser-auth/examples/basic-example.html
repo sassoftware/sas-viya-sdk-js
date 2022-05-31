@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sas-auth-browser basic auth</title>
+  </head>
+  <body>
+    <div id="content">Initializing</div>
+    <script src="https://cdn.developer.sas.com/packages/sas-auth-browser/latest/dist/index.js"></script>
+    <script>
+      (async () => {
+        const viyaUrl = "YOUR-VIYA-URL";
+        async function fetchFolders() {
+          const content = document.getElementById("content");
+          content.innerText = "Fetching folders.";
+          let json;
+          try {
+            resp = await fetch(
+              `${viyaUrl}/folders/folders?limit=1000000&filter=and(isNull(parent),in(type,%27folder%27))`,
+              {
+                credentials: "include",
+                // REST requests from browsers should include this header.
+                "X-Requested-With": "XMLHttpRequest",
+              }
+            );
+            if (!resp.ok) {
+              throw new Error("Invalid response");
+            }
+            json = await resp.json();
+          } catch (e) {
+            content.innerText = "Unable to fetch folders.";
+            throw e;
+          }
+
+          content.innerHTML = "";
+          const title = document.createElement("h1");
+          title.innerText = "Folders";
+          content.appendChild(title);
+          const ul = document.createElement("ul");
+          content.appendChild(ul);
+          for (const folder of json?.items || []) {
+            const li = document.createElement("li");
+            li.innerText = folder.name;
+            ul.appendChild(li);
+          }
+        }
+
+        const instance = sasAuthBrowser.createCookieAuthenticationCredential({
+          url: viyaUrl,
+        });
+        try {
+          // Before calling any SAS Viya API endpoints, first ensure that a user is authenticated.
+          await instance.checkAuthenticated();
+          // If a user is authenticated, it is safe to start making REST calls
+          fetchFolders();
+        } catch {
+          // When no user is authenticated, create a button to prompt the user to sign in.
+          // NOTE: A button is used so that the browser does not block the popup.
+          const btn = document.createElement("button");
+          btn.textContent = "Logon...";
+          btn.onclick = async () => {
+            // Open a popup and navigate to the logon endpoint.
+            // Once the user has logged in, the popup will automatically close.
+            await instance.loginPopup();
+            // After the user has successfully logged in and the popup has closed the promise
+            // will resolve and REST calls can now be made to SAS Viya endpoints.
+            fetchFolders();
+          };
+          const content = document.getElementById("content");
+          content.innerHTML = "";
+          content.appendChild(btn);
+        }
+      })();
+    </script>
+  </body>
+</html>
