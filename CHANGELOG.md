@@ -24,3 +24,7 @@
  ## 0.5.0 (March 17, 2022)
 
  - Added table view and controls to ContentAreaElement
+
+ ## 0.6.0 (June 16, 2022)
+
+ - Added ability to export PDFs for reports via the context menu
