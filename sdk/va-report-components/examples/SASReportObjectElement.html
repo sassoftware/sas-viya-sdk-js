@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script async src="https://cdn.developer.sas.com/packages/va-report-components/latest/dist/umd/va-report-components.js"></script>
+    <style>
+      html {
+        background-color: #f0f0f0;
+      }
+      .surveyResults {
+        width: 75%;
+        height: 75%;
+        padding: 10px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <sas-report-object
+      url="YOUR-VIYA-URL"
+      reportUri="YOUR-REPORT-URI"
+      objectName="YOUR-OBJECT-NAME"
+      class="surveyResults"
+    ></sas-report-object>
+  </body>
+</html>

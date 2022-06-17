@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <style>
+      html {
+        background-color: #f0f0f0;
+      }
+    </style>
+    <script async src="https://cdn.developer.sas.com/packages/va-report-components/latest/dist/umd/va-report-components.js"></script>
+  </head>
+  <body></body>
+  <script>
+    window.addEventListener("vaReportComponents.loaded", () => {
+      vaReportComponents.connectToServer("YOUR-SERVER-URL", { authenticationType: "guest" });
+    });
+  </script>
+</html>

@@ -1,0 +1,15 @@
+#vdk-slt-input {
+  resize: none;
+  width: 100%;
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+#vdk-slt-output[data-hide="true"] {
+  display: none;
+}
+
+/* for the copy code button */
+#vdk-slt-output[data-hide="true"] + .btnIcon {
+  display: none;
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SAS Visual Analytics Custom Data Table</title>
+    <script
+      async
+      src="https://cdn.developer.sas.com/packages/va-report-components/latest/dist/umd/va-report-components.js"
+    ></script>
+    <style>
+      body {
+        padding: 0 2rem 0 2rem;
+        background-color: #f0f0f0;
+      }
+      .container {
+        background-color: #ffffff;
+        flex-grow: 1;
+        flex-basis: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+      }
+      .large-content {
+        margin: 2rem 0 2rem 0;
+        width: 100%;
+        height: 800px;
+      }
+      .small-content {
+        margin: 2rem 0 2rem 0;
+        width: 100%;
+        height: 500px;
+      }
+      .left-content {
+        margin-right: 1rem;
+      }
+      .right-content {
+        margin-left: 1rem;
+      }
+      sas-report-object,
+      .ddc-container {
+        width: 100%;
+        height: 100%;
+      }
+      .ddc-container table {
+        font-size: 0.9889rem;
+        border-collapse: collapse;
+      }
+      .ddc-container th {
+        text-align: left;
+      }
+      .ddc-container th,
+      .ddc-container td {
+        padding: 0.25rem 0.5rem;
+      }
+      .ddc-container tbody,
+      .ddc-container tr + tr {
+        border-top: 1px solid rgb(231, 231, 231);
+      }
+      .ddc-container th + th,
+      .ddc-container td + td {
+        border-left: 1px solid rgb(231, 231, 231);
+      }
+      .ddc-container .numeric {
+        text-align: right;
+      }
+      .ddc-container {
+        display: block;
+        overflow: auto;
+        margin: 1rem;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container small-content">
+      <div class="container left-content">
+        <sas-report-object
+          authenticationType="guest"
+          url="{SAS-VIYA-URL}"
+          reportUri="{REPORT-URI}"
+          objectName="{OBJECT-NAME}"
+        ></sas-report-object>
+      </div>
+      <div class="container right-content">
+        <div id="data-driven-content" class="ddc-container"></div>
+      </div>
+    </div>
+  </body>
+  <script>
+    window.addEventListener('vaReportComponents.loaded', () => {
+      // Register the data handler with the data-driven content object
+      const ddcHandle = vaReportComponents.registerDataDrivenContent(
+        {
+          authenticationType: 'guest',
+          url: '{SAS-VIYA-URL}',
+          reportUri: '{REPORT-URI}',
+          objectName: '{OBJECT-NAME}',
+        },
+        handleDataMessage
+      );
+
+      // Receive data and create an html table in the 'data-driven-content' div
+      function handleDataMessage(message) {
+        if (message && message.rowCount >= 0) {
+          // Find the index of the brush column
+          const brushColumnIndex = message.columns.findIndex((column) => column.usage === 'brush');
+
+          // Extract the column labels (excluding the brush column)
+          const columnLabels = message.columns
+            .filter((column) => column.usage !== 'brush')
+            .map((column) => column.label);
+
+          // Create table rows from the data
+          const rows = message.data.map((dataRow, rowIndex) =>
+            createTableRow(dataRow, brushColumnIndex, rowIndex, message.columns)
+          );
+
+          // Create table from the column and row data
+          const table = createTable(columnLabels, rows);
+
+          // Remove any existing content in the parent div and replace with the table
+          const parentDiv = document.getElementById('data-driven-content');
+          parentDiv.innerHTML = '';
+          parentDiv.appendChild(table);
+
+          // Create a click handler for the html table.
+          const resultName = message.resultName;
+          table.addEventListener('click', (evt) => {
+            // Convert the array of selection indices into an array of objects
+            // with a 'row' property.
+            const selections = getTableSelections(evt.currentTarget).map((index) => {
+              return { row: index };
+            });
+
+            // Dispatch a selection from the data-driven content.
+            ddcHandle.dispatch({ resultName, selections });
+          });
+        }
+      }
+    });
+
+    // Process the array of CSV data and create a table
+    function createTable(columnLabels, tableRows) {
+      // Create a table header from the column labels
+      const header = createTableHeader(columnLabels);
+
+      // Create table body and add data rows
+      let tableBody = document.createElement('tbody');
+      for (const tr of tableRows) {
+        tableBody.appendChild(tr);
+      }
+
+      // Create the table and add header and body
+      const table = document.createElement('table');
+      table.appendChild(header);
+      table.appendChild(tableBody);
+
+      return table;
+    }
+
+    // Create an HTML DOM element of the given type containing the given text
+    function createElementWithText(tagName, text) {
+      const element = document.createElement(tagName);
+      element.appendChild(document.createTextNode(text));
+      return element;
+    }
+
+    // Create a table header
+    function createTableHeader(columnLabels) {
+      // Create table row
+      let tableHead = document.createElement('thead');
+      let tr = document.createElement('tr');
+
+      // Add a blank cell for checkbox/selection column
+      tr.appendChild(document.createElement('th'));
+
+      // Add a header cell for each column heading
+      columnLabels.forEach(function(header) {
+        tr.appendChild(createElementWithText('th', header));
+      });
+      tableHead.appendChild(tr);
+      return tableHead;
+    }
+
+    // Append a data row to the table
+    function createTableRow(dataRow, brushColumnIndex, rowNum, columns) {
+      let tr = document.createElement('tr');
+
+      // Add a checkbox/selector with ID to each row
+      let checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.setAttribute('id', rowNum);
+      let checkboxCell = document.createElement('td');
+      checkboxCell.appendChild(checkbox);
+      tr.appendChild(checkboxCell);
+
+      // A brush value > 0 means that the row is selected
+      checkbox.checked = brushColumnIndex >= 0 && dataRow[brushColumnIndex] > 0;
+
+      // Add table cell for each data value, with the exception of the brush column
+      dataRow.forEach((value, index) => {
+        if (index != brushColumnIndex) {
+          let td = createElementWithText('td', value);
+          // Use the column metadata to determine if the value is numeric.
+          // If it is apply the 'numeric' css class for right-alignment.
+          if (columns[index].type === 'number') {
+            td.className = 'numeric';
+          }
+          tr.appendChild(td);
+        }
+      });
+      return tr;
+    }
+
+    // Return an array with indices of table rows that are selected
+    function getTableSelections(table) {
+      const selections = [];
+      if (table) {
+        table.querySelectorAll(`:checked`).forEach((node) => {
+          selections.push(node.id);
+        });
+      }
+      return selections;
+    }
+  </script>
+</html>
