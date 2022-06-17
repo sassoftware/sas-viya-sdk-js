@@ -1,0 +1,106 @@
+
+<html>
+  <head>
+    <script async src="https://cdn.developer.sas.com/packages/content-sdk/latest/dist/umd/content-sdk-components.js"></script>
+  </head>
+  <body>
+    <!-- sas-content-group to link contained content components together, provide navigation and selection behavior, etc. -->
+    <sas-content-group id="cg">
+      <div style="display: flex;">
+        <div style="flex: 1;">
+          <!-- sas-content-tree to display a navigation tree -->
+          <sas-content-tree id="ct" url="YOUR-VIYA-URL"></sas-content-tree>
+        </div>
+        <div style="flex: 3;">
+          <!-- sas-content-breadcrumb to enable navigating back up the tree -->
+          <sas-content-breadcrumb id="cb" url="YOUR-VIYA-URL"></sas-content-breadcrumb>
+            <!-- sas-content-area to display a folder containing reports -->
+            <!-- Supported attributes: -->
+            <!-- url: the url of the Viya server to connect to -->
+            <!-- selection-mode: "single" or "multiple" -->
+            <!-- initial-selection-index: 0-based index of the item that should be initially selected -->
+            <sas-content-area id="ca" url="YOUR-VIYA-URL" selection-mode="single" initial-selection-index="0">
+            </sas-content-area>
+        </div>
+      </div>
+
+      <!-- Header that will be updated with the selected report name -->
+      <h3 id="reportName" style="margin-left: 1rem;">No report selected</h3>
+      <!-- sas-report with empty reportUri to start -->
+      <!-- The sas-content-group has no effect on a sas-report. It can be inside or outside of it. -->
+      <sas-report id="report" hideNavigation="auto" authenticationType="credentials" url="YOUR-VIYA-URL" style="height: 500px;"></sas-report>
+    </sas-content-group>
+  </body>
+  <script>
+    window.addEventListener('contentSdkComponents.loaded', () => {
+      // Get the required elements from the HTML
+      const cg = document.getElementById('cg');
+      const ca = document.getElementById('ca');
+      const report = document.getElementById('report');
+      const reportName = document.getElementById('reportName');
+
+      const myFolderIdentifier = {
+        type: "persistentLocation",
+        value: "myFolder"
+      };
+      const favoritesIdentifier = {
+        type: "persistentLocation",
+        value: "favorites",
+        preventExpansion: true
+      };
+      const sasContentIdentifier = {
+        type: "persistentLocation",
+        value: "root"
+      };
+      const recycleBinIdentifier = {
+        type: "persistentLocation",
+        value: "trash",
+        preventExpansion: true
+      };
+
+      // Set the initialNavigationValue on the sas-content-group
+      // This will sync all contained components to an initial state, and keep them in sync automatically based on user interaction
+      cg.initialNavigationValue = {
+        location: myFolderIdentifier,
+        locationContextPath: [myFolderIdentifier],
+        locations: [myFolderIdentifier, favoritesIdentifier, sasContentIdentifier, recycleBinIdentifier]
+      };
+
+      // Use the initialFilterValue to only show certain content types in the group
+      cg.initialFilterValue = {
+        // Show only reports
+        queryModeFilter: "or(eq(contentType,'report'),eq(contentType,'folder'))"
+        // Show only folders
+        // queryModeFilter: "eq(contentType, 'folder')"
+        // Show reports and folders
+        // queryModeFilter: "in(contentType, 'report', 'folder')"
+      };
+
+      // setSelectedIdentifiers can be used for programmatic selection
+      // ca.setSelectedIdentifiers([
+      //   {
+      //     type: "driveItemId",
+      //     value: "<item 1 uri>"
+      //   },
+      //   {
+      //     type: "driveItemId",
+      //     value: "<item 2 uri>"
+      //   }
+      // ]);
+
+      // The onSelect handler can be used to respond to user selection. In this case it will update the embedded report.
+      ca.onSelect = (value) => {
+        let reportUri = '';
+        if (value && value.length > 0 && value[0]?.resource?.type?.sasType === 'report') {
+          // If tiles are selected, get new reportUri and report name from the selected item
+          reportName.innerText = value[0].name;
+          reportUri = value[0].resource.id;
+        } else {
+          reportName.innerText = 'No report selected'
+        }
+
+        report.reportUri = reportUri;
+      };
+    });
+  </script>
+</html>

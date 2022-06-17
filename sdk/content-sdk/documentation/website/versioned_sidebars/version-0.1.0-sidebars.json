@@ -1,0 +1,16 @@
+{
+  "version-0.1.0-docs": {
+    "Introduction": [
+      "version-0.1.0-getting-started"
+    ],
+    "API Reference": [
+      "version-0.1.0-api-reference",
+      "version-0.1.0-api/ContentAreaElement",
+      "version-0.1.0-api/Item",
+      "version-0.1.0-api/ItemIdentifier"
+    ],
+    "Resources": [
+      "version-0.1.0-faq"
+    ]
+  }
+}

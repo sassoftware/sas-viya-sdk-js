@@ -1,0 +1,18 @@
+{
+  "docs": {
+    "Introduction": ["getting-started"],
+    "Guides": ["guides/browse-reports"],
+    "API Reference": [
+      "api-reference",
+      "api/ContentAreaElement",
+      "api/ContentBreadcrumbElement",
+      "api/ContentGroupElement",
+      "api/ContentTreeElement",
+      "api/Item",
+      "api/ItemIdentifier",
+      "api/LocationIdentifier",
+      "api/LogonWrapperProps"
+    ],
+    "Resources": ["faq"]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "version-0.3.0-docs": {
+    "Introduction": [
+      "version-0.3.0-getting-started"
+    ],
+    "Guides": [
+      "version-0.3.0-guides/browse-reports"
+    ],
+    "API Reference": [
+      "version-0.3.0-api-reference",
+      "version-0.3.0-api/ContentAreaElement",
+      "version-0.3.0-api/Item",
+      "version-0.3.0-api/ItemIdentifier"
+    ],
+    "Resources": [
+      "version-0.3.0-faq"
+    ]
+  }
+}
