@@ -9,14 +9,14 @@ Access to a deployment of SAS Viya 4.0.1 (or later) is necessary in order to use
 
 ## Installation
 
-The <a target="_blank" href="https://www.npmjs.com/package/@sassoftware/content-sdk">`@sassoftware/content-sdk`</a> library is published to NPM and can be installed by running the `npm install` command as shown below. `content-sdk` does not support ES6 imports. Therefore, the contents of the `content-sdk/dist` folder must be deployed with your page, and then loaded using a `script` tag.
+The <a target="_blank" href="https://www.npmjs.com/package/@sassoftware/content-components">`@sassoftware/content-components`</a> library is published to NPM and can be installed by running the `npm install` command as shown below. `content-components` does not support ES6 imports. Therefore, the contents of the `content-components/dist` folder must be deployed with your page, and then loaded using a `script` tag.
 
 ```bash
 # From the root directory of your project
-npm install @sassoftware/content-sdk
+npm install @sassoftware/content-components
 
 # Copy the contents of the package to an asset folder for deployment
-cp -r ./node_modules/@sassoftware/content-sdk ./sdk-assets/content
+cp -r ./node_modules/@sassoftware/content-components ./sdk-assets/content
 ```
 
 The library can then be loaded out of the deployed assets folder using a `script` tag.
@@ -27,14 +27,14 @@ The library can then be loaded out of the deployed assets folder using a `script
 
 ### CDN (Content Delivery Network)
 
-Accessing the `content-sdk` library from the SAS Developer CDN is easy. It does not require installation or
-hosting of the library code and assets. Here is an example of loading the latest version of `content-sdk` from the CDN
+Accessing the `content-components` library from the SAS Developer CDN is easy. It does not require installation or
+hosting of the library code and assets. Here is an example of loading the latest version of `content-components` from the CDN
 using an HTML `script` tag.
 
 ```html
-<script async src="https://cdn.developer.sas.com/packages/content-sdk/latest/dist/umd/content-sdk-components.js"></script>
+<script async src="https://cdn.developer.sas.com/packages/content-components/latest/dist/umd/content-sdk-components.js"></script>
 ```
-When the library is used in production, consider pinning it to an explicit version. This is done with a URL like `https://cdn.developer.sas.com/packages/content-sdk/${VERSION}/dist/umd/content-sdk-components.js`, where `${VERSION}` is the full `major.minor.patch` semantic version.
+When the library is used in production, consider pinning it to an explicit version. This is done with a URL like `https://cdn.developer.sas.com/packages/content-components/${VERSION}/dist/umd/content-sdk-components.js`, where `${VERSION}` is the full `major.minor.patch` semantic version.
 
 ## Getting Started
 
