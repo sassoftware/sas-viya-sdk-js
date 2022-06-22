@@ -1,7 +1,5 @@
 # SAS Content SDK
 
-## Overview
-
 The SAS Content SDK enables you to use the power of SAS Viya in your own websites and HTML applications.
 You can embed tiles representing content items with the `<sas-content-area>` custom HTML element.
 

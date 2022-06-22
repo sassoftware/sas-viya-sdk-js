@@ -1,7 +1,5 @@
 # SAS Visual Analytics SDK
 
-## Overview
-
 The SAS Visual Analytics SDK is a set of JavaScript APIs and web components that enable SAS Visual Analytics report content
 to be easily embedded in a third-party application or web page. Entire reports or individual report objects can be
 embedded, and the content is fully interactive. This functionality is delivered as the `va-report-components` JavaScript

@@ -1,18 +1,18 @@
-# Overview
+# SAS Authentication Library for the Browser
 
 The `sas-auth-browser` package provides an API that allows for an application or web page to ensure that a user is authenticated before making SAS API calls or using SAS web components. Currently only cookie-based authentication is supported.
 
-# Prerequisites
+## Prerequisites
 
 In order to successfully make browser based REST calls to SAS Viya endpoints using cookies, you will need to enable CORS, Cross-site cookies and CSRF web security settings. For more information, see the SAS® Visual Analytics SDK [SAS Viya setup guide](https://developer.sas.com/sdk/va/docs/guides/viya-setup/).
 
-# Installation
+## Installation
 
 ```
 npm install @sassoftware/sas-auth-browser
 ```
 
-# CDN
+## CDN
 
 ```html
 <script
@@ -21,7 +21,7 @@ npm install @sassoftware/sas-auth-browser
 ></script>
 ```
 
-## Usage
+### Usage
 
 A simple example that uses sas-auth-browser is provided in the [examples](./examples) directory.
 
@@ -42,9 +42,9 @@ async function callViyaApi() {
 }
 ```
 
-# API
+## API
 
-## `sasAuthBrowser.createCookieAuthenticationCredential(configuration): CookieAuthenticationCredential`
+#### `sasAuthBrowser.createCookieAuthenticationCredential(configuration): CookieAuthenticationCredential`
 
 Creates a new CookieAuthenticationCredential instance. This function is used when importing sas-basic-auth globally.
 
@@ -55,11 +55,11 @@ See: [CDN](#CDN)
   - `guest: boolean` Automatically log in as a guest, if no user session is found.
     - default value: `false`
 
-## CookieAuthenticationCredential
+### CookieAuthenticationCredential
 
 The CookieAuthenticationCredential class provides functions to check the authentication status of a given endpoint
 
-### `new CookieAuthenticationCredential(configuration)`
+#### `new CookieAuthenticationCredential(configuration)`
 
 - `configuration: object`
   - `url: string` The URL of the SAS Viya server that you are authenticating with.
@@ -84,10 +84,10 @@ rejects: When login fails (for example: user closes the popup).
 
 If `checkAuthenticated` has already been called, a cached value may be returned the next time. This is done to reduce the number of potential service calls needed when making multiple API calls. Calling `invalidateCache` will force `checkAuthenticated` to re-validate the next time it is called. **This is not needed for most use cases.**
 
-# Contributing
+## Contributing
 
 sas-auth-browser is not open for external contributions at this time.
 
-# License
+## License
 
 This project is licensed under this commercial [license](LICENSE).
