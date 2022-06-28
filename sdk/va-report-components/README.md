@@ -54,7 +54,7 @@ The SAS Visual Analytics SDK is not open for external contributions.
 
 ## License
 
-This project is licensed under this commercial [license](LICENSE).
+This package is licensed under this commercial [license](LICENSE).
 
 ## Additional Resources
 

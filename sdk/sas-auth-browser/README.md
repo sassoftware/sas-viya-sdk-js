@@ -90,4 +90,4 @@ sas-auth-browser is not open for external contributions at this time.
 
 ## License
 
-This project is licensed under this commercial [license](LICENSE).
+This package is licensed under this commercial [license](LICENSE).
