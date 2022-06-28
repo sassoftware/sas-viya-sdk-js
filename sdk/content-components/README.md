@@ -54,6 +54,6 @@ This project is licensed under this commercial [license](LICENSE).
 
 ## Additional Resources
 
-- SAS Content SDK on <a target="_blank" href="https://developer.sas.com/sdk/content/">developer.sas.com</a>
-- SAS Viya <a target="_blank" href="https://support.sas.com/en/software/visual-analytics-support.html#documentation">documentation</a>
-- SAS Visual Analytics <a target="_blank" href="https://communities.sas.com/t5/SAS-Visual-Analytics/bd-p/sas_va">Community</a>
+- <a target="_blank" href="https://developer.sas.com/sdk/content/">SAS Content SDK</a> on developer.sas.com
+- <a target="_blank" href="https://support.sas.com/en/software/visual-analytics-support.html#documentation">SAS Visual Analytics documentation</a>
+- <a target="_blank" href="https://communities.sas.com/t5/SAS-Visual-Analytics/bd-p/sas_va">SAS Visual Analytics Community</a>
