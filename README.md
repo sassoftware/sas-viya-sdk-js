@@ -35,8 +35,8 @@ These cases are noted in the library README and CONTRIBUTING files located in th
 
 ## License
 
-This project is licensed under the [Apache 2.0 License](LICENSE).
-Some libraries are individually licensed under terms that are specific to that library.
+This project, which includes all files in this GitHub repository, is licensed under the [Apache 2.0 License](LICENSE).
+Some libraries in this SDK have published packages that are individually licensed under terms that are specific to that library.
 These cases are noted in the library README and LICENSE files located in the corresponding package folder at [`/sdk`](./sdk/).
 
 ## Additional Resources
