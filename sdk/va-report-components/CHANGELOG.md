@@ -160,6 +160,7 @@
 - Add support for SAS Visual Analytics 8.5
 - Add support for `<sas-report-page>` custom element for embedding a report page.
 - Additional bug fixes
+
 ## 0.2.0 (October 2, 2019)
 
 - Add support for authenticationType='credentials'.
