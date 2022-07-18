@@ -52,6 +52,12 @@ than one section.
 
 default value: `'auto'`
 
+### `restrictViewportGestures: boolean`
+
+If `true`, some interactive viewport features may be restricted. Currently the only restriction is that a modifier key is required to enable zooming with the scroll wheel. When the user engages the scroll wheel a transluecent overlay is placed over the visual with a message indicating which modifier key is required to enable zooming. The overlay disappears when the key is pressed.
+
+default value: `false`
+
 ## Properties
 
 ### `menuItemProvider: MenuItemProvider`

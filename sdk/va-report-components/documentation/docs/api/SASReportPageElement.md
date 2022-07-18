@@ -52,6 +52,12 @@ Specify the name of the report page that you want to display. Either `pageName` 
 
 Specify the index of the report page that you want to display. `0` is the first page. Either `pageName` or `pageIndex` can be used, but not both.
 
+### `restrictViewportGestures: boolean`
+
+If `true`, some interactive viewport features may be restricted. Currently the only restriction is that a modifier key is required to enable zooming with the scroll wheel. When the user engages the scroll wheel a transluecent overlay is placed over the visual with a message indicating which modifier key is required to enable zooming. The overlay disappears when the key is pressed.
+
+default value: `true`
+
 ## Properties
 
 ### `menuItemProvider: MenuItemProvider`
