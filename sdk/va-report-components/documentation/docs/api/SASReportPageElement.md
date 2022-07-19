@@ -52,6 +52,12 @@ Specify the name of the report page that you want to display. Either `pageName` 
 
 Specify the index of the report page that you want to display. `0` is the first page. Either `pageName` or `pageIndex` can be used, but not both.
 
+### `restrictViewportGestures: boolean`
+
+When `true`, report objects that support zooming require a modifier key be used in addition to the scroll wheel. Enable restrictViewportGestures when embedding elements in a layout that causes overflow. This reserves the scroll-wheel action for page scrolling.
+
+default value: `true`
+
 ## Properties
 
 ### `menuItemProvider: MenuItemProvider`

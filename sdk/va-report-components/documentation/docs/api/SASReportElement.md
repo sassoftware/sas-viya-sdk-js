@@ -52,6 +52,12 @@ than one section.
 
 default value: `'auto'`
 
+### `restrictViewportGestures: boolean`
+
+When `true`, report objects that support zooming require a modifier key be used in addition to the scroll wheel. Enable restrictViewportGestures when embedding elements in a layout that causes overflow. This reserves the scroll-wheel action for page scrolling.
+
+default value: `false`
+
 ## Properties
 
 ### `menuItemProvider: MenuItemProvider`
