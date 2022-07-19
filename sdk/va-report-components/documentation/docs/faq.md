@@ -19,7 +19,7 @@ The SAS Visual Analytics SDK supports:
 
 ## Is there a license to use the SAS Visual Analytics SDK?
 
-The SAS Visual Analytics SDK is released under a <a target="_blank" href="https://github.com/sassoftware/visual-analytics-sdk/blob/master/LICENSE.txt">commercial license</a>.
+The SAS Visual Analytics SDK is released under a <a target="_blank" href="https://github.com/sassoftware/sas-viya-sdk-js/blob/master/sdk/va-report-components/LICENSE">commercial license</a>.
 
 ## How is authentication handled by the SAS Visual Analytics SDK?
 

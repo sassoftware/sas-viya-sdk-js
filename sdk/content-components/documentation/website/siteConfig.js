@@ -17,7 +17,7 @@ const siteConfig = {
   baseUrl: baseUrl, // Base URL for your project
 
   // Used for publishing and more
-  projectName: 'content-sdk',
+  projectName: 'sas-viya-sdk-js',
   organizationName: 'sassoftware',
 
   // For no header links in the top nav bar -> headerLinks: [],
@@ -72,7 +72,8 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  repoUrl: 'https://github.com/sassoftware/content-sdk',
+  repoUrl: 'https://github.com/sassoftware/sas-viya-sdk-js',
+  packageName: 'content-components',
   communitiesUrl: 'http://communities.sas.com/visual-analytics',
 
   // Google Analytics

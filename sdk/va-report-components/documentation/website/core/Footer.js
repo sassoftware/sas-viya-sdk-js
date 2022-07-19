@@ -53,7 +53,7 @@ class Footer extends React.Component {
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub"
             >
-              visual-analytics-sdk
+              {this.props.config.projectName}
             </a>
           </div>
         </section>
