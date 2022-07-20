@@ -26,3 +26,23 @@ When you load the library with a script element, the Content SDK components are 
   });
 </script>
 ```
+
+## Styling Components
+
+The SAS Content SDK components accept CSS styles by setting the "class" or "style" attributes of a component. For example:
+
+```html
+<style>
+  .customClass {
+    padding-top: 5rem;
+  }
+</style>
+
+<sas-content-area
+  url="http://my-viya-server.com"
+  initial-selection-index="0"
+  selection-mode="single"
+  class="customClass"
+  style="height: 30rem;"
+></sas-content-area> 
+```
