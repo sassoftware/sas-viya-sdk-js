@@ -21,6 +21,7 @@ function Versions(props) {
   const repoUrl = `https://github.com/${siteConfig.organizationName}/${
     siteConfig.projectName
   }`;
+  const tagPrefix = `%40${siteConfig.organizationName}%2F${siteConfig.packageName}_`;
   return (
     <div className="docMainWrapper wrapper">
       <Container className="mainContainer versionsContainer">
@@ -44,7 +45,7 @@ function Versions(props) {
                   </a>
                 </td>
                 <td>
-                  <a href={`${repoUrl}/releases/tag/v${latestVersion}`}>
+                  <a href={`${repoUrl}/releases/tag/${tagPrefix}${latestVersion}`}>
                     Release Notes
                   </a>
                 </td>
@@ -70,7 +71,7 @@ function Versions(props) {
                         </a>
                       </td>
                       <td>
-                        <a href={`${repoUrl}/releases/tag/v${version}`}>
+                        <a href={`${repoUrl}/releases/tag/${tagPrefix}${version}`}>
                           Release Notes
                         </a>
                       </td>

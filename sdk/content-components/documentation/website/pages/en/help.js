@@ -43,8 +43,7 @@ function Help(props) {
             <h1>Need help?</h1>
           </header>
           <p>
-            Get your questions answered by a dedicated support team by sending an email to{' '}
-            <a href="mailto:ContentSDKsupport@sas.com">ContentSDKsupport@sas.com</a>
+            Contact SAS Technical Support by entering a <a href="https://support.sas.com/en/technical-support/submit-a-support-request.html">support request</a>.
           </p>
           <GridBlock contents={supportLinks} layout="threeColumn" />
         </div>

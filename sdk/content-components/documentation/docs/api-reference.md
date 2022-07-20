@@ -19,7 +19,7 @@ Analytics SDK.
 When you load the library with a script element, the Content SDK components are not ready to configure and use until all of the other assets are loaded. The `contentSdkComponents.loaded` event is dispatched once it is ready.
 
 ```html
-<script async src="https://cdn.developer.sas.com/packages/content-sdk/latest/dist/umd/content-sdk-components.js"></script>
+<script async src="https://cdn.developer.sas.com/packages/content-components/latest/dist/umd/content-sdk-components.js"></script>
 <script>
   window.addEventListener('contentSdkComponents.loaded', function() {
     // The SAS Content SDK is loaded and ready

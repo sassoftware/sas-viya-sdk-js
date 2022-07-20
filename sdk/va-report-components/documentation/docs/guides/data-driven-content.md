@@ -20,7 +20,7 @@ The SAS Visual Analytics SDK offers two ways to work with data-driven content ob
 ## SAS Visual Analytics SDK API Example
 
 This guide walks you step-by-step through the
-<a target="_blank" href="https://github.com/sassoftware/visual-analytics-sdk/blob/master/examples/registerDataDrivenContent.html">Data-Driven
+<a target="_blank" href="https://github.com/sassoftware/sas-viya-sdk-js/blob/master/sdk/va-report-components/examples/registerDataDrivenContent.html">Data-Driven
 Content Example</a>. The example is set up to show the data flow between the SAS Visual Analytics SDK and a custom HTML table rendered by the
 example. Here are the steps to set up the example and run it using your own report.
 

@@ -19,7 +19,7 @@ The SAS Content SDK supports:
 
 ## Is there a license to use the SAS Content SDK?
 
-The SAS Content SDK is released under a <a target="_blank" href="https://github.com/sassoftware/content-sdk/blob/master/LICENSE.txt">commercial license</a>.
+The SAS Content SDK is released under a <a target="_blank" href="https://github.com/sassoftware/sas-viya-sdk-js/blob/master/sdk/content-components/LICENSE">commercial license</a>.
 
 ## How is authentication handled by the SAS Content SDK?
 
