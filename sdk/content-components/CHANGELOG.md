@@ -1,3 +1,7 @@
+## 0.7.0 (July 21, 2022)
+
+- Added support for styling components via "class" and "style" attributes.
+
 ## 0.6.0 (June 16, 2022)
 
 - Added ability to export PDFs for reports via the context menu
