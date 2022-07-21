@@ -1,3 +1,9 @@
+## 1.10.0 (July 21, 2022)
+
+- SAS Viya 2022.1.3 support (Report Package version 26)
+- Add `restrictViewportGestures` attributes to all report elements
+- Bug fixes
+
 ## 1.9.0 (June 16, 2022)
 
 - SAS Viya 2022.1.2 support (Report Package version 25)
