@@ -38,3 +38,43 @@ If no `options` parameter is supplied, the report is exported using the default 
 
 Refreshes the data for the report object that is controlled by the
 `ObjectHandle`.
+
+### getSelectedData(options?: {formatData: boolean | "datesOnly"}): ReportObjectResultData[]
+
+Returns a user's selection data from the visual. Returns an empty array if the visual has no selections.
+
+#### Arguments
+
+`options` is an optional options bundle for customizing the returned data. The following options are supported:
+
+- `formatData` for specifying the format of the returned data. It can be passed the following values:
+  - `true` to receive all formatted data
+  - `false` to receive all unformatted data
+  - `"datesOnly"` <b>`default`</b> to receive only SAS date values formatted, and all other data unformatted
+
+#### Return value
+
+Returns an array of `ReportObjectResultData` objects, where each object is associated with one data set.
+
+Each `ReportObjectResultData` object includes the following values:
+
+- `resultName: string`
+  - The name of the query result.
+- `rowCount: number`
+  - The number of rows of data returned.
+- `columns: { name: string; label: string; type: "string" | "number"; }[]`
+  - An array of objects describing each column in the data set. Each column object includes a unique name of the column, the label displayed in the data for the column, and the data type of the values in the column.
+- `data: (string | number)[][]`
+  - A two-dimensional array of the data values in row-major order. For example, accessing `data[0]` is the first row of data, and `data[0][0]` is the value of the first row in the first column.
+
+### addEventListener(eventType: string, listener: () => void)
+
+Adds an event listener to the `ObjectHandle` to call the supplied listener when the specified event occurs.
+
+Event types supported:
+
+- `"selectionChanged"` for listening for selection changes in the visual.
+
+### removeEventListener(eventType: string, listener: () => void)
+
+Removes the previously registered event listener from the `ObjectHandle`.
