@@ -41,16 +41,16 @@ Refreshes the data for the report object that is controlled by the
 
 ### getSelectedData(options?: {formatData: boolean | "datesOnly"}): ReportObjectResultData[]
 
-Returns a user's selection data from the visual. Returns an empty array if the visual has no selections.
+Returns a user's selection data from the object. Returns an empty array if the object has no selections.
 
 #### Arguments
 
 `options` is an optional options bundle for customizing the returned data. The following options are supported:
 
-- `formatData` for specifying the format of the returned data. It can be passed the following values:
-  - `true` to receive all formatted data
-  - `false` to receive all unformatted data
-  - `"datesOnly"` <b>`default`</b> to receive only SAS date values formatted, and all other data unformatted
+- `formatData` specifies the format of the returned data.
+  - `true` returns all formatted data
+  - `false` returns all unformatted data
+  - `"datesOnly"` `default` returns only SAS date values as formatted and all other data is unformatted
 
 #### Return value
 
@@ -63,7 +63,7 @@ Each `ReportObjectResultData` object includes the following values:
 - `rowCount: number`
   - The number of rows of data returned.
 - `columns: { name: string; label: string; type: "string" | "number"; }[]`
-  - An array of objects describing each column in the data set. Each column object includes a unique name of the column, the label displayed in the data for the column, and the data type of the values in the column.
+  - An array of objects that describes each column in the data set. Each column object includes a unique column name, the label that is displayed for the data in the column, and the data type for the column values.
 - `data: (string | number)[][]`
   - A two-dimensional array of the data values in row-major order. For example, accessing `data[0]` is the first row of data, and `data[0][0]` is the value of the first row in the first column.
 
@@ -73,7 +73,7 @@ Adds an event listener to the `ObjectHandle` to call the supplied listener when 
 
 Event types supported:
 
-- `"selectionChanged"` for listening for selection changes in the visual.
+- `"selectionChanged"` for listening for selection changes in the object.
 
 ### removeEventListener(eventType: string, listener: () => void)
 
