@@ -15,6 +15,7 @@
       "api/connectToServer",
       "api/registerDataDrivenContent",
       "api/DataDrivenContentHandle",
+      "api/ReportObjectResultData",
       "api/setUseHighContrastReportTheme",
       "api/setLoadingTheme"
     ],

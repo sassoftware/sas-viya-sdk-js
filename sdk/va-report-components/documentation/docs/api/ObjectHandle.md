@@ -39,9 +39,9 @@ If no `options` parameter is supplied, the report is exported using the default 
 Refreshes the data for the report object that is controlled by the
 `ObjectHandle`.
 
-### getSelectedData(options?: {formatData: boolean | "datesOnly"}): ReportObjectResultData[]
+### getSelectedData(options?: Object): ReportObjectResultData[]
 
-Returns a user's selection data from the object. Returns an empty array if the object has no selections.
+Returns a user's selection data from the report object. Returns an empty array if the object has no selections.
 
 #### Arguments
 
@@ -54,18 +54,9 @@ Returns a user's selection data from the object. Returns an empty array if the o
 
 #### Return value
 
-Returns an array of `ReportObjectResultData` objects, where each object is associated with one data set.
+Returns an array of [`ReportObjectResultData`](ReportObjectResultData.md) objects, where each object is associated with one data set.
 
-Each `ReportObjectResultData` object includes the following values:
-
-- `resultName: string`
-  - The name of the query result.
-- `rowCount: number`
-  - The number of rows of data returned.
-- `columns: { name: string; label: string; type: "string" | "number"; }[]`
-  - An array of objects that describes each column in the data set. Each column object includes a unique column name, the label that is displayed for the data in the column, and the data type for the column values.
-- `data: (string | number)[][]`
-  - A two-dimensional array of the data values in row-major order. For example, accessing `data[0]` is the first row of data, and `data[0][0]` is the value of the first row in the first column.
+For user selection data, the ReportObjectResultData property `columns` will never include values for `usage`, `aggregation`, or `format`.
 
 ### addEventListener(eventType: string, listener: () => void)
 
