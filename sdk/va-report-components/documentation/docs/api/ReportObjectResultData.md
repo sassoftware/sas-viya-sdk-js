@@ -30,7 +30,7 @@ Each column object supports the following properties:
 - `aggregation?: string` An optional string that describes how the values in this column are aggregated together.
 - `format?: Object` An optional object describing how the data should be formatted for a column of type `'number'`. It has the
   following properties:
-  - `name: string` A name for the format
+  - `name: string` A name for the format.
   - `width: number` The maximum number of characters for the formatted value.
   - `precision: number` The number of digits after the decimal place.
   - `formatString: string` A string that completely specifies the formatting by combining the `name`, `width`, and
