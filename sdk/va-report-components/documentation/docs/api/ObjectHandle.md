@@ -38,3 +38,34 @@ If no `options` parameter is supplied, the report is exported using the default 
 
 Refreshes the data for the report object that is controlled by the
 `ObjectHandle`.
+
+### getSelectedData(options?: Object): ReportObjectResultData[]
+
+Returns a user's selection data from the report object. Returns an empty array if the object has no selections.
+
+#### Arguments
+
+`options` is an optional options bundle for customizing the returned data. The following options are supported:
+
+- `formatData` specifies the format of the returned data.
+  - `true` returns all formatted data
+  - `false` returns all unformatted data
+  - `"datesOnly"` `default` returns only SAS date values as formatted and all other data is unformatted
+
+#### Return value
+
+Returns an array of [`ReportObjectResultData`](ReportObjectResultData.md) objects, where each object is associated with one data set.
+
+For user selection data, the ReportObjectResultData property `columns` will never include values for `usage`, `aggregation`, or `format`.
+
+### addEventListener(eventType: string, listener: () => void)
+
+Adds an event listener to the `ObjectHandle` to call the supplied listener when the specified event occurs.
+
+Event types supported:
+
+- `"selectionChanged"` for listening for selection changes in the object.
+
+### removeEventListener(eventType: string, listener: () => void)
+
+Removes the previously registered event listener from the `ObjectHandle`.
