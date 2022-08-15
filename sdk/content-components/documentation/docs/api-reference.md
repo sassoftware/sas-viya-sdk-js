@@ -13,6 +13,7 @@ Analytics SDK.
 - [`ContentBreadcrumbElement`](api/ContentBreadcrumbElement.md)
 - [`ContentGroupElement`](api/ContentGroupElement.md)
 - [`ContentTreeElement`](api/ContentTreeElement.md)
+- [`getSASJobExecutionUrl`](api/getSASJobExecutionUrl.md)
 
 ## Loading with a script element
 

@@ -1,4 +1,3 @@
-
 <html>
   <head>
     <script async src="https://cdn.developer.sas.com/packages/content-components/latest/dist/umd/content-sdk-components.js"></script>
@@ -14,7 +13,7 @@
         <div style="flex: 3;">
           <!-- sas-content-breadcrumb to enable navigating back up the tree -->
           <sas-content-breadcrumb id="cb"></sas-content-breadcrumb>
-            <!-- sas-content-area to display a folder containing reports -->
+            <!-- sas-content-area to display a folder containing jobs -->
             <!-- Supported attributes: -->
             <!-- selection-mode: "single" or "multiple" -->
             <!-- initial-selection-index: 0-based index of the item that should be initially selected -->
@@ -23,11 +22,12 @@
         </div>
       </div>
 
-      <!-- Header that will be updated with the selected report name -->
-      <h3 id="reportName" style="margin-left: 1rem;">No report selected</h3>
-      <!-- sas-report with empty reportUri to start -->
-      <!-- The sas-content-group has no effect on a sas-report. It can be inside or outside of it. -->
-      <sas-report id="report" hideNavigation="auto" authenticationType="credentials" style="height: 500px;"></sas-report>
+      <!-- Header that will be updated with the selected job name -->
+      <h3 id="jobName" style="margin-left: 1rem;">No job selected</h3>
+      <!-- An iframe within a sized div that will be the target of the selected job -->
+      <div id="jobsIframeContainer" style="height: 500px;">
+        <iframe id="jobsIframe" src="about:blank" scrolling="no" frameborder="0" style="height: 100%; width: 100%;"></iframe>
+      </div>
     </sas-content-group>
   </body>
   <script>
@@ -36,14 +36,14 @@
       const cg = document.getElementById('cg');
       const ca = document.getElementById('ca');
       const ct = document.getElementById('ct');
-      const report = document.getElementById('report');
-      const reportName = document.getElementById('reportName');
-
+      const jobsIframeContainer = document.getElementById('jobsIframeContainer');
+      const jobsIframe = document.getElementById('jobsIframe');
+      const jobName = document.getElementById('jobName');
       // The base url for your SAS Viya deployment
       const url = "YOUR-VIYA-URL";
 
-      // Set the url on the SDK components
-      [cg, ca, ct, report].forEach((el) => el.setAttribute('url', url));
+      // Set the url on the content components
+      [cg, ca, ct].forEach((el) => el.setAttribute('url', url));
 
       const myFolderIdentifier = {
         type: "persistentLocation",
@@ -74,44 +74,39 @@
 
       // Use the initialFilterValue to only show certain content types in the group
       cg.initialFilterValue = {
-        // Show only reports
-        queryModeFilter: "or(eq(contentType,'report'),eq(contentType,'folder'))"
-        // Show only folders
-        // queryModeFilter: "eq(contentType, 'folder')"
-        // Show reports and folders
-        // queryModeFilter: "in(contentType, 'report', 'folder')"
+        // Show only jobs and folders
+        queryModeFilter: "or(eq(contentType,'jobDefinition'),eq(contentType,'folder'))"
       };
 
-      // setSelectedIdentifiers can be used for programmatic selection
-      // ca.setSelectedIdentifiers([
-      //   {
-      //     type: "driveItemId",
-      //     value: "<item 1 uri>"
-      //   },
-      //   {
-      //     type: "driveItemId",
-      //     value: "<item 2 uri>"
-      //   }
-      // ]);
+      // The onSelect handler can be used to respond to user selection. In this case it will update the embedded iframe.
+      ca.onSelect = async (value) => {
+        if (value && value.length > 0 && value[0]?.resource?.type?.typeDefName === 'jobDefinition') {
+          const job = value[0];
+          // If tiles are selected, attempt to get the SASJobExecution URL for the job and set it on the iframe
+          const jobExecutionUrl = await contentSdkComponents.getSASJobExecutionUrl(value[0], url);
 
-      // The onSelect handler can be used to respond to user selection. In this case it will update the embedded report.
-      ca.onSelect = (value) => {
-        let reportUri = '';
-        if (value && value.length > 0 && value[0]?.resource?.type?.sasType === 'report') {
-          // If tiles are selected, get new reportUri and report name from the selected item
-          reportName.innerText = value[0].name;
-          reportUri = value[0].resource.id;
+          if (jobExecutionUrl) {
+            // If we were able to retrieve the URL, show the iframe and set the URL on it
+            jobName.innerText = job.name;
+            jobsIframeContainer.style.display = 'block';
+            jobsIframe.src = jobExecutionUrl;
+          } else {
+            jobName.innerText = "No job selected";
+            jobsIframeContainer.style.display = 'none';
+            jobsIframe.src = 'about:blank';
+          }
         } else {
-          reportName.innerText = 'No report selected'
+          jobName.innerText = "No job selected";
+          jobsIframeContainer.style.display = 'none';
+          jobsIframe.src = 'about:blank';
         }
-
-        report.reportUri = reportUri;
-      };
-
-      ct.onSelect = () => {
-        reportName.innerText = "No report selected";
-        report.reportUri = '';
       };
     });
+
+    ct.onSelect = () => {
+      jobName.innerText = "No job selected";
+      jobsIframeContainer.style.display = 'none';
+      jobsIframe.src = 'about:blank';
+    };
   </script>
 </html>
