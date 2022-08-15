@@ -57,10 +57,10 @@ default value: `true`
 
 ### `reportContextKey: string`
 
-By default SASReportObjectElements that have the same `reportUri` or `packageUri` share a report context. This allows for SASReportElements to interact with each other through report features, like filters, when interaction are present. However, as a result, two SASReportElements cannot render the same report element. Setting the reportContextKey to a unique value will give a SASReportElement its own report context and allow multiple SASReportObjectElement to be render the same report element. When reportContextKey is undefined, `getReportHandle()` will return the same report handle for each SASReportObjectElement that has the same `reportUri` or `packageUri`.
+`reportContextKey` controls the sharing of report contexts between different `SASReportObjectElement` and `SASReportPageElement` elements that originate from the same report.  A shared report context allows for report object actions like filtering and brushing to occur between elements.  Elements sharing a report context also have the same shared instance of a `ReportHandle`, thus all report parameters are also shared. In contrast, unique report contexts do not allow for interactions across elements and result in a unique `Report Handle`. Unique report contexts also allow for multiple instances of the same report object to be shown at one time, which is not possible when using a shared report context.  By default `SASReportObjectElement`s share a report context with other elements using the same `reportUri` or `packageUri`. Setting different `reportContextKey` values on elements from the same report will result in separate report contexts.
 
-default value: `undefined`
-default behavior: shared reportContextKey per report
+default value: `undefined`<br>
+default behavior: use a shared report context per report
 
 
 ## Properties
