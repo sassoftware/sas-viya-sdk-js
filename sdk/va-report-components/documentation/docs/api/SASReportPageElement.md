@@ -58,6 +58,15 @@ When `true`, report objects that support zooming require a modifier key be used 
 
 default value: `true`
 
+### `reportContextKey: string`
+
+By default SASReportPageElements that have the same `reportUri` or `packageUri` do not share a report context. However, creating a separate report context per page can have negative performance characteristics and the default behavior results in `getReportHandle()` returning a different handle per SASReportPageElement. Setting the same `reportContextKey` value on multiple SASReportPageElements will improve performance in some cases and will result in `getReportHandle()` returning the same instance.
+
+Note: A future release of va-report-components will change the default behavior. In the future SASReportPageElements will share report contexts with other SASReportPageElements and SASReportElements.
+
+default value: `undefined`
+default behavior: unique reportContextKey per SASReportPageElement
+
 ## Properties
 
 ### `menuItemProvider: MenuItemProvider`

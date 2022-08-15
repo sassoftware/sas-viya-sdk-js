@@ -55,6 +55,14 @@ When `true`, report objects that support zooming require a modifier key be used 
 
 default value: `true`
 
+### `reportContextKey: string`
+
+By default SASReportObjectElements that have the same `reportUri` or `packageUri` share a report context. This allows for SASReportElements to interact with each other through report features, like filters, when interaction are present. However, as a result, two SASReportElements cannot render the same report element. Setting the reportContextKey to a unique value will give a SASReportElement its own report context and allow multiple SASReportObjectElement to be render the same report element. When reportContextKey is undefined, `getReportHandle()` will return the same report handle for each SASReportObjectElement that has the same `reportUri` or `packageUri`.
+
+default value: `undefined`
+default behavior: shared reportContextKey per report
+
+
 ## Properties
 
 ### `menuItemProvider: MenuItemProvider`
