@@ -40,7 +40,7 @@ Specify the report URI.
 
 ### `packageUri: string`
 
-Specify the base location of the SAS report package that was exported from SAS Visual Analytics.  This can be absolute or relative to the page. `authenticationType`, `url`, and `reportUri` are ignored when you set this property.
+Specify the base location of the SAS report package that was exported from SAS Visual Analytics. This can be absolute or relative to the page. `authenticationType`, `url`, and `reportUri` are ignored when you set this property.
 
 See [Export Report Package](guides/export-report-package.md)
 
@@ -60,7 +60,7 @@ default value: `true`
 
 ### `reportContextKey: string`
 
-`reportContextKey` controls the sharing of report contexts between different `SASReportObjectElement` and `SASReportPageElement` elements that originate from the same report.  A shared report context allows for report object actions like filtering and brushing to occur between elements.  Elements sharing a report context also have the same shared instance of a `ReportHandle`, thus all report parameters are also shared. In contrast, unique report contexts do not allow for interactions across elements and result in a unique `Report Handle`. Unique report contexts also allow for multiple instances of the same report object to be shown at one time, which is not possible when using a shared report context.  By default `SASReportPageElement`s use their own unique report context. Setting identical `reportContextKey` values on elements from the same report will result in use of a shared report context. Doing this can give performance benefits when multiple `SASReportPageElement`s from the same report are used.
+`reportContextKey` controls the sharing of report contexts between different `SASReportObjectElement` and `SASReportPageElement` elements that originate from the same report. A shared report context allows for report actions, like filtering and linked selections, to occur between objects. Objects that are a report context also have the same shared instance of a `ReportHandle` and all report parameters are shared. In contrast, unique report contexts do not allow for actions across elements and result in a unique `Report Handle`. Unique report contexts also allow for multiple instances of the same report object to be shown at one time, which is not possible when using a shared report context. By default, `SASReportPageElement`s use their own unique report context. Setting identical `reportContextKey` values on elements from the same report will result in use of a shared report context. Doing this can give performance benefits when multiple `SASReportPageElement`s from the same report are used.
 
 default value: `undefined`<br>
 default behavior: use a unique report context per `SASReportPageElement`
