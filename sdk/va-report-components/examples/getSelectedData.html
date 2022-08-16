@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <script
+      async
+      src="https://cdn.developer.sas.com/packages/va-report-components/latest/dist/umd/va-report-components.js"
+    ></script>
+    <style>
+      html {
+        background-color: #f0f0f0;
+      }
+      body {
+        width: 60%;
+        height: 60%;
+        padding: 10px;
+        display: block;
+      }
+      h1 {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <sas-report-object
+      authenticationType="guest"
+      url="{SAS-VIYA-URL}"
+      reportUri="{REPORT-URI}"
+      objectName="{OBJECT-NAME}"
+      id="object1"
+    ></sas-report-object>
+    <h1>Currently selected data:</h1>
+    <div id="tableDiv"></div>
+  </body>
+  <script>
+    window.addEventListener("vaReportComponents.loaded", async () => {
+      const reportObject = document.getElementById("object1");
+      const objectHandle = await reportObject.getObjectHandle();
+
+      const selectionChangedListener = () => {
+        // Retrieve the new selected data
+        const selectedData = objectHandle.getSelectedData({ formatData: true });
+
+        // Reset the table since the data has changed
+        const tableDiv = document.getElementById("tableDiv");
+        tableDiv.innerHTML = "";
+
+        for (const dataSet of selectedData) {
+          // Process the data and display a table of currently selected data
+          createTable(dataSet);
+        }
+      };
+
+      // Call the listener when user selections change
+      objectHandle.addEventListener(
+        "selectionChanged",
+        selectionChangedListener
+      );
+    });
+
+    function createTable(dataSet) {
+      const tableDiv = document.getElementById("tableDiv");
+      const table = document.createElement("table");
+
+      const headingRow = document.createElement("tr");
+      table.appendChild(headingRow);
+
+      // Processing column names
+      for (const column of dataSet.columns) {
+        const heading = document.createElement("th");
+        // Use the column label as the heading
+        heading.appendChild(document.createTextNode(column.label));
+        headingRow.appendChild(heading);
+      }
+
+      // Processing each row of data
+      for (const dataRow of dataSet.data) {
+        const row = document.createElement("tr");
+        table.appendChild(row);
+
+        // Processing each data value in the row
+        for (const dataValue of dataRow) {
+          const cell = document.createElement("td");
+          cell.appendChild(document.createTextNode(dataValue));
+          row.appendChild(cell);
+        }
+      }
+
+      // Place the table in the div
+      tableDiv.appendChild(table);
+    }
+  </script>
+</html>
