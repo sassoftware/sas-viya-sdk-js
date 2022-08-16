@@ -62,8 +62,9 @@ default value: `true`
 
 `reportContextKey` controls the sharing of report contexts between different `SASReportObjectElement` and `SASReportPageElement` elements that originate from the same report.  A shared report context allows for report object actions like filtering and brushing to occur between elements.  Elements sharing a report context also have the same shared instance of a `ReportHandle`, thus all report parameters are also shared. In contrast, unique report contexts do not allow for interactions across elements and result in a unique `Report Handle`. Unique report contexts also allow for multiple instances of the same report object to be shown at one time, which is not possible when using a shared report context.  By default `SASReportPageElement`s use their own unique report context. Setting identical `reportContextKey` values on elements from the same report will result in use of a shared report context. Doing this can give performance benefits when multiple `SASReportPageElement`s from the same report are used.
 
-default value: `undefined`<br>
-default behavior: use a unique report context per `SASReportPageElment`
+default value: `undefined`
+
+default behavior: use a unique report context per `SASReportPageElement`
 
 <span style='color:red'>DEPRECATED</span>: This default behavior is deprecated and will change in a future release of va-report-components. The new default behavior will share report contexts with other `SASReportPageElement` and `SASReportObjectElement` elements from the same report.
 
