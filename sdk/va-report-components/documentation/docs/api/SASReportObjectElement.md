@@ -41,7 +41,7 @@ Specify the report URI.
 
 ### `packageUri: string`
 
-Specify the base location of the SAS report package that was exported from SAS Visual Analytics.  This can be absolute or relative to the page. `authenticationType`, `url`, and `reportUri` are ignored when you set this property.
+Specify the base location of the SAS report package that was exported from SAS Visual Analytics. This can be absolute or relative to the page. `authenticationType`, `url`, and `reportUri` are ignored when you set this property.
 
 See [Export Report Package](guides/export-report-package.md)
 
@@ -54,6 +54,14 @@ Specify the name of the object from the report to display.
 When `true`, report objects that support zooming require a modifier key be used in addition to the scroll wheel. Enable restrictViewportGestures when embedding elements in a layout that causes overflow. This reserves the scroll-wheel action for page scrolling.
 
 default value: `true`
+
+### `reportContextKey: string`
+
+`reportContextKey` controls the sharing of report contexts between different `SASReportObjectElement` and `SASReportPageElement` elements that originate from the same report. A shared report context allows for report actions, like filtering and linked selections, to occur between objects. Objects that are a report context also have the same shared instance of a `ReportHandle` and all report parameters are shared. In contrast, unique report contexts do not allow for actions across elements and result in a unique `Report Handle`. Unique report contexts also allow for multiple instances of the same report object to be shown at one time, which is not possible when using a shared report context. By default, `SASReportObjectElement`s share a report context with other elements using the same `reportUri` or `packageUri`. Setting different `reportContextKey` values on elements from the same report will result in separate report contexts.
+
+default value: `undefined`<br>
+default behavior: use a shared report context per report
+
 
 ## Properties
 

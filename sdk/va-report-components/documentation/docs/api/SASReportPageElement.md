@@ -40,7 +40,7 @@ Specify the report URI.
 
 ### `packageUri: string`
 
-Specify the base location of the SAS report package that was exported from SAS Visual Analytics.  This can be absolute or relative to the page. `authenticationType`, `url`, and `reportUri` are ignored when you set this property.
+Specify the base location of the SAS report package that was exported from SAS Visual Analytics. This can be absolute or relative to the page. `authenticationType`, `url`, and `reportUri` are ignored when you set this property.
 
 See [Export Report Package](guides/export-report-package.md)
 
@@ -57,6 +57,15 @@ Specify the index of the report page that you want to display. `0` is the first 
 When `true`, report objects that support zooming require a modifier key be used in addition to the scroll wheel. Enable restrictViewportGestures when embedding elements in a layout that causes overflow. This reserves the scroll-wheel action for page scrolling.
 
 default value: `true`
+
+### `reportContextKey: string`
+
+`reportContextKey` controls the sharing of report contexts between different `SASReportObjectElement` and `SASReportPageElement` elements that originate from the same report. A shared report context allows for report actions, like filtering and linked selections, to occur between objects. Objects that are a report context also have the same shared instance of a `ReportHandle` and all report parameters are shared. In contrast, unique report contexts do not allow for actions across elements and result in a unique `Report Handle`. Unique report contexts also allow for multiple instances of the same report object to be shown at one time, which is not possible when using a shared report context. By default, `SASReportPageElement`s use their own unique report context. Setting identical `reportContextKey` values on elements from the same report will result in use of a shared report context. Doing this can give performance benefits when multiple `SASReportPageElement`s from the same report are used.
+
+default value: `undefined`<br>
+default behavior: use a unique report context per `SASReportPageElement`
+
+<span style='color:red'>DEPRECATED</span>: This default behavior is deprecated and will change in a future release of va-report-components. The new default behavior will share report contexts with other `SASReportPageElement` and `SASReportObjectElement` elements from the same report.
 
 ## Properties
 
