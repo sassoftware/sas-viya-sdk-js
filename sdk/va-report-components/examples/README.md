@@ -33,3 +33,7 @@ Uses `registerDataDrivenContent` and `DataDrivenContentHandle` to connect to a d
 - [connectToServer](./connectToServer.html) (<a target="_blank" href="https://developer.sas.com/sdk/va/docs/api/connectToServer">docs</a>)
 
 Uses `connectToServer` to establish a connection to a SAS Viya server before adding reports to the page.
+
+- [getSelectedData](./getSelectedData.html) (<a target="_blank" href="https://developer.sas.com/sdk/va/docs/api/ObjectHandle">docs</a>)
+
+Uses `getSelectedData` and `addEventListener` from `ObjectHandle` to retrieve user selection data from a report object, then displays the data in a table. 
