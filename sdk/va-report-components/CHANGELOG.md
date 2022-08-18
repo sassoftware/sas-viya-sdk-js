@@ -1,3 +1,17 @@
+## 1.11.0 (August 18, 2022)
+
+### Added
+- SAS Viya 2022.1.4 support (Report Package version 27)
+- `getSelectedData` method on `ObjectHandle`
+- `addEventListener` method on `ObjectHandle`
+- `removeEventListener` method on `ObjectHandle`
+- Support for `selectionChanged` event type on `ObjectHandle`
+- `reportContextKey` attribute on `SASReportPageElement`
+- `reportContextKey` attribute on `SASReportObjectElement`
+
+### Deprecated
+- The default report context behavior for `SASReportPageElement` ([details](https://developer.sas.com/sdk/va/docs/api/SASReportPageElement/#reportcontextkey-string))
+
 ## 1.10.0 (July 21, 2022)
 
 - SAS Viya 2022.1.3 support (Report Package version 26)
