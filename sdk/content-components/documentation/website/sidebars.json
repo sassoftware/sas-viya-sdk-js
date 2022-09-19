@@ -8,7 +8,6 @@
       "api/ContentBreadcrumbElement",
       "api/ContentGroupElement",
       "api/ContentTreeElement",
-      "api/getSASJobExecutionUrl",
       "api/Item",
       "api/ItemIdentifier",
       "api/LocationIdentifier",
