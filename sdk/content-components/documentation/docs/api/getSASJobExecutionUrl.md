@@ -4,16 +4,16 @@ title: getSASJobExecutionUrl
 ---
 
 ```
-getSASJobExecutionUrl(item, url): Promise<string | undefined>
+getSASJobExecutionUrl(itemUri, url): Promise<string | undefined>
 ```
 
 This function generates a SAS Job Execution URL. You can use the URL to open a job and execute it if it is a job with an HTML prompt. This URL can be opened in a new tab or window, or embedded in an iframe if allowed by the security settings on the deployment.
 
 ## Arguments
 
-### `item: Item`
+### `itemUri: string`
 
-The target job definition [Item](Item.md), such as from an `onSelect` event.
+The uri of the target job definition [Item](Item.md), such as from an `onSelect` event. This corresponds to the `resource.id` property of the Item.
 
 ### `url: string`
 
