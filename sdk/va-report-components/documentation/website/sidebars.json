@@ -17,7 +17,8 @@
       "api/DataDrivenContentHandle",
       "api/ReportObjectResultData",
       "api/setUseHighContrastReportTheme",
-      "api/setLoadingTheme"
+      "api/setLoadingTheme",
+      "api/setLocale"
     ],
     "Resources": ["faq"]
   }
