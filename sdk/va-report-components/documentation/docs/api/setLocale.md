@@ -7,7 +7,7 @@ title: setLocale
 setLocale(locale): void
 ```
 
-`setLocale` allows the user to set an override to the language specified in the browser settings.
+`setLocale` enables the user to set an override for the language that is specified in the browser settings.
 
 ## Arguments
 
