@@ -1,3 +1,7 @@
+## 0.8.0 (September 22, 2022)
+
+- Added ContentLocationsElement
+
 ## 0.7.0 (July 21, 2022)
 
 - Added support for styling components via "class" and "style" attributes.

@@ -7,6 +7,7 @@
       "api/ContentAreaElement",
       "api/ContentBreadcrumbElement",
       "api/ContentGroupElement",
+      "api/ContentLocationsElement",
       "api/ContentTreeElement",
       "api/Item",
       "api/ItemIdentifier",

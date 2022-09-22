@@ -1,6 +1,7 @@
 ---
-id: api-reference
+id: version-0.8.0-api-reference
 title: API Reference
+original_id: api-reference
 ---
 
 The SAS Content SDK provides a set of components and APIs that enable you to render tiles representing items (such as Report and Models) stored in SAS Viya. It also enables
