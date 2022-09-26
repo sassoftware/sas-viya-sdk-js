@@ -64,7 +64,7 @@ Adds an event listener to the `ObjectHandle` to call the supplied listener when 
 
 #### Arguments
 
-`eventType` is a string that represents the event type to listen for. Event types supported:
+`eventType` is a string that represents the event type to listen for. These event types are supported:
 - `"selectionChanged"` for listening for selection changes in the object.
 
 `listener` is an event listener callback function. When the event occurs, `listener` is called and passed an event object containing the following properties:
