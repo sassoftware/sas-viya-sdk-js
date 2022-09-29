@@ -58,14 +58,19 @@ Returns an array of [`ReportObjectResultData`](ReportObjectResultData.md) object
 
 For user selection data, the ReportObjectResultData property `columns` will never include values for `usage`, `aggregation`, or `format`.
 
-### addEventListener(eventType: string, listener: () => void)
+### addEventListener(eventType: string, listener: (event: Object) => void)
 
 Adds an event listener to the `ObjectHandle` to call the supplied listener when the specified event occurs.
 
-Event types supported:
+#### Arguments
 
+`eventType` is a string that represents the event type to listen for. These event types are supported:
 - `"selectionChanged"` for listening for selection changes in the object.
 
-### removeEventListener(eventType: string, listener: () => void)
+`listener` is an event listener callback function. When the event occurs, `listener` is called and passed an event object containing the following properties:
+- `type` is a string that matches the event type.
+- `target` refers to the ObjectHandle that the event occurred on.
+
+### removeEventListener(eventType: string, listener: (event: Object) => void)
 
 Removes the previously registered event listener from the `ObjectHandle`.
