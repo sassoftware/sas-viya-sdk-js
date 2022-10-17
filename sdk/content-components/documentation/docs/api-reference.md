@@ -14,6 +14,7 @@ Analytics SDK.
 - [`ContentGroupElement`](api/ContentGroupElement.md)
 - [`ContentLocationsElement`](api/ContentLocationsElement.md)
 - [`ContentTreeElement`](api/ContentTreeElement.md)
+- [`getSASJobExecutionUrl`](api/getSASJobExecutionUrl.md)
 
 ## Loading with a script element
 

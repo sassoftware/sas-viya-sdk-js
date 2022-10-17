@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <script async src="https://cdn.developer.sas.com/packages/content-components/latest/dist/umd/content-sdk-components.js"></script>
+  </head>
+  <body>
+    <!-- sas-content-group to link contained content components together, provide navigation and selection behavior, etc. -->
+    <sas-content-group id="cg">
+      <div style="display: flex;">
+        <div style="flex: 1;">
+          <!-- sas-content-tree to display a navigation tree -->
+          <sas-content-tree id="ct"></sas-content-tree>
+        </div>
+        <div style="flex: 3;">
+          <!-- sas-content-breadcrumb to enable navigating back up the tree -->
+          <sas-content-breadcrumb id="cb"></sas-content-breadcrumb>
+            <!-- sas-content-area to display a folder containing jobs -->
+            <!-- Supported attributes: -->
+            <!-- selection-mode: "single" or "multiple" -->
+            <!-- initial-selection-index: 0-based index of the item that should be initially selected -->
+            <sas-content-area id="ca" selection-mode="single" initial-selection-index="0">
+            </sas-content-area>
+        </div>
+      </div>
+
+      <!-- Header that will be updated with the selected job name -->
+      <h3 id="jobName" style="margin-left: 1rem;">No job selected</h3>
+      <!-- An iframe within a sized div that will be the target of the selected job -->
+      <div id="jobsIframeContainer" style="height: 500px;">
+        <iframe id="jobsIframe" src="about:blank" scrolling="no" frameborder="0" style="height: 100%; width: 100%;"></iframe>
+      </div>
+    </sas-content-group>
+  </body>
+  <script>
+    window.addEventListener('contentSdkComponents.loaded', () => {
+      // Get the required elements from the HTML
+      const cg = document.getElementById('cg');
+      const ca = document.getElementById('ca');
+      const ct = document.getElementById('ct');
+      const jobsIframeContainer = document.getElementById('jobsIframeContainer');
+      const jobsIframe = document.getElementById('jobsIframe');
+      const jobName = document.getElementById('jobName');
+      // The base url for your SAS Viya deployment
+      const url = "YOUR-VIYA-URL";
+
+      // Set the url on the content components
+      [cg, ca, ct].forEach((el) => el.setAttribute('url', url));
+
+      const myFolderIdentifier = {
+        type: "persistentLocation",
+        value: "myFolder"
+      };
+      const favoritesIdentifier = {
+        type: "persistentLocation",
+        value: "favorites",
+        preventExpansion: true
+      };
+      const sasContentIdentifier = {
+        type: "persistentLocation",
+        value: "root"
+      };
+      const recycleBinIdentifier = {
+        type: "persistentLocation",
+        value: "trash",
+        preventExpansion: true
+      };
+
+      // Set the initialNavigationValue on the sas-content-group
+      // This will sync all contained components to an initial state, and keep them in sync automatically based on user interaction
+      cg.initialNavigationValue = {
+        location: myFolderIdentifier,
+        locationContextPath: [myFolderIdentifier],
+        locations: [myFolderIdentifier, favoritesIdentifier, sasContentIdentifier, recycleBinIdentifier]
+      };
+
+      // Use the initialFilterValue to only show certain content types in the group
+      cg.initialFilterValue = {
+        // Show only jobs and folders
+        queryModeFilter: "or(eq(contentType,'jobDefinition'),eq(contentType,'folder'))"
+      };
+
+      // The onSelect handler can be used to respond to user selection. In this case it will update the embedded iframe.
+      ca.onSelect = async (value) => {
+        if (value && value.length > 0 && value[0]?.resource?.type?.typeDefName === 'jobDefinition') {
+          const job = value[0];
+          // If tiles are selected, attempt to get the SASJobExecution URL for the job and set it on the iframe
+          const jobExecutionUrl = await contentSdkComponents.getSASJobExecutionUrl(value[0], url);
+
+          if (jobExecutionUrl) {
+            // If we were able to retrieve the URL, show the iframe and set the URL on it
+            jobName.innerText = job.name;
+            jobsIframeContainer.style.display = 'block';
+            jobsIframe.src = jobExecutionUrl;
+          } else {
+            jobName.innerText = "No job selected";
+            jobsIframeContainer.style.display = 'none';
+            jobsIframe.src = 'about:blank';
+          }
+        } else {
+          jobName.innerText = "No job selected";
+          jobsIframeContainer.style.display = 'none';
+          jobsIframe.src = 'about:blank';
+        }
+      };
+    });
+
+    ct.onSelect = () => {
+      jobName.innerText = "No job selected";
+      jobsIframeContainer.style.display = 'none';
+      jobsIframe.src = 'about:blank';
+    };
+  </script>
+</html>

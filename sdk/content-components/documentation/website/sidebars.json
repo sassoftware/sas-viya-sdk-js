@@ -9,6 +9,7 @@
       "api/ContentGroupElement",
       "api/ContentLocationsElement",
       "api/ContentTreeElement",
+      "api/getSASJobExecutionUrl",
       "api/Item",
       "api/ItemIdentifier",
       "api/LocationIdentifier",
