@@ -83,7 +83,7 @@
         if (value && value.length > 0 && value[0]?.resource?.type?.typeDefName === 'jobDefinition') {
           const job = value[0];
           // If tiles are selected, attempt to get the SASJobExecution URL for the job and set it on the iframe
-          const jobExecutionUrl = await contentSdkComponents.getSASJobExecutionUrl(value[0], url);
+          const jobExecutionUrl = await contentSdkComponents.getSASJobExecutionUrl(job.resource.id, url);
 
           if (jobExecutionUrl) {
             // If we were able to retrieve the URL, show the iframe and set the URL on it

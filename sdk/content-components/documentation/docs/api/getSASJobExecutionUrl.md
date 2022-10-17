@@ -11,9 +11,9 @@ This function generates a SAS Job Execution URL. You can use the URL to open a j
 
 ## Arguments
 
-### `item: Item`
+### `itemUri: string`
 
-The target job definition [Item](Item.md), such as from an `onSelect` event.
+The URI of the target job definition [Item](Item.md), such as from an `onSelect` event. This corresponds to the `resource.id` property of the Item.
 
 ### `url: string`
 
