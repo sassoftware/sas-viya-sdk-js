@@ -1,0 +1,26 @@
+{
+  "version-0.9.0-docs": {
+    "Introduction": [
+      "version-0.9.0-getting-started"
+    ],
+    "Guides": [
+      "version-0.9.0-guides/browse-reports"
+    ],
+    "API Reference": [
+      "version-0.9.0-api-reference",
+      "version-0.9.0-api/ContentAreaElement",
+      "version-0.9.0-api/ContentBreadcrumbElement",
+      "version-0.9.0-api/ContentGroupElement",
+      "version-0.9.0-api/ContentLocationsElement",
+      "version-0.9.0-api/ContentTreeElement",
+      "version-0.9.0-api/getSASJobExecutionUrl",
+      "version-0.9.0-api/Item",
+      "version-0.9.0-api/ItemIdentifier",
+      "version-0.9.0-api/LocationIdentifier",
+      "version-0.9.0-api/LogonWrapperProps"
+    ],
+    "Resources": [
+      "version-0.9.0-faq"
+    ]
+  }
+}
