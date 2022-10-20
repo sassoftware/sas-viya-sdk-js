@@ -1,3 +1,9 @@
+## 1.13.0 (October 20, 2022)
+
+### Added
+- SAS Viya 2022.10 support (Report Package version 29)
+- `event` parameter added to the callback signature of `addEventListener` on `ObjectHandle`
+
 ## 1.12.0 (September 22, 2022)
 
 ### Added
