@@ -1,3 +1,7 @@
+## 0.9.0 (Octover 20, 2022)
+
+- Added getSASJobExecutionUrl helper
+
 ## 0.8.0 (September 22, 2022)
 
 - Added ContentLocationsElement
