@@ -18,7 +18,8 @@
       "api/ReportObjectResultData",
       "api/setUseHighContrastReportTheme",
       "api/setLoadingTheme",
-      "api/setLocale"
+      "api/setLocale",
+      "api/setFormatterLocale"
     ],
     "Resources": ["faq"]
   }

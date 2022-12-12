@@ -1,13 +1,13 @@
 ---
-id: setLocale
-title: setLocale
+id: setFormatterLocale
+title: setFormatterLocale
 ---
 
 ```
-setLocale(locale): void
+setFormatterLocale(locale): void
 ```
 
-`setLocale` enables the user to set an override for the language that is specified in the browser settings.
+`setFormatterLocale` enables the user to set the language that is used to format numeric values and dates. If not specified, the language will fallback to the one that is specified by calling setLocale or the one is specified in the browser settings.
 
 ## Arguments
 
@@ -19,12 +19,12 @@ The locale should be specified as a language code and an optional country code. 
 
 ```javascript
 window.addEventListener("vaReportComponents.loaded", function () {
-  vaReportComponents.setLocale("fr");
+  vaReportComponents.setFormatterLocale("fr");
 });
 ```
 
 ```javascript
 window.addEventListener("vaReportComponents.loaded", function () {
-  vaReportComponents.setLocale("fr-CA");
+  vaReportComponents.setFormatterLocale("fr-CA");
 });
 ```
