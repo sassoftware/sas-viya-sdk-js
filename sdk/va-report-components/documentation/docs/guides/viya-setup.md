@@ -29,4 +29,4 @@ It is also a requirement that SAS Viya be accessed using the HTTPS protocol in o
 ## Allow guest access
 
 The SAS Visual Analytics SDK has the option to connect to SAS Viya using guest authentication. This requires that SAS Viya be set up to enable guest access, and that the guest user has access to the appropriate report content and data. For more information, see 
-<a target="_blank" href="https://documentation.sas.com/?cdcId=sasadmincdc&cdcVersion=default&docsetId=calauthmdl&docsetTarget=n067qoyrgu1yohn19nq4ehy8o0b3.htm">SAS Help Center</a>.
+<a target="_blank" href="https://documentation.sas.com/doc/en/sasadmincdc/default/calauthmdl/n1iyx40th7exrqn1ej8t12gfhm88.htm#n067qoyrgu1yohn19nq4ehy8o0b3">SAS Help Center</a>.
