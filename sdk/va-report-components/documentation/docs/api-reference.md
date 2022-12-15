@@ -17,7 +17,7 @@ to use SAS data to drive your own components or visualizations.
 - [`setUseHighContrastReportTheme`](api/setUseHighContrastReportTheme.md)
 - [`setLoadingTheme`](api/setLoadingTheme.md)
 - [`setLocale`](api/setLocale.md)
-- [`setLocale`](api/setFormatterLocale.md)
+- [`setFormatterLocale`](api/setFormatterLocale.md)
 
 ## Loading with \<script\>
 
