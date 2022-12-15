@@ -1,3 +1,9 @@
+## 1.15.0 (December 15, 2022)
+
+### Added
+- SAS Viya 2022.12 support (Report Package version 31)
+- `setFormatterLocale` function to top-level exports
+
 ## 1.14.0 (November 17, 2022)
 
 ### Added
