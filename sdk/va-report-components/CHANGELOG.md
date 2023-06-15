@@ -1,3 +1,11 @@
+## 1.21.0 (June 15, 2023)
+
+### Added
+- SAS Viya 2023.06 support (Report Package version 35)
+- Honor report theme in data tips
+- New page tab design
+- Collapsible page and report prompt areas
+
 ## 1.20.0 (May 18, 2023)
 
 ### Added
