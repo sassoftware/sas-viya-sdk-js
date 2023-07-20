@@ -1,3 +1,11 @@
+## 2.0.0 (July 20, 2023)
+
+### Added
+- SAS Viya 2023.07 support (Report Package version 36)
+
+### Deprecated
+- Library versions prior to `2.0.0` are now deprecated. An upgrade to version >= `2.0.0` will be required to connect to SAS Viya starting with SAS Viya 2024.01.
+
 ## 1.21.0 (June 15, 2023)
 
 ### Added
