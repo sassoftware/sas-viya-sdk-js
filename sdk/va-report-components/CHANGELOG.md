@@ -1,3 +1,9 @@
+## 2.1.0 (August 17, 2023)
+
+### Added
+- SAS Viya 2023.08 support (Report Package version 37)
+- Tooltip on prompt containers showing current selected values
+
 ## 2.0.0 (July 20, 2023)
 
 ### Added
