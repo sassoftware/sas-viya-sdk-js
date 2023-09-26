@@ -80,6 +80,12 @@ Launches a popup window that navigates to the authentication endpoint and allows
 
 rejects: When login fails (for example: user closes the popup).
 
+##### `logout(): Promise<void>`
+
+Makes an endpoint call to the SAS Viya server that ends the cookie based browser session.
+
+rejects: When sign out fails.
+
 ##### `invalidateCache()`
 
 If `checkAuthenticated` has already been called, a cached value may be returned the next time. This is done to reduce the number of potential service calls needed when making multiple API calls. Calling `invalidateCache` will force `checkAuthenticated` to re-validate the next time it is called. **This is not needed for most use cases.**
