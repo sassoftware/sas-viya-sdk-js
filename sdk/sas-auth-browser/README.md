@@ -82,9 +82,9 @@ rejects: When login fails (for example: user closes the popup).
 
 ##### `logout(): Promise<void>`
 
-Makes an endpoint call to the Viya server that ends the cookie based browser session.
+Makes an endpoint call to the SAS Viya server that ends the cookie based browser session.
 
-rejects: When logout fails.
+rejects: When sign out fails.
 
 ##### `invalidateCache()`
 
