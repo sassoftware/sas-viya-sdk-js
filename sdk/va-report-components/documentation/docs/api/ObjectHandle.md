@@ -41,16 +41,16 @@ Refreshes the data for the report object that is controlled by the
 
 ### getData(options?: Object): ReportObjectResultData[]
 
-Returns all currently displayed data from the report object.
+Returns all of the data from the report object. This data matches what appears in the report object, including any filters that have been applied.
 
 #### Arguments
 
 `options` is an optional options bundle for customizing the returned data. The following options are supported:
 
 - `formatData` specifies the format of the returned data.
-  - `true` returns all formatted data
-  - `false` returns all unformatted data
-  - `"datesOnly"` `default` returns only SAS date values as formatted and all other data is unformatted
+  - `true` returns all formatted data.
+  - `false` returns all unformatted data.
+  - `"datesOnly"` `default` returns SAS date values as formatted data and returns all other values as unformatted data.
 
 #### Return value
 
@@ -65,9 +65,9 @@ Returns a user's selection data from the report object. Returns an empty array i
 `options` is an optional options bundle for customizing the returned data. The following options are supported:
 
 - `formatData` specifies the format of the returned data.
-  - `true` returns all formatted data
-  - `false` returns all unformatted data
-  - `"datesOnly"` `default` returns only SAS date values as formatted and all other data is unformatted
+  - `true` returns all formatted data.
+  - `false` returns all unformatted data.
+  - `"datesOnly"` `default` returns SAS date values as formatted data and returns all other values as unformatted data.
 
 #### Return value
 
