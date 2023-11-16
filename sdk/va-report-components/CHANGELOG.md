@@ -1,3 +1,9 @@
+## 2.4.0 (November 16, 2023)
+
+### Added
+- SAS Viya 2023.11 support (Report Package version 40)
+- `getData` method on `ObjectHandle`
+
 ## 2.3.0 (October 19, 2023)
 
 ### Added
