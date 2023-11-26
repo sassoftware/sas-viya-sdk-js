@@ -60,8 +60,10 @@
       const tableDiv = document.getElementById("tableDiv");
       const table = document.createElement("table");
 
+      const tableHeader = document.createElement("thead");
       const headingRow = document.createElement("tr");
-      table.appendChild(headingRow);
+      tableHeader.appendChild(headingRow)
+      table.appendChild(tableHeader);
 
       // Processing column names
       for (const column of dataSet.columns) {
@@ -71,10 +73,12 @@
         headingRow.appendChild(heading);
       }
 
+      const tableBody = document.createElement("tbody");
+      table.appendChild(tableBody);
       // Processing each row of data
       for (const dataRow of dataSet.data) {
         const row = document.createElement("tr");
-        table.appendChild(row);
+        tableBody.appendChild(row);
 
         // Processing each data value in the row
         for (const dataValue of dataRow) {
