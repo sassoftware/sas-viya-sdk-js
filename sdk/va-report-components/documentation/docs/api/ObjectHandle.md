@@ -11,6 +11,16 @@ When a report element is assigned new attribute values or removed from the DOM,
 any `ObjectHandles` obtained from that element are invalidated and should be
 discarded.
 
+## Properties
+
+###	readyState: string
+Describes the ready state of the report object. When this value changes, a `readyStateChanged` event is fired on the ObjectHandle. 
+
+This value can be one of the following:
+  - `"contentLoading"` when the report object is still loading its content.
+  - `"complete"` when the report object has finished loading.
+  - `"error"` when the report object encountered an error and could not load.
+
 ## Methods
 
 ### exportData(format: string, options?: ExportDataOptions): Promise\<string>
@@ -83,6 +93,7 @@ Adds an event listener to the `ObjectHandle` to call the supplied listener when 
 
 `eventType` is a string that represents the event type to listen for. These event types are supported:
 - `"selectionChanged"` for listening for selection changes in the object.
+- `"readyStateChanged"` for listening for changes in the object’s ready state.
 
 `listener` is an event listener callback function. When the event occurs, `listener` is called and passed an event object containing the following properties:
 - `type` is a string that matches the event type.

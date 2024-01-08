@@ -62,6 +62,12 @@ default value: `true`
 default value: `undefined`<br>
 default behavior: use a shared report context per report
 
+### `hideLoadImage: boolean`
+
+Indicates whether the static loading image displayed during object load should be hidden. When true, the report image is not displayed.
+
+default value: `false`
+
 
 ## Properties
 
