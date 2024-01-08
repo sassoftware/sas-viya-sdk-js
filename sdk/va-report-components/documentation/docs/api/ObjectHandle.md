@@ -13,7 +13,7 @@ discarded.
 
 ## Properties
 
-###	readyState: string
+### readyState: string
 Describes the ready state of the report object. When this value changes, a `readyStateChanged` event is fired on the ObjectHandle. 
 
 This value can be one of the following:
