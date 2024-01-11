@@ -14,7 +14,7 @@ discarded.
 ## Properties
 
 ### readyState: string
-Describes the ready state of the report object. When this value changes, a `readyStateChanged` event is fired on the ObjectHandle. 
+The ready state of the report object. When this value changes, a `readyStateChanged` event is fired on the ObjectHandle. 
 
 This value can be one of the following:
   - `"contentLoading"` when the report object is still loading its content.
@@ -93,7 +93,7 @@ Adds an event listener to the `ObjectHandle` to call the supplied listener when 
 
 `eventType` is a string that represents the event type to listen for. These event types are supported:
 - `"selectionChanged"` for listening for selection changes in the object.
-- `"readyStateChanged"` for listening for changes in the object’s ready state.
+- `"readyStateChanged"` for listening to changes on the `readyState` property.
 
 `listener` is an event listener callback function. When the event occurs, `listener` is called and passed an event object containing the following properties:
 - `type` is a string that matches the event type.

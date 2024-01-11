@@ -64,7 +64,7 @@ default behavior: use a shared report context per report
 
 ### `hideLoadImage: boolean`
 
-Indicates whether the static loading image displayed during object load should be hidden. When true, the report image is not displayed.
+When `false`, report objects display a placeholder static image of the report object while it is loading. `true` hides this placeholder and displays a loading indicator.
 
 default value: `false`
 
