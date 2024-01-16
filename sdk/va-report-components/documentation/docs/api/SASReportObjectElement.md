@@ -62,6 +62,12 @@ default value: `true`
 default value: `undefined`<br>
 default behavior: use a shared report context per report
 
+### `hideLoadImage: boolean`
+
+When `false`, report objects display a placeholder static image of the report object while it is loading. `true` hides this placeholder and displays a loading indicator.
+
+default value: `false`
+
 
 ## Properties
 
