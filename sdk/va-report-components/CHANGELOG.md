@@ -1,3 +1,11 @@
+## 2.6.0 (January 18, 2024)
+
+### Added
+- SAS Viya 2024.01 support (Report Package version 42)
+- `readyState` property on `ObjectHandle`
+- `readyStateChanged` event type on `ObjectHandle`
+- `hideLoadImage` attribute on `sas-report-object`
+
 ## 2.5.0 (December 14, 2023)
 
 ### Added
