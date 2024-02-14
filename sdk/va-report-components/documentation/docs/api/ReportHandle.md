@@ -13,6 +13,17 @@ When a report element is assigned new attribute values or removed from the DOM,
 any `ReportHandles` obtained from that element are invalidated and should be
 discarded.
 
+## Properties
+
+### readyState: string
+The ready state of the report. When this value changes, a `readyStateChanged` event is fired on the ReportHandle. 
+
+This value can be one of the following:
+  - `"loading"` when the report is still initializing.
+  - `"contentLoading"` when the report is still loading its content.
+  - `"complete"` when the report has finished loading.
+  - `"error"` when the report encountered an error and could not load.
+
 ## Methods
 
 ### getObjectHandle(objectName: string): Promise\<ObjectHandle>
@@ -146,3 +157,20 @@ Refreshes the data for all of the objects in the report.
 ### reloadReport(): void
 
 Reloads the report. This updates all report content and data, which resets all filters and parameters to their default values.
+
+### addEventListener(eventType: string, listener: (event: Object) => void)
+
+Adds an event listener to the `ReportHandle` to call the supplied listener when the specified event occurs.
+
+#### Arguments
+
+`eventType` is a string that represents the event type to listen for. These event types are supported:
+- `"readyStateChanged"` for listening to changes on the `readyState` property.
+
+`listener` is an event listener callback function. When the event occurs, `listener` is called and passed an event object containing the following properties:
+- `type` is a string that matches the event type.
+- `target` refers to the ReportHandle that the event occurred on.
+
+### removeEventListener(eventType: string, listener: (event: Object) => void)
+
+Removes the previously registered event listener from the `ReportHandle`.
