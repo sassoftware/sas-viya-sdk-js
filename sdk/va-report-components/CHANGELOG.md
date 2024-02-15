@@ -1,3 +1,12 @@
+## 2.7.0 (February 15, 2024)
+
+### Added
+- SAS Viya 2024.02 support (Report Package version 43)
+- `addEventListener` method on `ReportHandle`
+- `removeEventListener` method on `ReportHandle`
+- `readyState` property on `ReportHandle`
+- `readyStateChanged` event type on `ReportHandle`
+
 ## 2.6.0 (January 18, 2024)
 
 ### Added
