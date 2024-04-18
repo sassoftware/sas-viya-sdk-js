@@ -1,3 +1,8 @@
+## 2.9.0 (April 18, 2024)
+
+### Added
+- SAS Viya 2024.04 support (Report Package version 45)
+
 ## 2.8.0 (March 21, 2024)
 
 ### Added
