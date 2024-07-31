@@ -13,7 +13,7 @@ Access to a deployment of SAS Visual Analytics 8.4 (or later) is necessary in or
 
 ### NPM
 
-The <a target="_blank" href="https://www.npmjs.com/package/@sassoftware/va-report-components">`@sassoftware/va-report-components`</a> library is published to NPM and can be installed by running the `npm install` command as shown below. `va-report-components` can then either be loaded with a `script` tag or with ES module imports.
+The <a target="_blank" href="https://www.npmjs.com/package/@sassoftware/va-report-components">`@sassoftware/va-report-components`</a> library is published to NPM and can be installed by running the `npm install` command as shown below. `va-report-components` can then be loaded with either a `script` tag or with an ES module import.
 
 ```bash
 # From the root directory of your project

@@ -34,7 +34,7 @@ const report = document.getElementById("my-report") as SASReportElement;
 
 #### Configuration
 
-`va-report-components` contains CSS files that might not work as intended when processed by Webpack loaders. If your build uses loaders such as style-loader or css-loader, you should exclude `va-report-components`.
+`va-report-components` contains CSS files that might not work as intended when processed by webpack loaders. If your build uses loaders such as style-loader or css-loader, you should exclude `va-report-components`.
 
 ```js
 // webpack.config.js
@@ -88,7 +88,7 @@ export default defineConfig({
 });
 ```
 
-Known CommonJS dependencies are listed above, but the actual list may vary between applications. When a module needs to be added to the list, a message like the following is logged to the browser console.
+Known CommonJS dependencies are listed above, but the actual list can vary between applications. When a module needs to be added to the list, a message is logged in the browser console. Here is an example:
 
 ```text
 SyntaxError: The requested module '/node_modules/prop-types/index.js?v=4776a820' does not provide an export named 'default'
