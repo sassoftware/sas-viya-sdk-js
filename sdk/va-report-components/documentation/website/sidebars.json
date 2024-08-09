@@ -1,7 +1,12 @@
 {
   "docs": {
     "Introduction": ["getting-started"],
-    "Guides": ["guides/viya-setup", "guides/export-report-package", "guides/data-driven-content"],
+    "Guides": [
+      "guides/viya-setup",
+      "guides/export-report-package",
+      "guides/data-driven-content",
+      "guides/esm"
+    ],
     "API Reference": [
       "api-reference",
       "api/SASReportElement",
