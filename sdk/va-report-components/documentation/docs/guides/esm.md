@@ -53,7 +53,7 @@ export default {
 
 #### SAS Report Packages
 
-If your site hosts [exported SAS Report Packages](guides/export-report-package.md) alongside your webpack build, they may be referenced relative to `__webpack_public_path__`.
+If your site hosts [exported SAS Report Packages](guides/export-report-package.md) alongside your webpack build, they can be referenced relative to `__webpack_public_path__`.
 
 ```js
 import { SASReportElement } from "@sassoftware/va-report-components";
@@ -99,7 +99,7 @@ Production builds are not affected by this issue.
 #### SAS Report Packages
 
 If you include [exported SAS Report Packages](guides/export-report-package.md) in your Vite project's
-`public` directory, the packages may be referenced relative to `import.meta.env.BASE_URL`.
+`public` directory, the packages can be referenced relative to `import.meta.env.BASE_URL`.
 
 ```js
 import { SASReportElement } from "@sassoftware/va-report-components";
@@ -125,3 +125,5 @@ export const MyComponent(props) {
   )
 }
 ```
+
+For more information, see [Custom HTML elements](https://react.dev/reference/react-dom/components#custom-html-elements) in the React documentation.
