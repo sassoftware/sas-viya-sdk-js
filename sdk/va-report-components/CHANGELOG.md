@@ -1,3 +1,9 @@
+## 2.13.0 (August 15, 2024)
+
+### Added
+- SAS Viya 2024.08 support (Report Package version 48)
+- [ES Module imports](https://developer.sas.com/sdk/va/docs/guides/esm) support
+
 ## 2.12.0 (July 18, 2024)
 
 ### Added
