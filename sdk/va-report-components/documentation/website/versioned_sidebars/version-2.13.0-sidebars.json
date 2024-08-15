@@ -1,0 +1,35 @@
+{
+  "version-2.13.0-docs": {
+    "Introduction": [
+      "version-2.13.0-getting-started"
+    ],
+    "Guides": [
+      "version-2.13.0-guides/viya-setup",
+      "version-2.13.0-guides/export-report-package",
+      "version-2.13.0-guides/data-driven-content",
+      "version-2.13.0-guides/esm"
+    ],
+    "API Reference": [
+      "version-2.13.0-api-reference",
+      "version-2.13.0-api/SASReportElement",
+      "version-2.13.0-api/SASReportPageElement",
+      "version-2.13.0-api/SASReportObjectElement",
+      "version-2.13.0-api/ReportHandle",
+      "version-2.13.0-api/ObjectHandle",
+      "version-2.13.0-api/ExportPDFOptions",
+      "version-2.13.0-api/ExportDataOptions",
+      "version-2.13.0-api/MenuItemProvider",
+      "version-2.13.0-api/connectToServer",
+      "version-2.13.0-api/registerDataDrivenContent",
+      "version-2.13.0-api/DataDrivenContentHandle",
+      "version-2.13.0-api/ReportObjectResultData",
+      "version-2.13.0-api/setUseHighContrastReportTheme",
+      "version-2.13.0-api/setLoadingTheme",
+      "version-2.13.0-api/setLocale",
+      "version-2.13.0-api/setFormatterLocale"
+    ],
+    "Resources": [
+      "version-2.13.0-faq"
+    ]
+  }
+}
