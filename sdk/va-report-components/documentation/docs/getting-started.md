@@ -11,20 +11,30 @@ You can embed entire reports with the `<sas-report>` custom HTML element, embed 
 
 ### NPM
 
-The <a target="_blank" href="https://www.npmjs.com/package/@sassoftware/va-report-components">`@sassoftware/va-report-components`</a> library is published to NPM and can be installed by running the `npm install` command as shown below. `va-report-components` does not support ES6 imports. Therefore, the contents of the `va-report-components/dist` folder must be deployed with your page, and then loaded using a `script` tag.
+The <a target="_blank" href="https://www.npmjs.com/package/@sassoftware/va-report-components">`@sassoftware/va-report-components`</a> library is published to NPM and can be installed by running the `npm install` command as shown below. `va-report-components` can then be loaded with either a `script` tag or with an ES module import.
 
 ```bash
 # From the root directory of your project
 npm install @sassoftware/va-report-components
+```
 
+When using a `script` tag, the contents of the `va-report-components/dist` folder must be deployed with your page.
+
+```bash
 # Copy the contents of the package to an asset folder for deployment
 cp -r ./node_modules/@sassoftware/va-report-components ./sdk-assets
 ```
 
-The library can then be loaded out of the deployed assets folder using a `script` tag.
+The library can then be loaded out of the deployed assets folder.
 
 ```html
 <script async src="./sdk-assets/dist/umd/va-report-components.js"></script>
+```
+
+If your site is built using a code bundler, it might be more convenient to load the library through ES module imports. See the [ES module guide](guides/esm.md) for more details.
+
+```js
+import "@sassoftware/va-report-components"
 ```
 
 ### CDN (Content Delivery Network)

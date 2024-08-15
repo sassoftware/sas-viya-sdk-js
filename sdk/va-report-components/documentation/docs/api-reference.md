@@ -33,3 +33,11 @@ assets are loaded. The `vaReportComponents.loaded` event is dispatched once it i
   });
 </script>
 ```
+
+## Loading with imports
+
+When you load the library as an ES module, APIs are available as named imports. See the [ES module imports guide](guides/esm.md) for more information about loading the library as a module.
+
+```ts
+import { connectToServer } from '@sassoftware/va-report-components';
+```
