@@ -10,7 +10,7 @@ registerDataDrivenContent(options, onMessage): DataDrivenContentHandle
 This function is used to receive and dispatch messages to a data-driven content object. If the report is not yet
 opened then this call will open it and initiate data processing for this data-driven content object.
 
-To find the correct values for `url`, `reportUri`, and `objectName`, see [the Getting Started page](getting-started.md#create-a-custom-html-tag).
+To find the correct values for `url`, `reportUri`, and `objectName`, see [the Getting Started page](getting-started.md#create-a-custom-html-tag). See [Export SAS Report Packages](guides/export-report-package.md) for more information about the `packageUri` option.
 
 ## Arguments
 
@@ -18,13 +18,14 @@ To find the correct values for `url`, `reportUri`, and `objectName`, see [the Ge
 
 Choose options for how to connect to the server. The following properties are supported:
 
+- `objectName: string`: Specify the name of the data-driven content object.
 - `url: string`: Specify the URL of the SAS Viya server that hosts the report. This is the full context root, including
   the protocol, optional port, and host.
 - `reportUri: string`: Specify the report URI.
-- `objectName: string`: Specify name of the data-driven content object.
 - `authenticationType: string`: Choose the method to authenticate requests to the SAS Viya server.
   - `'guest'` automatically signs in to the SAS Viya server as the guest user.
   - `'credentials'` <b>`default`</b> uses SAS Logon to establish an authenticated session.
+- `packageUri: string`: Specify the base location of the SAS report package that was exported from SAS Visual Analytics. This can be absolute or relative to the page. `authenticationType`, `url`, and `reportUri` are ignored when you set this property.
 
 ### `onMessage: (receivedMessage: ReportObjectResultData) => void`
 
