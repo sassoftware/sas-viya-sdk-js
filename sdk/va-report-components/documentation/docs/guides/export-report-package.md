@@ -27,7 +27,7 @@ As noted in the `packageUri` API documentation, this property takes the place of
 
 ## Why do my report fonts look different from SAS Visual Analytics?
 
-When you use the SAS Visual Analytics SDK to connect directly to SAS Viya, the fonts are loaded from that SAS Viya deployment. This allows the report content to render using the same font that was specified when the report was designed in SAS Visual Analytics. For licensing reasons, SAS cannot redistribute these fonts when a report package is exported. When you use a report package, extra steps are required to ensure that the report content uses the fonts that you intended. These steps are outlined below.
+When you use the SAS Visual Analytics SDK to connect directly to SAS Viya, the fonts are loaded from that SAS Viya deployment. The report content is rendered using the same font that was specified when the report was designed in SAS Visual Analytics. The SAS Visual Analytics SDK redistributes fonts that are owned by SAS. For example, if you use a report theme that uses the default Anova font family, then the Anova fonts automatically appear in your exported report. However, if you use a custom font, or if you have an older report that still uses the Avenir Next font family, licensing limitations prevent those fonts from being redistributed when you export a report package. When you have a report package with custom fonts or the Avenir Next font, extra steps are required to ensure that the report content uses the fonts that you intended. These steps are outlined below.
 
 ### Define the font face in CSS
 
