@@ -1,3 +1,9 @@
+## 2.25.0 (August 21, 2025)
+
+### Added
+- SAS Viya 2025.08 support (Report Package version 60)
+- `registerDataDriveContent` support with exported report packages using new [`packageUri` option](https://developer.sas.com/sdk/va/docs/api/registerDataDrivenContent#options-object)
+
 ## 2.24.0 (July 18, 2025)
 
 ### Added
