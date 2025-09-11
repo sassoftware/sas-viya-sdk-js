@@ -26,6 +26,22 @@ This value can be one of the following:
 
 ## Methods
 
+### getReportName(): Promise\<string>
+
+Returns the name of the report as a string. Throws an error if the result is not a string.
+
+#### Example
+
+In this example, the method is called and its result is logged in the console.
+
+```javascript
+const sasReport = document.querySelector("sas-report");
+sasReport.getReportHandle().then(async (reportHandle) => {
+  const reportName = await reportHandle.getReportName();
+  console.log('Report Name:', reportName);
+});
+```
+
 ### getObjectHandle(objectName: string): Promise\<ObjectHandle>
 
 Get an [ObjectHandle](ObjectHandle.md) for performing actions on a single object
