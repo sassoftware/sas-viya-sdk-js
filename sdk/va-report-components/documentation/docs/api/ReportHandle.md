@@ -26,6 +26,9 @@ This value can be one of the following:
 
 ## Methods
 
+### getReportName(): Promise\<string>
+Returns a promise that resolves with the name of the report. If the name cannot be obtained, the promise is rejected.
+
 ### getObjectHandle(objectName: string): Promise\<ObjectHandle>
 
 Get an [ObjectHandle](ObjectHandle.md) for performing actions on a single object
