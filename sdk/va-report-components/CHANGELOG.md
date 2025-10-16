@@ -1,3 +1,9 @@
+## 2.27.0 (October 16, 2025)
+
+### Added
+- SAS Viya 2025.10 support (Report Package version 62)
+- `getReportName` method on `ReportHandle`
+
 ## 2.26.0 (September 24, 2025)
 
 ### Added
