@@ -1,3 +1,8 @@
+## 2.30.0 (January 22, 2026)
+
+### Added
+- SAS Viya 2026.01 support (Report Package version 65)
+
 ## 2.29.0 (December 18, 2025)
 
 ### Added
