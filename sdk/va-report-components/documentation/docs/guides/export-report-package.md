@@ -27,23 +27,11 @@ As noted in the `packageUri` API documentation, this property takes the place of
 
 ## Why do my report fonts look different from SAS Visual Analytics?
 
-When you use the SAS Visual Analytics SDK to connect directly to SAS Viya, the fonts are loaded from that SAS Viya deployment. The report content is rendered using the same font that was specified when the report was designed in SAS Visual Analytics. The SAS Visual Analytics SDK redistributes fonts that are owned by SAS. For example, if you use a report theme that uses the default Anova font family, then the Anova fonts automatically appear in your exported report. However, if you use a custom font, or if you have an older report that still uses the Avenir Next font family, licensing limitations prevent those fonts from being redistributed when you export a report package. When you have a report package with custom fonts or the Avenir Next font, extra steps are required to ensure that the report content uses the fonts that you intended. These steps are outlined below.
+When you use the SAS Visual Analytics SDK to connect directly to SAS Viya, the fonts are loaded from that SAS Viya deployment. The report content is rendered using the same font that was specified when the report was designed in SAS Visual Analytics. The SAS Visual Analytics SDK redistributes fonts that are owned by SAS. For example, if you use a report theme that uses the default Anova font family, then the Anova fonts automatically appear in your exported report. However, due to licensing restrictions, no other fonts are redistributed in the report package. [Web safe fonts](https://www.w3schools.com/cssref/css_websafe_fonts.php) will also automatically render correctly without any additional modification. When you have a report package that uses unavailable fonts, extra steps are required to ensure that the report content uses the fonts that you intended.
 
 ### Define the font face in CSS
 
-#### Using SAS Viya fonts
-
-Within the exported report package, a file named `viyafonts.css` references fonts from your SAS Viya deployment for use in your page. Including a link to this stylesheet in your HTML page enables it to access the fonts that were used to design the report.
-
-To use these fonts, the SAS Viya deployment must be accessible and have CORS enabled. For more information on enabling CORS, see [`Enable Cross-Origin Resource Sharing`](viya-setup#enable-cross-origin-resource-sharing).
-
-```html
-<link rel='stylesheet' type='text/css' href='css/viyafonts.css' />
-```
-
-#### Using your custom fonts
-
-Use the [@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) in your CSS to define the font (or fonts) that are used by the report content. This means that you must know the `font-family` name and have access to the font files.
+To ensure that a font is available to the report, use the [@font-face css at-rule](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face) to define the font (or fonts) that are used by the report content. To do this, you must know the `font-family` name and have http access to the font files.
 
 ```html
 <style>
@@ -55,7 +43,7 @@ Use the [@font-face](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face
 </style>
 ```
 
-It might be necessary for you to use a font that is not a standard font available in SAS Visual Analytics. To do this, you must first load the font onto SAS Viya by utilizing the SAS Viya CLI fonts plug-in, as shown in <a target="_blank" href="https://documentation.sas.com/?cdcId=sasadmincdc&cdcVersion=default&docsetId=calfonts&docsetTarget=p0z64ee1ufe5vpn1pibg7pzhsgrb.htm">Fonts: CLI Examples</a>. You can then create the report content using that font.
+See [this article](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts) for a more detailed tutorial on web fonts.
 
 ## Are all features and APIs supported?
 
