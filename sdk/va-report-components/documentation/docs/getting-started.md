@@ -54,7 +54,7 @@ The SAS Visual Analytics SDK requires either connecting directly to SAS Viya or 
 
 ## Embed SAS Visual Analytics report content
 
-Use the steps outlined in the [SAS Visual Analytics documentation](https://documentation.sas.com/doc/en/vacdc/v_036/vareports/n12fx3dg213larn13myrl9352g4x.htm) to create [`sas-report`](api/SASReportElement), [`sas-report-page`](api/SASReportPageElement), or [`sas-report-object`](api/SASReportObjectElement) HTML elements that embed your report content using the SDK.
+Use the steps outlined in the [SAS Visual Analytics documentation](https://documentation.sas.com/?cdcId=vacdc&cdcVersion=default&docsetId=vareports&docsetTarget=n12fx3dg213larn13myrl9352g4x.htm) to create [`sas-report`](api/SASReportElement), [`sas-report-page`](api/SASReportPageElement), or [`sas-report-object`](api/SASReportObjectElement) HTML elements that embed your report content using the SDK.
 
 ## See our examples
 
