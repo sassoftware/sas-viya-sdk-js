@@ -52,34 +52,9 @@ When the library is used in production, consider pinning it to an explicit versi
 
 The SAS Visual Analytics SDK requires either connecting directly to SAS Viya or exporting a SAS Report Package.  Server setup requirements for connecting to SAS Viya are covered in the [SAS Viya Setup Guide](guides/viya-setup.md).
 
-## Create a custom HTML tag
+## Embed SAS Visual Analytics report content
 
-To build the custom HTML tag that you will embed in your web page:
-
-1. Open a report in SAS Visual Analytics.
-1. Open the menu in the report toolbar (which is displayed in the image below) or right-click an individual object, and then select Copy Link. The Copy Link window is displayed.
-1. If you are using guest access, expand the Options heading and select the Guest access check box.
-1. Click Copy Link.
-
-![Report Overflow Menu](assets/report-overflow-menu.png)
-
-Once the report link or object link has been copied to your clipboard, paste it below, and the output will show a custom HTML
-tag that is ready to use.
-
-<link rel="stylesheet" href="/sdk/va/css/copy-link-translator.css">
-<form>
-  <textarea id="vdk-slt-input"
-    rows="5"
-    style="resize: none; width: 100%;"
-    placeholder="Paste the link from SAS Visual Analytics here."
-    aria-label="Paste the link from SAS Visual Analytics here."
-  ></textarea>
-  <pre><code id="vdk-slt-output" class="hljs" data-hide="true"></code></pre>
-</form>
-<script type="module" src="/sdk/va/js/copy-link-translator.js"></script>
-
-For a complete list of options, see the documentation for [`SASReportElement`](api/SASReportElement.md) and
-[`SASReportObjectElement`](api/SASReportObjectElement.md)
+Use the steps outlined in the [SAS Visual Analytics documentation](https://documentation.sas.com/?cdcId=vacdc&cdcVersion=default&docsetId=vareports&docsetTarget=n12fx3dg213larn13myrl9352g4x.htm) to create [`sas-report`](api/SASReportElement), [`sas-report-page`](api/SASReportPageElement), or [`sas-report-object`](api/SASReportObjectElement) HTML elements that embed your report content using the SDK.
 
 ## See our examples
 
