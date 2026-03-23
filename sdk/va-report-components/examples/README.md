@@ -6,34 +6,31 @@
 
 - Object name should take this form: `'ve123'`
 
-To support Edge, a polyfill for HTML custom elements is also needed.  
-<a target="_blank" href="https://developer.sas.com/sdk/va/docs/getting-started#include-a-custom-element-polyfill">See our documentation here</a>.
-
 ## Examples
 
-- [SASReportElement](./SASReportElement.html) (<a target="_blank" href="https://developer.sas.com/sdk/va/docs/api/SASReportElement">docs</a>)
+- [SASReportElement](./SASReportElement.html) (<a target="_blank" href="https://developer.sas.com/sdk/js/va-report-components/api/SASReportElement">docs</a>)
 
 Uses the `<sas-report>` custom element to display full reports. Styles report viewer in CSS with the `sas-report`
 selector.
 
 - [SASReportElementJS](./SASReportElementJS.html)
-  (<a target="_blank" href="https://developer.sas.com/sdk/va/docs/api/SASReportElement">docs</a>)
+  (<a target="_blank" href="https://developer.sas.com/sdk/js/va-report-components/api/SASReportElement">docs</a>)
 
 Uses JavaScript `SASReportElement` to display a report on SDK load. Styles report with inline styles.
 
 - [SASReportObjectElement](./SASReportObjectElement.html)
-  (<a target="_blank" href="https://developer.sas.com/sdk/va/docs/api/SASReportObjectElement">docs</a>)
+  (<a target="_blank" href="https://developer.sas.com/sdk/js/va-report-components/api/SASReportObjectElement">docs</a>)
 
 Uses the `<sas-report-object>` custom element to display a report object. Styles report object with CSS classes.
 
-- [registerDataDrivenContent](./registerDataDrivenContent.html) (<a target="_blank" href="https://developer.sas.com/sdk/va/docs/guides/data-driven-content">docs</a>)
+- [registerDataDrivenContent](./registerDataDrivenContent.html) (<a target="_blank" href="https://developer.sas.com/sdk/js/va-report-components/guides/data-driven-content">docs</a>)
 
 Uses `registerDataDrivenContent` and `DataDrivenContentHandle` to connect to a data-driven content report object and harness the data from SAS Visual Analytics to augment the html page.
 
-- [connectToServer](./connectToServer.html) (<a target="_blank" href="https://developer.sas.com/sdk/va/docs/api/connectToServer">docs</a>)
+- [connectToServer](./connectToServer.html) (<a target="_blank" href="https://developer.sas.com/sdk/js/va-report-components/api/connectToServer">docs</a>)
 
 Uses `connectToServer` to establish a connection to a SAS Viya server before adding reports to the page.
 
-- [getSelectedData](./getSelectedData.html) (<a target="_blank" href="https://developer.sas.com/sdk/va/docs/api/ObjectHandle">docs</a>)
+- [getSelectedData](./getSelectedData.html) (<a target="_blank" href="https://developer.sas.com/sdk/js/va-report-components/api/ObjectHandle">docs</a>)
 
 Uses `getSelectedData` and `addEventListener` from `ObjectHandle` to retrieve user selection data from a report object, then displays the data in a table. 
