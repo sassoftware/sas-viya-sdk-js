@@ -7,7 +7,7 @@ library.
 
 ## Prerequisites
 
-Access to a deployment of SAS Visual Analytics 8.4 (or later) is necessary in order to use the SDK. For more information about server set up, see <a target="_blank" href="https://developer.sas.com/sdk/va/docs/guides/viya-setup/">SAS Viya setup</a>.
+Access to a deployment of SAS Visual Analytics 8.4 (or later) is necessary in order to use the SDK. For more information about server set up, see <a target="_blank" href="https://developer.sas.com/sdk/js/getting-started#sas-viya-platform-setup">SAS Viya Platform setup</a>.
 
 ## Installation
 
@@ -33,7 +33,7 @@ The library can then be loaded out of the deployed assets folder.
 <script async src="./sdk-assets/dist/umd/va-report-components.js"></script>
 ```
 
-If your site is built using a code bundler, it might be more convenient to load the library through ES module imports. See the <a target="_blank" href="https://developer.sas.com/sdk/va/docs/guides/esm/">ES module imports guide</a> for more details.
+If your site is built using a code bundler, it might be more convenient to load the library through ES module imports. See the <a target="_blank" href="https://developer.sas.com/sdk/js/va-report-components/guides/esm">ES module imports guide</a> for more details.
 
 ```js
 import "@sassoftware/va-report-components"
@@ -52,7 +52,7 @@ When the library is used in production, consider pinning it to an explicit versi
 
 ## Getting Started
 
-For guides and an API reference, see <a target="_blank" href="https://developer.sas.com/sdk/va/">developer.sas.com</a>.
+For guides and an API reference, see <a target="_blank" href="https://developer.sas.com/sdk/js/va-report-components/getting-started">developer.sas.com</a>.
 
 ## Examples
 
@@ -68,6 +68,6 @@ This package is licensed under this commercial [license](LICENSE).
 
 ## Additional Resources
 
-- <a target="_blank" href="https://developer.sas.com/sdk/va/">SAS Visual Analytics SDK</a> on developer.sas.com
+- <a target="_blank" href="https://developer.sas.com/sdk/js/va-report-components/getting-started">SAS Visual Analytics SDK</a> on developer.sas.com
 - <a target="_blank" href="https://support.sas.com/en/software/visual-analytics-support.html#documentation">SAS Visual Analytics documentation</a>
 - <a target="_blank" href="https://communities.sas.com/t5/SAS-Visual-Analytics/bd-p/sas_va">SAS Visual Analytics Community</a>

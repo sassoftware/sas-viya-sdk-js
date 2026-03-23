@@ -41,7 +41,6 @@ These cases are noted in the library README and LICENSE files located in the cor
 
 ## Additional Resources
 
-- <a target="_blank" href="https://developer.sas.com/sdk/va/">SAS Visual Analytics SDK</a> on developer.sas.com
-- <a target="_blank" href="https://developer.sas.com/sdk/content/">SAS Content SDK</a> on developer.sas.com
+- <a target="_blank" href="https://developer.sas.com/sdk/js/">SAS Viya SDK for JavaScript</a> on developer.sas.com
 - <a target="_blank" href="https://support.sas.com/en/software/visual-analytics-support.html#documentation">SAS Visual Analytics documentation</a>
 - <a target="_blank" href="https://communities.sas.com/t5/SAS-Visual-Analytics/bd-p/sas_va">SAS Visual Analytics Community</a>

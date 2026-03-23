@@ -5,7 +5,7 @@ You can embed tiles representing content items with the `<sas-content-area>` cus
 
 ## Prerequisites
 
-Access to a deployment of SAS Viya 4.0.1 (or later) is necessary in order to use the SDK. For more information about server set up, see <a target="_blank" href="https://developer.sas.com/sdk/content/docs/getting-started#sas-viya-setup">SAS Viya setup</a>.
+Access to a deployment of SAS Viya 4.0.1 (or later) is necessary in order to use the SDK. For more information about server set up, see <a target="_blank" href="https://developer.sas.com/sdk/js/getting-started#sas-viya-platform-setup">SAS Viya Platform setup</a>.
 
 ## Installation
 
@@ -38,7 +38,7 @@ When the library is used in production, consider pinning it to an explicit versi
 
 ## Getting Started
 
-For guides and an API reference, see <a target="_blank" href="https://developer.sas.com/sdk/content/">developer.sas.com</a>.
+For guides and an API reference, see <a target="_blank" href="https://developer.sas.com/sdk/js/content-components/getting-started">developer.sas.com</a>.
 
 ## Examples
 
@@ -54,6 +54,6 @@ This package is licensed under this commercial [license](LICENSE).
 
 ## Additional Resources
 
-- <a target="_blank" href="https://developer.sas.com/sdk/content/">SAS Content SDK</a> on developer.sas.com
+- <a target="_blank" href="https://developer.sas.com/sdk/js/content-components/getting-started">SAS Content SDK</a> on developer.sas.com
 - <a target="_blank" href="https://support.sas.com/en/software/visual-analytics-support.html#documentation">SAS Visual Analytics documentation</a>
 - <a target="_blank" href="https://communities.sas.com/t5/SAS-Visual-Analytics/bd-p/sas_va">SAS Visual Analytics Community</a>

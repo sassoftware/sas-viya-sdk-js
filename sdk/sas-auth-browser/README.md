@@ -4,7 +4,7 @@ The `sas-auth-browser` package provides an API that allows for an application or
 
 ## Prerequisites
 
-In order to successfully make browser based REST calls to SAS Viya endpoints using cookies, you will need to enable CORS, Cross-site cookies and CSRF web security settings. For more information, see the SAS® Visual Analytics SDK [SAS Viya setup guide](https://developer.sas.com/sdk/va/docs/guides/viya-setup/).
+In order to successfully make browser based REST calls to SAS Viya endpoints using cookies, you will need to enable CORS, Cross-site cookies and CSRF web security settings. For more information, see [SAS Viya Platform setup](https://developer.sas.com/sdk/js/getting-started#sas-viya-platform-setup).
 
 ## Installation
 

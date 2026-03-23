@@ -6,7 +6,7 @@
 
 ## Examples
 
-- [ContentSDKWithReport](./ContentSDKWithReport.html) (<a target="_blank" href="https://developer.sas.com/sdk/content/docs/api-reference/">docs</a>)
+- [ContentSDKWithReport](./ContentSDKWithReport.html) (<a target="_blank" href="https://developer.sas.com/sdk/js/content-components/api-reference">docs</a>)
 
 
-Uses the `<sas-content-tree>`, `<sas-content-breadcrumb>`, and `<sas-content-area>`, along with a `<sas-report>` (from the <a target="_blank" href="https://developer.sas.com/sdk/va/docs/getting-started">VA SDK</a>) to display a set of tiles representing reports. Selecting a report tile will update the report being displayed below.
+Uses the `<sas-content-tree>`, `<sas-content-breadcrumb>`, and `<sas-content-area>`, along with a `<sas-report>` (from the <a target="_blank" href="https://developer.sas.com/sdk/js/va-report-components/getting-started">VA SDK</a>) to display a set of tiles representing reports. Selecting a report tile will update the report being displayed below.

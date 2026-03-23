@@ -38,7 +38,7 @@
 
 ### Added
 - SAS Viya 2025.08 support (Report Package version 60)
-- `registerDataDriveContent` support with exported report packages using new [`packageUri` option](https://developer.sas.com/sdk/va/docs/api/registerDataDrivenContent#options-object)
+- `registerDataDriveContent` support with exported report packages using new [`packageUri` option](https://developer.sas.com/sdk/js/va-report-components/api/registerDataDrivenContent#options-object)
 
 ## 2.24.0 (July 18, 2025)
 
@@ -99,7 +99,7 @@
 
 ### Added
 - SAS Viya 2024.08 support (Report Package version 48)
-- [ES Module imports](https://developer.sas.com/sdk/va/docs/guides/esm) support
+- [ES Module imports](https://developer.sas.com/sdk/js/va-report-components/guides/esm) support
 
 ## 2.12.0 (July 18, 2024)
 
@@ -246,7 +246,7 @@
 - `reportContextKey` attribute on `SASReportObjectElement`
 
 ### Deprecated
-- The default report context behavior for `SASReportPageElement` ([details](https://developer.sas.com/sdk/va/docs/api/SASReportPageElement/#reportcontextkey-string))
+- The default report context behavior for `SASReportPageElement` ([details](https://developer.sas.com/sdk/js/va-report-components/api/SASReportPageElement#reportcontextkey-string))
 
 ## 1.10.0 (July 21, 2022)
 
