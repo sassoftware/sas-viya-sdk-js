@@ -1,3 +1,8 @@
+## 2.33.1 (April 27, 2026)
+
+### Fixed
+- Fix issue with opening old reports on a newer SAS Viya server
+
 ## 2.33.0 (April 16, 2026)
 
 ### Added
