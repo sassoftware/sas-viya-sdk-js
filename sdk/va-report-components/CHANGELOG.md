@@ -1,3 +1,9 @@
+## 2.35.0 (June 18, 2026)
+
+### Added
+- SAS Viya 2026.06 support (Report Package version 70)
+- `setActivePage` method on `ReportHandle`
+
 ## 2.34.0 (May 4, 2026)
 
 ### Added
