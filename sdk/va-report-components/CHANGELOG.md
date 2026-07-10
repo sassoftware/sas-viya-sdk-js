@@ -1,3 +1,10 @@
+## 2.36.0 (July 16, 2026)
+
+### Added
+- SAS Viya 2026.07 support (Report Package version 71)
+- `exportExcelWorkbook` method on `ObjectHandle`
+- `downloadImage` method on `ObjectHandle`
+
 ## 2.35.0 (June 18, 2026)
 
 ### Added
