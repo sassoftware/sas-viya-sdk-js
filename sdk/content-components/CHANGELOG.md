@@ -1,3 +1,9 @@
+## 1.0.0 (August 20, 2026)
+
+- Added `ContentSearchFieldElement` for catalog content searches.
+- Added `QuickDriveElement` and enhanced `DataSelectorElement` for selecting content data.
+- Added clipboard support, DragAndDrop, and configurable excluded action types for content components.
+
 ## 0.9.0 (Octover 20, 2022)
 
 - Added getSASJobExecutionUrl helper
