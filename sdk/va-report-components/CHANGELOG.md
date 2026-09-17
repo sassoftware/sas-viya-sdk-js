@@ -1,3 +1,10 @@
+## 2.38.0 (September 17, 2026)
+
+### Added
+- SAS Viya 2026.09 support (Report Package version 73)
+- `activePageChanged` event on `ReportHandle`
+- `getActivePageInfo` method on `ReportHandle`
+
 ## 2.37.0 (August 20, 2026)
 
 ### Added
