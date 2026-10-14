@@ -1,3 +1,23 @@
+## 1.1.0 (October 14, 2026)
+
+- Added theme support. Call `setTheme('light' | 'dark' | 'high-contrast')` or
+  `setTheme({ themeId })` for a custom SAS Viya theme to restyle all mounted components without a
+  page reload. If `setTheme` is not called, components use the theme from the host page
+  (`#sas-nc-startup-data`).
+- Added `setLocale(locale)` to change the language of all mounted components without a page reload
+  (for example, `setLocale('fr-FR')`). Right-to-left languages are supported.
+- `setTheme` and `setLocale` are available on `window.contentSdkComponents` and on the
+  `SASContentSDK` UMD export.
+- Menus, dialogs, and other popovers now use the active theme and text direction.
+- Added the `hide-all-types` attribute and `contentFilterConfig` property to
+  `ContentSelectorElement` to control which content types can be filtered.
+- Fixed focus outlines disappearing when tabbing between SDK components on the same page. Focus
+  outlines now appear for keyboard users only.
+- Fixed `QuickDriveElement` so opening a recommended report launches it in SAS Visual Analytics.
+- Fixed `DataSelectorElement` so it always closes after a commit, even if the `onCommit` handler
+  throws or `linked-viewer` is an invalid selector. Invalid selectors now log a warning.
+- Upgraded internal dependencies and fixed reported security vulnerabilities.
+
 ## 1.0.0 (August 20, 2026)
 
 - Added `ContentSearchFieldElement` for catalog content searches.
