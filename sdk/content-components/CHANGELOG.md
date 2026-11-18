@@ -1,3 +1,12 @@
+## 1.2.0 (November 18, 2026)
+
+- Added the `suppress-open` attribute to `ContentAreaElement` and `QuickDriveElement`. When set,
+  double-clicking a non-folder item (or pressing Enter on it) no longer opens it in SAS Viya in a
+  new tab; folders still open so users can navigate. Open actions in menus are unaffected.
+- Added the `onOpen` property to `ContentAreaElement`. It is called with `{ item }` whenever an item
+  is opened by double-click or Enter, whether or not `suppress-open` is set, so pages can, for
+  example, submit the selection on double-click.
+
 ## 1.1.0 (October 14, 2026)
 
 - Added theme support. Call `setTheme('light' | 'dark' | 'high-contrast')` or
